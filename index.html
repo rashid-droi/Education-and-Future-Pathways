@@ -53,6 +53,8 @@
 	}
 	.elementor-location-header .elementor-widget-icon .elementor-icon i.far.fa-calendar-alt {
 	  color: inherit !important;
+	  font-family: "Font Awesome 5 Free" !important;
+	  font-weight: 400 !important;
 	}
 	/* Scrolled bar: dark “black” navy to match header text (icons were ignoring parent color) */
 	body.header-scrolled .elementor-location-header .elementor-search-form__toggle i.fas.fa-search {
@@ -69,6 +71,174 @@
 	}
 	body.header-scrolled .elementor-location-header .elementor-widget-icon .elementor-icon i.far.fa-calendar-alt {
 	  color: inherit !important;
+	  font-family: "Font Awesome 5 Free" !important;
+	  font-weight: 400 !important;
+	}
+	/* Header colors by state: default white, scrolled black */
+	.elementor-location-header .elementor-nav-menu--main .elementor-nav-menu > ul > li > a.elementor-item,
+	.elementor-location-header .elementor-menu-toggle,
+	.elementor-location-header .elementor-menu-cart__toggle_button,
+	.elementor-location-header .elementor-search-form__toggle,
+	.elementor-location-header .elementor-icon-wrapper a,
+	.elementor-location-header .trp-language-switcher-container .elementor-item,
+	.elementor-location-header .elementor-search-form__toggle i.fas.fa-search,
+	.elementor-location-header .elementor-widget-icon .elementor-icon,
+	.elementor-location-header .elementor-menu-cart__toggle_button i.fas.fa-shopping-cart {
+	  color: #ffffff !important;
+	}
+	.elementor-location-header .elementor-nav-menu--main .elementor-nav-menu > ul > li > a.elementor-item:hover,
+	.elementor-location-header .elementor-menu-toggle:hover,
+	.elementor-location-header .elementor-menu-cart__toggle_button:hover,
+	.elementor-location-header .elementor-search-form__toggle:hover,
+	.elementor-location-header .elementor-icon-wrapper a:hover,
+	.elementor-location-header .trp-language-switcher-container .elementor-item:hover {
+	  color: #f3e38a !important;
+	}
+	body.header-scrolled .elementor-location-header .elementor-nav-menu--main .elementor-nav-menu > ul > li > a.elementor-item,
+	body.header-scrolled .elementor-location-header .elementor-menu-toggle,
+	body.header-scrolled .elementor-location-header .elementor-menu-cart__toggle_button,
+	body.header-scrolled .elementor-location-header .elementor-search-form__toggle,
+	body.header-scrolled .elementor-location-header .elementor-icon-wrapper a,
+	body.header-scrolled .elementor-location-header .trp-language-switcher-container .elementor-item,
+	body.header-scrolled .elementor-location-header .elementor-search-form__toggle i.fas.fa-search,
+	body.header-scrolled .elementor-location-header .elementor-widget-icon .elementor-icon,
+	body.header-scrolled .elementor-location-header .elementor-menu-cart__toggle_button i.fas.fa-shopping-cart {
+	  color: #000000 !important;
+	}
+	body.header-scrolled .elementor-location-header .elementor-nav-menu--main .elementor-nav-menu > ul > li > a.elementor-item:hover,
+	body.header-scrolled .elementor-location-header .elementor-menu-toggle:hover,
+	body.header-scrolled .elementor-location-header .elementor-menu-cart__toggle_button:hover,
+	body.header-scrolled .elementor-location-header .elementor-search-form__toggle:hover,
+	body.header-scrolled .elementor-location-header .elementor-icon-wrapper a:hover,
+	body.header-scrolled .elementor-location-header .trp-language-switcher-container .elementor-item:hover {
+	  color: #111111 !important;
+	}
+
+	/*
+	 * Keep right-side header icons pinned in place.
+	 * Sticky clone/header state swaps can otherwise cause slight horizontal shifts.
+	 */
+	.elementor-location-header .elementor-element-d68cf08 > .elementor-widget-wrap {
+	  display: flex;
+	  justify-content: flex-end;
+	  align-items: center;
+	  flex-wrap: nowrap;
+	  gap: 0.42rem;
+	}
+	.elementor-location-header .elementor-element-b9fdc27,
+	.elementor-location-header .elementor-element-5cd00b3,
+	.elementor-location-header .elementor-element-06ae072 {
+	  margin: 0 !important;
+	  flex: 0 0 auto;
+	}
+	.elementor-location-header .elementor-search-form__toggle,
+	.elementor-location-header .elementor-menu-cart__toggle_button,
+	.elementor-location-header .elementor-widget-icon .elementor-icon {
+	  min-width: 2.25rem;
+	  height: 2.25rem;
+	  display: inline-flex;
+	  align-items: center;
+	  justify-content: center;
+	  line-height: 1;
+	}
+	.elementor-location-header .elementor-search-form__toggle i,
+	.elementor-location-header .elementor-menu-cart__toggle_button i,
+	.elementor-location-header .elementor-widget-icon .elementor-icon i {
+	  line-height: 1;
+	  display: inline-block;
+	}
+	/* Lock icon group geometry across normal/sticky states (no shifting) */
+	.elementor-location-header .elementor-element-d68cf08,
+	.elementor-location-header .she-header .elementor-element-d68cf08 {
+	  flex: 0 0 auto !important;
+	}
+	.elementor-location-header .elementor-element-d68cf08 > .elementor-widget-wrap,
+	.elementor-location-header .she-header .elementor-element-d68cf08 > .elementor-widget-wrap {
+	  gap: 0.42rem !important;
+	  margin: 0 !important;
+	  padding: 0 !important;
+	}
+	.elementor-location-header .elementor-element-b9fdc27,
+	.elementor-location-header .elementor-element-5cd00b3,
+	.elementor-location-header .elementor-element-06ae072,
+	.elementor-location-header .elementor-search-form__toggle,
+	.elementor-location-header .elementor-menu-cart__toggle_button,
+	.elementor-location-header .elementor-widget-icon .elementor-icon {
+	  margin: 0 !important;
+	  inset: auto !important;
+	  translate: none !important;
+	  transform: none !important;
+	  animation: none !important;
+	}
+	.elementor-location-header .elementor-search-form__toggle,
+	.elementor-location-header .elementor-menu-cart__toggle_button,
+	.elementor-location-header .elementor-widget-icon .elementor-icon,
+	.elementor-location-header .elementor-menu-toggle {
+	  transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
+	}
+	/* Header alignment: keep everything in one clean row on desktop */
+	@media (min-width: 1025px) {
+	  .elementor-location-header .elementor-section.sticky-header > .elementor-container {
+	    display: flex !important;
+	    align-items: center !important;
+	    justify-content: space-between !important;
+	    gap: 1rem;
+	    flex-wrap: nowrap !important;
+	  }
+	  .elementor-location-header .elementor-element-ac03a15,
+	  .elementor-location-header .elementor-element-3f5a881 {
+	    width: auto !important;
+	    flex: 0 0 auto !important;
+	  }
+	  .elementor-location-header .elementor-element-3f5a881 {
+	    flex: 1 1 auto !important;
+	    min-width: 0 !important;
+	  }
+	  .elementor-location-header .elementor-element-c6d849f > .elementor-container {
+	    display: flex !important;
+	    align-items: center !important;
+	    justify-content: flex-end !important;
+	    flex-wrap: nowrap !important;
+	    gap: 0.65rem;
+	  }
+	  .elementor-location-header .elementor-element-1890a99 {
+	    flex: 1 1 auto !important;
+	    min-width: 0 !important;
+	  }
+	  .elementor-location-header .elementor-element-d68cf08 {
+	    flex: 0 0 auto !important;
+	    width: auto !important;
+	  }
+	  .elementor-location-header .elementor-element-e295b8d img,
+	  .elementor-location-header #logo img {
+	    width: clamp(148px, 14vw, 220px) !important;
+	  }
+	  .elementor-location-header .elementor-nav-menu--main > ul.elementor-nav-menu {
+	    display: flex !important;
+	    align-items: center !important;
+	    flex-wrap: nowrap !important;
+	    gap: clamp(0.25rem, 1vw, 0.85rem);
+	  }
+	  .elementor-location-header .elementor-nav-menu--main .elementor-item {
+	    white-space: nowrap;
+	  }
+	  .elementor-location-header .elementor-element-d3a5159 .elementor-menu-toggle {
+	    display: none !important;
+	  }
+	}
+	/* Mobile/tablet: always show menu button and use dropdown nav */
+	@media (max-width: 1024px) {
+	  .elementor-location-header .elementor-element-d3a5159 .elementor-menu-toggle {
+	    display: inline-flex !important;
+	    align-items: center !important;
+	    justify-content: center !important;
+	  }
+	  .elementor-location-header .elementor-element-d3a5159 .elementor-nav-menu--main {
+	    display: none !important;
+	  }
+	  .elementor-location-header .elementor-element-d3a5159 .elementor-nav-menu--dropdown {
+	    display: block;
+	  }
 	}
 
 	/* Flyout + mobile panel: light background + navy/teal text (sub-items were white-on-white; mobile top-level matched old rule too) */
@@ -174,30 +344,33 @@
 	body.header-scrolled .she-header .elementor-nav-menu a:active {
 	  color: var(--header-scroll-violet-hover) !important;
 	}
-	/*
-	 * Some sticky-header setups render a cloned layer (.she-header) on scroll.
-	 * Hide icon widgets in the base header while scrolled; keep them visible in .she-header.
-	 */
-	body.header-scrolled .elementor-location-header .elementor-element-b9fdc27,
-	body.header-scrolled .elementor-location-header .elementor-element-5cd00b3,
-	body.header-scrolled .elementor-location-header .elementor-element-06ae072 {
-	  opacity: 0 !important;
-	  visibility: hidden !important;
-	  pointer-events: none !important;
+	/* On scroll, keep a single header icon/logo layer: base sticky header only */
+	body.header-scrolled .elementor-location-header .sticky-header:not(.she-header) .elementor-element-b9fdc27,
+	body.header-scrolled .elementor-location-header .sticky-header:not(.she-header) .elementor-element-5cd00b3,
+	body.header-scrolled .elementor-location-header .sticky-header:not(.she-header) .elementor-element-06ae072 {
+	  display: block !important;
+	  opacity: 1 !important;
+	  visibility: visible !important;
+	  pointer-events: auto !important;
 	}
 	body.header-scrolled .elementor-location-header .she-header .elementor-element-b9fdc27,
 	body.header-scrolled .elementor-location-header .she-header .elementor-element-5cd00b3,
-	body.header-scrolled .elementor-location-header .she-header .elementor-element-06ae072 {
-	  opacity: 1 !important;
-	  visibility: visible !important;
-	  pointer-events: auto !important;
+	body.header-scrolled .elementor-location-header .she-header .elementor-element-06ae072,
+	body.header-scrolled .elementor-location-header .she-header .elementor-element-e295b8d,
+	body.header-scrolled .elementor-location-header .she-header .elementor-element-ca7b612 {
+	  display: none !important;
+	  visibility: hidden !important;
+	  pointer-events: none !important;
 	}
-	body.header-scrolled .she-header .elementor-element-b9fdc27,
-	body.header-scrolled .she-header .elementor-element-5cd00b3,
-	body.header-scrolled .she-header .elementor-element-06ae072 {
-	  opacity: 1 !important;
-	  visibility: visible !important;
-	  pointer-events: auto !important;
+	/* Stop tiny translate/transition shifts while sticky state swaps layers */
+	.elementor-location-header .elementor-element-b9fdc27,
+	.elementor-location-header .elementor-element-5cd00b3,
+	.elementor-location-header .elementor-element-06ae072,
+	.elementor-location-header .elementor-search-form__toggle,
+	.elementor-location-header .elementor-menu-cart__toggle_button,
+	.elementor-location-header .elementor-widget-icon .elementor-icon {
+	  transform: none !important;
+	  transition-property: color, background-color, border-color, box-shadow !important;
 	}
 
 	/* Keep icons visible across header/footer/widgets */
@@ -217,6 +390,51 @@
 	#logo img {
 	  filter: none !important;
 	  opacity: 1 !important;
+	}
+	/* Keep the primary SELECT logo visible and aligned in header row */
+	.elementor-location-header .elementor-element-ac03a15 > .elementor-widget-wrap {
+	  display: flex !important;
+	  align-items: center !important;
+	  min-height: 100%;
+	}
+	.elementor-location-header .elementor-element-e295b8d,
+	.elementor-location-header #logo {
+	  display: block !important;
+	  opacity: 1 !important;
+	  visibility: visible !important;
+	  position: static !important;
+	  top: auto !important;
+	  left: auto !important;
+	  transform: none !important;
+	  z-index: 3;
+	}
+	.elementor-location-header .elementor-element-e295b8d .elementor-widget-container,
+	.elementor-location-header #logo .elementor-widget-container {
+	  display: block !important;
+	}
+	.elementor-location-header .elementor-element-e295b8d img,
+	.elementor-location-header #logo img {
+	  display: block !important;
+	  width: clamp(138px, 15vw, 220px);
+	  height: auto !important;
+	}
+	/* Logo swap by scroll state: normal=main logo, scrolled=sticky logo */
+	.elementor-location-header .elementor-element-ca7b612 {
+	  display: none !important;
+	}
+	body.header-scrolled .elementor-location-header .sticky-header:not(.she-header) .elementor-element-e295b8d,
+	body.header-scrolled .elementor-location-header .sticky-header:not(.she-header) #logo {
+	  display: none !important;
+	}
+	body.header-scrolled .elementor-location-header .sticky-header:not(.she-header) .elementor-element-ca7b612 {
+	  display: block !important;
+	  opacity: 1 !important;
+	  visibility: visible !important;
+	  position: static !important;
+	}
+	body.header-scrolled .elementor-location-header .sticky-header:not(.she-header) .elementor-element-ca7b612 img {
+	  width: clamp(138px, 15vw, 220px) !important;
+	  height: auto !important;
 	}
 
 	/* Brand photo overlay + scrolled header theme tokens */
@@ -288,8 +506,11 @@
 	.elementor-column {
 	  min-width: 0;
 	}
+	/*
+	 * Stretched sections: Elementor uses width:100vw + left:50% + negative margins for full-bleed.
+	 * max-width:100% breaks that math and leaves the background (e.g. quiz CTA) as a band on one side.
+	 */
 	.elementor-section.elementor-section-stretched {
-	  max-width: 100%;
 	  box-sizing: border-box;
 	}
 	.entry-content,
@@ -360,11 +581,27 @@
 	  }
 	}
 	@media (max-width: 767px) {
+	  .elementor-location-header .elementor-section.sticky-header > .elementor-container {
+	    display: grid !important;
+	    grid-template-columns: minmax(0, 1fr) auto !important;
+	    align-items: center !important;
+	  }
+	  .elementor-location-header .elementor-element-d68cf08,
+	  .elementor-location-header .she-header .elementor-element-d68cf08 {
+	    min-width: 7.2rem !important;
+	    width: 7.2rem !important;
+	    max-width: 7.2rem !important;
+	  }
+	  .elementor-location-header .elementor-element-d3a5159,
+	  .elementor-location-header .she-header .elementor-element-d3a5159 {
+	    min-width: 0 !important;
+	  }
+	  .elementor-location-header .elementor-element-d68cf08 > .elementor-widget-wrap,
+	  .elementor-location-header .she-header .elementor-element-d68cf08 > .elementor-widget-wrap {
+	    gap: 0.35rem !important;
+	  }
 	  .elementor-location-header .elementor-section.sticky-header {
 	    min-height: 58px;
-	  }
-	  .elementor-location-header .elementor-menu-toggle {
-	    padding: 0.35rem 0.45rem !important;
 	  }
 	  .elementor-location-header .elementor-widget-icon,
 	  .elementor-location-header .elementor-widget-search-form,
@@ -373,7 +610,9 @@
 	    margin-right: 0.1rem !important;
 	  }
 	  /* Decongest mobile header: hide calendar shortcut icon */
-	  .elementor-location-header .elementor-element-06ae072 {
+	  .elementor-location-header .elementor-element-06ae072,
+	  body.header-scrolled .elementor-location-header .she-header .elementor-element-06ae072,
+	  body.header-scrolled .elementor-location-header .sticky-header:not(.she-header) .elementor-element-06ae072 {
 	    display: none !important;
 	  }
 	  .elementor-location-header .elementor-element-b9fdc27,
@@ -534,11 +773,67 @@
 	  opacity: 0.95;
 	}
 	@media (max-width: 767px) {
+	  .elementor-22203 .elementor-element.elementor-element-4e94bf3 {
+	    min-height: 620px !important;
+	  }
+	  .elementor-22203 .elementor-element.elementor-element-4e94bf3 > .elementor-container {
+	    padding-top: clamp(5rem, 13vw, 6.5rem);
+	    padding-bottom: clamp(7rem, 20vw, 9rem);
+	    padding-left: 1rem;
+	    padding-right: 1rem;
+	  }
+	  .elementor-22203 .elementor-element.elementor-element-6bd7373 .elementor-heading-title {
+	    font-size: clamp(2rem, 8.2vw, 2.45rem) !important;
+	    line-height: 1.24 !important;
+	    max-width: 15ch;
+	    margin-left: auto;
+	    margin-right: auto;
+	  }
+	  .elementor-22203 .elementor-element.elementor-element-4a07282 .elementor-widget-container p {
+	    font-size: 1rem !important;
+	    line-height: 1.5 !important;
+	    max-width: 34ch;
+	    margin-left: auto;
+	    margin-right: auto;
+	  }
+	  .elementor-22203 .elementor-element.elementor-element-4e94bf3 .custom-button-group {
+	    display: grid;
+	    grid-template-columns: 1fr;
+	    gap: 0.75rem;
+	    width: min(100%, 22rem);
+	    margin-left: auto;
+	    margin-right: auto;
+	  }
+	  .elementor-22203 .elementor-element.elementor-element-4e94bf3 .custom-button-group > a.elementor-button {
+	    width: 100%;
+	    min-height: 54px;
+	  }
 	  .elementor-22203 .elementor-element.elementor-element-4e94bf3 .hero-rating-in-overlay {
-	    bottom: clamp(0.75rem, 2.5vw, 1.25rem);
+	    bottom: clamp(1rem, 3vw, 1.5rem);
+	    max-width: calc(100% - 1.25rem);
+	    gap: 0.25rem;
 	  }
 	  .elementor-22203 .elementor-element.elementor-element-4e94bf3 .hero-rating-in-overlay img {
 	    max-width: 110px;
+	  }
+	  .elementor-22203 .elementor-element.elementor-element-4e94bf3 .hero-rating-in-overlay p {
+	    font-size: 0.96rem;
+	    line-height: 1.3;
+	  }
+	}
+	@media (max-width: 480px) {
+	  .elementor-22203 .elementor-element.elementor-element-4e94bf3 {
+	    min-height: 590px !important;
+	  }
+	  .elementor-22203 .elementor-element.elementor-element-6bd7373 .elementor-heading-title {
+	    font-size: clamp(1.72rem, 9vw, 2.05rem) !important;
+	    max-width: 16ch;
+	  }
+	  .elementor-22203 .elementor-element.elementor-element-4e94bf3 .custom-button-group {
+	    width: min(100%, 20.5rem);
+	  }
+	  .elementor-22203 .elementor-element.elementor-element-4e94bf3 .custom-button-group > a.elementor-button {
+	    min-height: 50px;
 	  }
 	}
 
@@ -559,16 +854,55 @@
 	}
 
 	/* Icon fonts: visibility only (do not override font-family — breaks Elementor eicons + FA) */
-	i[class*="eicon"],
+	i[class*="eicon"]:not(.elementor-menu-toggle__icon--open):not(.elementor-menu-toggle__icon--close),
 	i[class*="fa-"],
-	.elementor-swiper-button i,
-	.elementor-menu-toggle i {
+	.elementor-swiper-button i {
 	  display: inline-block !important;
 	  opacity: 1 !important;
 	  visibility: visible !important;
 	  line-height: 1 !important;
 	  font-style: normal !important;
 	  -webkit-font-smoothing: antialiased;
+	}
+	/* Keep Elementor mobile menu toggle icons in their intended open/close state */
+	.elementor-location-header .elementor-menu-toggle i[class*="eicon"] {
+	  font-family: eicons, "eicons" !important;
+	  font-weight: 400 !important;
+	}
+	.elementor-location-header .elementor-menu-toggle .elementor-menu-toggle__icon--open {
+	  display: inline-block !important;
+	}
+	.elementor-location-header .elementor-menu-toggle .elementor-menu-toggle__icon--close {
+	  display: none !important;
+	}
+	.elementor-location-header .elementor-menu-toggle.elementor-active .elementor-menu-toggle__icon--open,
+	.elementor-location-header .elementor-menu-toggle[aria-expanded="true"] .elementor-menu-toggle__icon--open {
+	  display: none !important;
+	}
+	.elementor-location-header .elementor-menu-toggle.elementor-active .elementor-menu-toggle__icon--close,
+	.elementor-location-header .elementor-menu-toggle[aria-expanded="true"] .elementor-menu-toggle__icon--close {
+	  display: inline-block !important;
+	}
+	/* Prevent menu-toggle button/icon geometry shift */
+	.elementor-location-header .elementor-menu-toggle {
+	  width: 2.25rem !important;
+	  min-width: 2.25rem !important;
+	  height: 2.25rem !important;
+	  padding: 0 !important;
+	  margin: 0 !important;
+	  display: inline-flex !important;
+	  align-items: center !important;
+	  justify-content: center !important;
+	  position: relative;
+	  flex: 0 0 2.25rem !important;
+	}
+	.elementor-location-header .elementor-menu-toggle i.elementor-menu-toggle__icon--open,
+	.elementor-location-header .elementor-menu-toggle i.elementor-menu-toggle__icon--close {
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%) !important;
+	  line-height: 1 !important;
 	}
 
 	/* Elementor button icons (cart, etc.): stop collapsed / invisible glyphs */
@@ -2657,35 +2991,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         
         <!-- Form panel – fills remaining height, unified border/shadow -->
         <div class="contact-panel bg-white rounded-2xl sm:rounded-3xl border border-slate-200 shadow-lg p-5 sm:p-7 md:p-8 flex-1 flex flex-col">
-          <form class="space-y-5 sm:space-y-6 flex-1 flex flex-col">
+          <form id="contact-purpose-form" class="space-y-5 sm:space-y-6 flex-1 flex flex-col" novalidate>
             <!-- Name + Organisation row -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label class="block text-xs font-black uppercase tracking-wider text-[#00968F] mb-1">Name</label>
-                <input type="text" placeholder="Full Name" class="w-full py-3 px-4 form-input text-base sm:text-sm">
+                <input type="text" name="name" autocomplete="name" placeholder="Full Name" class="w-full py-3 px-4 form-input text-base sm:text-sm" required>
               </div>
               <div>
                 <label class="block text-xs font-black uppercase tracking-wider text-[#00968F] mb-1">Organisation</label>
-                <input type="text" placeholder="Company Name" class="w-full py-3 px-4 form-input text-base sm:text-sm">
+                <input type="text" name="organisation" autocomplete="organization" placeholder="Company Name" class="w-full py-3 px-4 form-input text-base sm:text-sm">
               </div>
             </div>
             
             <!-- Email -->
             <div>
               <label class="block text-xs font-black uppercase tracking-wider text-[#00968F] mb-1">Email</label>
-              <input type="email" placeholder="email@address.com" class="w-full py-3 px-4 form-input text-base sm:text-sm">
+              <input type="email" name="email" autocomplete="email" placeholder="email@address.com" class="w-full py-3 px-4 form-input text-base sm:text-sm" required>
             </div>
             
             <!-- Phone -->
             <div>
               <label class="block text-xs font-black uppercase tracking-wider text-[#00968F] mb-1">Phone</label>
-              <input type="tel" placeholder="+971 -- --- ----" class="w-full py-3 px-4 form-input text-base sm:text-sm">
+              <input type="tel" name="phone" autocomplete="tel" placeholder="+971 -- --- ----" class="w-full py-3 px-4 form-input text-base sm:text-sm" required>
             </div>
             
             <!-- Interested in (select) – now part of the same rhythm as cards -->
             <div>
               <label class="block text-xs font-black uppercase tracking-wider text-[#00968F] mb-1">Interested in</label>
-              <select class="w-full py-3 px-4 form-input font-montserrat text-base sm:text-sm bg-white">
+              <select name="interest" class="w-full py-3 px-4 form-input font-montserrat text-base sm:text-sm bg-white" required>
                 <option>Tier 1: Full Lifecycle Management</option>
                 <option>Tier 2: Core Support</option>
                 <option>Tier 3: Bespoke Intervention</option>
@@ -2699,6 +3033,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <button type="submit" class="submit-btn w-full min-h-[48px] py-3.5 sm:py-4 bg-[#003057] text-white font-black rounded-xl shadow-md hover:scale-[1.02] transition-transform duration-200 uppercase tracking-wider text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#00968F] focus:ring-offset-2 mt-2">
               Submit Request
             </button>
+            <p class="form-status mt-2 text-sm" data-form-status aria-live="polite"></p>
           </form>
         </div>
       </div>
@@ -2741,6 +3076,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     outline: none;
     border-color: #00968F;
     box-shadow: 0 0 0 3px rgba(0, 150, 143, 0.1);
+  }
+  .form-status {
+    min-height: 1.25rem;
+    margin-bottom: 0;
+  }
+  .form-status.is-error {
+    color: #b91c1c;
+  }
+  .form-status.is-success {
+    color: #065f46;
   }
   
   /* Responsive adjustments for small devices */
@@ -4687,6 +5032,128 @@ if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_c
       window.AOS.refreshHard();
     }
   });
+})();
+</script>
+<script>
+(function () {
+  function splitName(fullName) {
+    var trimmed = (fullName || "").trim();
+    if (!trimmed) return { first: "", last: "" };
+    var parts = trimmed.split(/\s+/);
+    return {
+      first: parts[0] || "",
+      last: parts.slice(1).join(" ") || ""
+    };
+  }
+
+  function setFieldValue(container, selector, value) {
+    var field = container.querySelector(selector);
+    if (!field) return;
+    field.value = value;
+    field.dispatchEvent(new Event("input", { bubbles: true }));
+    field.dispatchEvent(new Event("change", { bubbles: true }));
+  }
+
+  function setSelectByIncludes(container, selector, targetText) {
+    var select = container.querySelector(selector);
+    if (!select) return;
+    var normalized = (targetText || "").toLowerCase();
+    for (var i = 0; i < select.options.length; i++) {
+      var option = select.options[i];
+      if (option.text.toLowerCase().indexOf(normalized) !== -1 || option.value.toLowerCase().indexOf(normalized) !== -1) {
+        select.value = option.value;
+        select.dispatchEvent(new Event("change", { bubbles: true }));
+        return;
+      }
+    }
+  }
+
+  function setStatus(statusEl, message, type) {
+    if (!statusEl) return;
+    statusEl.textContent = message || "";
+    statusEl.classList.remove("is-success", "is-error");
+    if (type === "success") statusEl.classList.add("is-success");
+    if (type === "error") statusEl.classList.add("is-error");
+  }
+
+  function initPurposeContactForm() {
+    var form = document.getElementById("contact-purpose-form");
+    if (!form) return;
+
+    var statusEl = form.querySelector("[data-form-status]");
+    var submitBtn = form.querySelector(".submit-btn");
+    var defaultBtnText = submitBtn ? submitBtn.textContent.trim() : "Submit Request";
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        setStatus(statusEl, "Please complete all required fields.", "error");
+        return;
+      }
+
+      var name = (form.elements.name && form.elements.name.value || "").trim();
+      var organisation = (form.elements.organisation && form.elements.organisation.value || "").trim();
+      var email = (form.elements.email && form.elements.email.value || "").trim();
+      var phone = (form.elements.phone && form.elements.phone.value || "").trim();
+      var interest = (form.elements.interest && form.elements.interest.value || "").trim();
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending...";
+      }
+      setStatus(statusEl, "", "");
+
+      var legacyForm = document.querySelector('form.elementor-form[name="RequestCallBack"]');
+      if (legacyForm) {
+        var parsedName = splitName(name);
+        setFieldValue(legacyForm, 'input[name="form_fields[name]"]', parsedName.first || name);
+        setFieldValue(legacyForm, 'input[name="form_fields[email]"]', parsedName.last || organisation || "-");
+        setFieldValue(legacyForm, 'input[name="form_fields[field_1bb7aa2]"]', email);
+        setFieldValue(legacyForm, 'input[name="form_fields[field_d705a16]"]', email);
+        setFieldValue(legacyForm, 'input[name="form_fields[field_dcceabf]"]', phone);
+        setSelectByIncludes(legacyForm, 'select[name="form_fields[country_code]"]', "(+971)");
+        setSelectByIncludes(legacyForm, 'select[name="form_fields[field_3a8aac9]"]', interest);
+        setSelectByIncludes(legacyForm, 'select[name="form_fields[field_bc229ef]"]', interest);
+
+        try {
+          if (typeof legacyForm.requestSubmit === "function") {
+            legacyForm.requestSubmit();
+          } else {
+            legacyForm.submit();
+          }
+          setStatus(statusEl, "Request submitted. Our team will contact you shortly.", "success");
+          form.reset();
+        } catch (err) {
+          setStatus(statusEl, "Submission failed. Please try again.", "error");
+        }
+      } else {
+        var subject = "Request a Call Back";
+        var body =
+          "Name: " + name + "\n" +
+          "Organisation: " + (organisation || "-") + "\n" +
+          "Email: " + email + "\n" +
+          "Phone: " + phone + "\n" +
+          "Interested in: " + interest;
+        window.location.href =
+          "mailto:hello@selectgroup.ae?subject=" + encodeURIComponent(subject) +
+          "&body=" + encodeURIComponent(body);
+        setStatus(statusEl, "Your email app was opened. Please send the prepared message.", "success");
+      }
+
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = defaultBtnText;
+      }
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initPurposeContactForm);
+  } else {
+    initPurposeContactForm();
+  }
 })();
 </script>
 <script data-no-minify="1" async src="https://selecttraining.ae/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script></body>
