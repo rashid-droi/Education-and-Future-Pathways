@@ -322,7 +322,9 @@
       align-content: center;
       gap: 14px;
       width: 100%;
+      max-width: 100%;
       margin: 0;
+      min-width: 0;
     }
     .hub-card-btn {
       position: relative;
@@ -333,7 +335,9 @@
       justify-content: center;
       gap: 16px;
       min-height: 178px;
-      padding: 20px 18px;
+      min-width: 0;
+      width: 100%;
+      padding: 20px clamp(14px, 3vw, 18px);
       border-radius: 14px;
       text-align: center;
       font-weight: 900;
@@ -364,17 +368,25 @@
     }
     .hub-card-title {
       margin: 0;
-      max-width: 16ch;
-      font-size: clamp(18px, 1.7vw, 33px);
+      max-width: 100%;
+      width: 100%;
+      font-size: clamp(17px, 1.65vw, 33px);
       font-weight: 900;
       letter-spacing: 0.01em;
       text-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+      line-height: 1.18;
+      text-wrap: balance;
+      hyphens: auto;
+      overflow-wrap: break-word;
     }
     .hub-card-cta {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-width: min(78%, 240px);
+      box-sizing: border-box;
+      width: min(100%, 280px);
+      min-width: 0;
+      max-width: 100%;
       min-height: 42px;
       padding: 0 16px;
       border-radius: 10px;
@@ -406,23 +418,6 @@
     .hub-card-btn:focus-visible {
       outline: 3px solid rgba(255, 205, 0, 0.9);
       outline-offset: 2px;
-    }
-    @media (max-width: 760px) {
-      .hub-card-actions {
-        grid-template-columns: 1fr;
-        width: min(340px, 100%);
-      }
-      .hub-card-btn {
-        min-height: 170px;
-        gap: 14px;
-      }
-      .hub-card-title {
-        font-size: clamp(20px, 6vw, 28px);
-      }
-      .hub-card-cta {
-        min-height: 40px;
-        font-size: clamp(14px, 4.6vw, 18px);
-      }
     }
     .lifecycle-intro {
       position: relative;
@@ -568,10 +563,14 @@
       }
       .hub-card-actions {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 16px;
+        gap: clamp(12px, 2vw, 16px);
       }
       .hub-card-btn {
-        min-height: 170px;
+        min-height: clamp(158px, 22vw, 190px);
+        padding: clamp(16px, 3vw, 20px) clamp(10px, 2vw, 14px);
+      }
+      .hub-card-title {
+        font-size: clamp(15px, 2.1vw, 24px);
       }
     }
     @media (max-width: 900px) {
@@ -584,6 +583,36 @@
         max-width: 520px;
         margin: 0 auto;
         width: 100%;
+      }
+      .hub-card-actions {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        width: 100%;
+        max-width: none;
+      }
+      .hub-card-btn {
+        min-height: clamp(152px, 38vw, 188px);
+      }
+    }
+    @media (max-width: 760px) {
+      .hub-card-actions {
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 100%;
+      }
+      .hub-card-btn {
+        min-height: clamp(158px, 42vw, 200px);
+        gap: 14px;
+      }
+      .hub-card-title {
+        font-size: clamp(18px, 5.2vw, 26px);
+      }
+      .hub-card-cta {
+        width: 100%;
+        max-width: 100%;
+        min-height: 44px;
+        padding: 0 14px;
+        font-size: clamp(14px, 4.2vw, 17px);
       }
     }
     @media (max-width: 767px) {
@@ -3023,11 +3052,11 @@
               <p class="lifecycle-intro-lead">Our Education and Future Pathways services are designed to guide students, families, and sponsors through every stage of the academic journey—from early decision-making to successful graduation and beyond. We combine expert advisory, data-driven insights, and personalized support to help students make confident choices and achieve long-term success.</p>
             </div>
             <div class="hub-card-actions" data-aos="fade-up" data-aos-duration="850" data-aos-delay="120">
-              <a class="hub-card-btn" href="index5.html#pathways">
+              <a class="hub-card-btn" href="about.html#pathways">
                 <span class="hub-card-title">Student Pathways &amp; Academic Advisory</span>
                 <span class="hub-card-cta">See courses</span>
               </a>
-              <a class="hub-card-btn" href="index7.html#lifecycle">
+              <a class="hub-card-btn" href="contact.html#lifecycle">
                 <span class="hub-card-title">UAE Student Lifecycle Management</span>
                 <span class="hub-card-cta">See courses</span>
               </a>
