@@ -637,6 +637,21 @@
     .slc-title span {
       color: #00968f;
     }
+    .slc-title .slc-title-line {
+      display: block;
+      white-space: nowrap;
+    }
+    .slc-title .slc-title-line--main {
+      color: #003057;
+    }
+    .slc-title .slc-title-line--accent {
+      color: #00968f;
+    }
+    @media (max-width: 900px) {
+      .slc-title .slc-title-line {
+        white-space: normal;
+      }
+    }
     .slc-sub {
       max-width: 480px;
       margin: 0;
@@ -2885,8 +2900,7 @@
     <!-- Page hero -->
     <section class="top-hero" role="region" aria-labelledby="hero-title">
       <div class="container">
-        <h1 id="hero-title" class="hero-title" data-aos="fade-down" data-aos-duration="900"><span class="hero-title-line">Clarity.</span> <span class="hero-title-line">Direction.</span> <span class="hero-title-line">Capability.</span> <span class="hero-title-line">Impact.</span></h1>
-        <p class="hero-subheadline" data-aos="fade-up" data-aos-duration="800" data-aos-delay="120">We support students, institutions, and organisations through integrated solutions across education pathways, student success, and workforce transformation.</p>
+        <h1 id="hero-title" class="hero-title" data-aos="fade-down" data-aos-duration="900">Student Pathways &amp; Academic Advisory</h1>
         <div class="hero-cta-row" data-aos="fade-up" data-aos-duration="750" data-aos-delay="220">
           <a class="hero-cta-btn" href="#contact">Request a call back</a>
           <a class="hero-cta-btn is-secondary" href="#services-overview">Explore solutions</a>
@@ -2932,7 +2946,7 @@
           <div class="slc-head">
             <div data-aos="fade-up" data-aos-duration="800">
               <span class="slc-eyebrow">Student pathways</span>
-              <h2 class="slc-title" id="pathways-heading">Student Pathways &amp; <br /><span>Academic Advisory</span></h2>
+              <h2 class="slc-title" id="pathways-heading"><span class="slc-title-line slc-title-line--main">Student Pathways&nbsp;&amp;</span><span class="slc-title-line slc-title-line--accent">Academic Advisory</span></h2>
             </div>
             <p class="slc-sub" data-aos="fade-left" data-aos-duration="750" data-aos-delay="60">Structured guidance, global mobility, and admissions support — aligned to each learner&rsquo;s context and ambition.</p>
           </div>
