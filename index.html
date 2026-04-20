@@ -343,11 +343,11 @@
       font-weight: 900;
       line-height: 1.2;
       color: #ffffff;
-      border: 1px solid rgba(0, 48, 87, 0.08);
-      box-shadow: 0 14px 34px rgba(0, 48, 87, 0.16);
+      border: 0;
+      box-shadow: 0 16px 36px rgba(0, 48, 87, 0.18);
       background-size: cover;
       background-position: center;
-      transition: transform 0.22s ease, box-shadow 0.22s ease;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease;
     }
     .hub-card-btn::before {
       content: "";
@@ -388,28 +388,26 @@
       min-width: 0;
       max-width: 100%;
       min-height: 42px;
-      padding: 0 16px;
-      border-radius: 10px;
+      padding: 0 18px;
+      border-radius: 999px;
       background: #003057;
-      border: 1px solid rgba(255, 255, 255, 0.22);
+      border: 0;
       color: #ffffff;
       font-size: clamp(14px, 1.1vw, 18px);
       font-weight: 800;
       line-height: 1;
-      transition: background-color 0.2s ease, transform 0.2s ease;
-    }
-    .hub-card-cta::after {
-      content: "→";
-      margin-left: 8px;
-      font-size: 0.9em;
+      box-shadow: 0 8px 20px rgba(0, 38, 74, 0.24);
+      transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
     }
     .hub-card-btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 18px 38px rgba(0, 48, 87, 0.23);
+      box-shadow: 0 20px 42px rgba(0, 48, 87, 0.26);
+      filter: saturate(1.04);
     }
     .hub-card-btn:hover .hub-card-cta {
       background: #0b365d;
       transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(0, 38, 74, 0.3);
     }
     .hub-card-btn:active {
       transform: translateY(0);
