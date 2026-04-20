@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Quick navigation to Student Pathways & Academic Advisory and UAE Student Lifecycle Management." />
-  <title>Course Navigation · Select Training</title>
+  <meta name="description" content="Clarity, direction, capability, and impact — integrated solutions across education pathways, student success, workforce transformation, and organisational change." />
+  <title>Integrated Education &amp; Workforce Solutions · Select Training</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -52,7 +52,6 @@
     #main-content {
       overflow-x: clip;
       min-width: 0;
-      background: linear-gradient(180deg, #ffffff 0%, #f7fbfa 40%, #ffffff 100%);
     }
     a { color: inherit; text-decoration: none; }
     .container {
@@ -310,115 +309,6 @@
     .hero-cta-btn.is-secondary:hover {
       background: rgba(255, 255, 255, 0.12);
     }
-    /* index6 hub: screenshot-like image cards with inner CTA button */
-    .hub-card-actions {
-      display: grid;
-      grid-template-columns: 1fr;
-      align-content: center;
-      gap: 14px;
-      width: 100%;
-      margin: 0;
-    }
-    .hub-card-btn {
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-      min-height: 178px;
-      padding: 20px 18px;
-      border-radius: 14px;
-      text-align: center;
-      font-weight: 900;
-      line-height: 1.2;
-      color: #ffffff;
-      border: 1px solid rgba(0, 48, 87, 0.08);
-      box-shadow: 0 14px 34px rgba(0, 48, 87, 0.16);
-      background-size: cover;
-      background-position: center;
-      transition: transform 0.22s ease, box-shadow 0.22s ease;
-    }
-    .hub-card-btn::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(140deg, rgba(0, 150, 143, 0.8), rgba(11, 54, 93, 0.74));
-      pointer-events: none;
-    }
-    .hub-card-btn > * {
-      position: relative;
-      z-index: 1;
-    }
-    .hub-card-btn:nth-child(1) {
-      background-image: url("https://selecttraining.ae/wp-content/uploads/2022/10/leader-e1665416491999.jpg");
-    }
-    .hub-card-btn:nth-child(2) {
-      background-image: url("https://selecttraining.ae/wp-content/uploads/2022/08/Begin-With-The-End-In-Mind-scaled.jpg");
-    }
-    .hub-card-title {
-      margin: 0;
-      max-width: 16ch;
-      font-size: clamp(18px, 1.7vw, 33px);
-      font-weight: 900;
-      letter-spacing: 0.01em;
-      text-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
-    }
-    .hub-card-cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: min(78%, 240px);
-      min-height: 42px;
-      padding: 0 16px;
-      border-radius: 10px;
-      background: #003057;
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      color: #ffffff;
-      font-size: clamp(14px, 1.1vw, 18px);
-      font-weight: 800;
-      line-height: 1;
-      transition: background-color 0.2s ease, transform 0.2s ease;
-    }
-    .hub-card-cta::after {
-      content: "→";
-      margin-left: 8px;
-      font-size: 0.9em;
-    }
-    .hub-card-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 18px 38px rgba(0, 48, 87, 0.23);
-    }
-    .hub-card-btn:hover .hub-card-cta {
-      background: #0b365d;
-      transform: translateY(-1px);
-    }
-    .hub-card-btn:active {
-      transform: translateY(0);
-      box-shadow: 0 10px 24px rgba(0, 48, 87, 0.18);
-    }
-    .hub-card-btn:focus-visible {
-      outline: 3px solid rgba(255, 205, 0, 0.9);
-      outline-offset: 2px;
-    }
-    @media (max-width: 760px) {
-      .hub-card-actions {
-        grid-template-columns: 1fr;
-        width: min(340px, 100%);
-      }
-      .hub-card-btn {
-        min-height: 170px;
-        gap: 14px;
-      }
-      .hub-card-title {
-        font-size: clamp(20px, 6vw, 28px);
-      }
-      .hub-card-cta {
-        min-height: 40px;
-        font-size: clamp(14px, 4.6vw, 18px);
-      }
-    }
     .lifecycle-intro {
       position: relative;
       padding: 88px 0 72px;
@@ -455,7 +345,7 @@
     }
     .lifecycle-intro-content {
       padding: clamp(28px, 4vw, 48px) clamp(24px, 4vw, 52px);
-      border-radius: 22px;
+      border-radius: 16px;
       background: rgba(255, 255, 255, 0.82);
       backdrop-filter: blur(12px);
       border: 1px solid rgba(0, 150, 143, 0.14);
@@ -468,16 +358,6 @@
       grid-template-columns: minmax(0, 1fr) minmax(240px, 380px);
       gap: clamp(28px, 4vw, 48px);
       align-items: center;
-    }
-    .lifecycle-intro-grid--hub {
-      grid-template-columns: minmax(0, 1.08fr) minmax(300px, 400px);
-      gap: clamp(22px, 3.2vw, 38px);
-      align-items: stretch;
-    }
-    .lifecycle-intro-grid--hub .lifecycle-intro-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
     }
     .lifecycle-intro-visual {
       position: relative;
@@ -550,24 +430,11 @@
     }
     .lifecycle-intro-lead {
       margin: 0;
-      max-width: 50ch;
+      max-width: 52em;
       color: #4a5568;
       font-size: clamp(17px, 1.9vw, 19px);
       line-height: 1.82;
       font-weight: 400;
-    }
-    @media (max-width: 980px) {
-      .lifecycle-intro-grid--hub {
-        grid-template-columns: 1fr;
-        gap: 24px;
-      }
-      .hub-card-actions {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 16px;
-      }
-      .hub-card-btn {
-        min-height: 170px;
-      }
     }
     @media (max-width: 900px) {
       .lifecycle-intro-grid {
@@ -2430,9 +2297,16 @@
       justify-content: center;
       margin-bottom: clamp(24px, 4vw, 36px);
     }
-    .svc-tab-bar label {
+    .svc-tab-btn {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       cursor: pointer;
       padding: 13px 20px;
+      min-height: 48px;
       border-radius: 999px;
       font-weight: 800;
       font-size: 11px;
@@ -2441,18 +2315,57 @@
       border: 2px solid #d7e0ea;
       background: #ffffff;
       color: var(--text-main);
-      transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+      font-family: inherit;
+      line-height: 1.15;
+      appearance: none;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+      box-shadow: 0 2px 8px rgba(11, 54, 93, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
     }
-    .svc-tab-bar label:hover {
+    .svc-tab-btn::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0));
+      opacity: 0.9;
+      pointer-events: none;
+      z-index: -1;
+    }
+    .svc-tab-btn:hover {
       border-color: rgba(0, 150, 143, 0.45);
       color: var(--brand-primary);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(11, 54, 93, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.9);
     }
-    #svc-tab-edu:checked ~ .svc-tab-bar label[for="svc-tab-edu"],
-    #svc-tab-hc:checked ~ .svc-tab-bar label[for="svc-tab-hc"] {
+    .svc-tab-btn:active {
+      transform: translateY(1px);
+    }
+    .svc-tab-btn.is-pressed {
+      transform: translateY(1px) scale(0.997);
+      box-shadow: 0 3px 10px rgba(11, 54, 93, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    }
+    .svc-tab-btn:focus-visible {
+      outline: 3px solid rgba(0, 150, 143, 0.3);
+      outline-offset: 2px;
+    }
+    .svc-tab-btn.is-active {
       border-color: var(--brand-primary);
       color: var(--brand-primary);
       background: rgba(0, 150, 143, 0.07);
       box-shadow: 0 6px 20px rgba(0, 150, 143, 0.12);
+      cursor: default;
+    }
+    .svc-tab-btn.is-active:hover {
+      transform: none;
+      box-shadow: 0 6px 20px rgba(0, 150, 143, 0.12);
+    }
+    .svc-tab-btn[disabled],
+    .svc-tab-btn[aria-disabled="true"] {
+      opacity: 0.55;
+      cursor: not-allowed;
+      pointer-events: none;
     }
     .svc-panel-edu,
     .svc-panel-hc {
@@ -2912,7 +2825,7 @@
       <div class="hero-nav">
         <div class="hero-nav-left">
           <a href="https://selecttraining.ae/" class="hero-logo-link" aria-label="Select Training — Home"><img src="https://selecttraining.ae/wp-content/uploads/2022/11/Select-Logo_Horizontal-1400x447.png" alt="Select Training" /></a>
-                    </div>
+        </div>
         <nav id="mobile-primary-nav" class="hero-links">
           <div class="menu-item">
             <a href="https://selecttraining.ae/our-journey/">About us<i class="fa-solid fa-caret-down" aria-hidden="true"></i></a>
@@ -2923,8 +2836,8 @@
               <a href="https://selecttraining.ae/why-select/">Why Select?</a>
               <a href="https://selecttraining.ae/our-partners/">Our Partners</a>
               <a href="https://selecttraining.ae/careers/">Careers</a>
-                </div>
-                    </div>
+            </div>
+          </div>
           <div class="menu-item">
             <a href="https://selecttraining.ae/courses/">Solutions<i class="fa-solid fa-caret-down" aria-hidden="true"></i></a>
             <div class="dropdown">
@@ -2936,8 +2849,8 @@
               <a href="https://selecttraining.ae/business-consultancy/">Consultancy</a>
               <a href="https://selecttraining.ae/business-development-programmes/">Programmes</a>
               <a href="https://selecttraining.ae/ai-programmes/">AI Programmes</a>
-                </div>
-                    </div>
+            </div>
+          </div>
           <div class="menu-item">
             <a href="https://selecttraining.ae/library/">Blog<i class="fa-solid fa-caret-down" aria-hidden="true"></i></a>
             <div class="dropdown">
@@ -2950,21 +2863,21 @@
               <a href="https://selecttraining.ae/category/human-resources/">Human Resources</a>
               <a href="https://selecttraining.ae/category/customer-service/">Customer Service</a>
               <a href="https://selecttraining.ae/category/sales/">Sales</a>
-                </div>
+            </div>
           </div>
           <a href="https://selecttraining.ae/contact/" class="active-link">Contact us</a>
           <a href="https://selecttraining.ae/wp-login.php">Sign in</a>
-          <a href="https://selecttraining.ae/ar/%d8%aa%d9%88%d8%a7%d8%b5%d9%84/" class="lang-link"><img src="https://selecttraining.ae/wp-content/plugins/translatepress-multilingual/assets/images/flags/ar.png" alt="AR flag" />AR</a>
-            </nav>
+          <a href="https://selecttraining.ae/ar/%d8%aa%d9%88%d8%a7%d8%b5%d9%84/" class="lang-link"><img src="https://selecttraining.ae/wp-content/plugins/translatepress-multilingual/assets/images/flags/ar.png" alt="AR flag " /> AR</a>
+        </nav>
         <div class="hero-actions">
           <a href="https://selecttraining.ae/?s=" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
           <a href="https://selecttraining.ae/cart/" aria-label="Cart"><i class="fa-solid fa-cart-shopping"></i></a>
           <a href="https://selecttraining.ae/courses/" aria-label="Calendar"><i class="fa-regular fa-calendar"></i></a>
-            </div>
-        <button id="mobile-menu-toggle" class="menu-toggle-btn" aria-label="Toggle navigation" aria-controls="mobile-primary-nav" aria-expanded="false"><i class="fa-solid fa-bars icon-open" aria-hidden="true"></i><i class="fa-solid fa-xmark icon-close" aria-hidden="true"></i></button>
-            </div>
         </div>
-    </header>
+        <button id="mobile-menu-toggle" class="menu-toggle-btn" aria-label="Toggle navigation" aria-controls="mobile-primary-nav" aria-expanded="false"><i class="fa-solid fa-bars icon-open" aria-hidden="true"></i><i class="fa-solid fa-xmark icon-close" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </header>
   <!-- ========== / HEADER ========== -->
 
   <!-- ========== [2] MAIN ========== -->
@@ -2972,30 +2885,677 @@
     <!-- Page hero -->
     <section class="top-hero" role="region" aria-labelledby="hero-title">
       <div class="container">
-        <h1 id="hero-title" class="hero-title" data-aos="fade-down" data-aos-duration="900">Education and Future Pathways</h1>
+        <h1 id="hero-title" class="hero-title" data-aos="fade-down" data-aos-duration="900"><span class="hero-title-line">Clarity.</span> <span class="hero-title-line">Direction.</span> <span class="hero-title-line">Capability.</span> <span class="hero-title-line">Impact.</span></h1>
+        <p class="hero-subheadline" data-aos="fade-up" data-aos-duration="800" data-aos-delay="120">We support students, institutions, and organisations through integrated solutions across education pathways, student success, and workforce transformation.</p>
+        <div class="hero-cta-row" data-aos="fade-up" data-aos-duration="750" data-aos-delay="220">
+          <a class="hero-cta-btn" href="#contact">Request a call back</a>
+          <a class="hero-cta-btn is-secondary" href="#services-overview">Explore solutions</a>
+        </div>
       </div>
     </section>
 
-    <section id="services-hub" class="lifecycle-intro" aria-labelledby="services-hub-heading">
+    <section id="services-overview" class="lifecycle-intro" aria-labelledby="services-overview-heading">
       <div class="lifecycle-intro-inner">
         <div class="lifecycle-intro-content" data-aos="fade-up" data-aos-duration="850">
-          <div class="lifecycle-intro-grid lifecycle-intro-grid--hub">
-            <div class="lifecycle-intro-text" data-aos="fade-up" data-aos-duration="800" data-aos-delay="50">
-              <p class="lifecycle-intro-kicker">Choose a course area</p>
-              <h2 id="services-hub-heading">Education and Future Pathways</h2>
+          <div class="lifecycle-intro-grid">
+            <div class="lifecycle-intro-text" data-aos="fade-right" data-aos-duration="800" data-aos-delay="50">
+              <p class="lifecycle-intro-kicker">Integrated solutions</p>
+              <h2 id="services-overview-heading">One partner for <span class="lifecycle-intro-em">pathways, success, and transformation</span></h2>
               <span class="elementor-divider-separator lifecycle-intro-rule" aria-hidden="true"></span>
-              <p class="lifecycle-intro-lead">Our Education and Future Pathways services are designed to guide students, families, and sponsors through every stage of the academic journey—from early decision-making to successful graduation and beyond. We combine expert advisory, data-driven insights, and personalized support to help students make confident choices and achieve long-term success.</p>
+              <div class="svc-pillar-row" aria-hidden="true">
+                <span class="svc-pillar">Clarity</span>
+                <span class="svc-pillar">Direction</span>
+                <span class="svc-pillar">Capability</span>
+                <span class="svc-pillar">Impact</span>
+              </div>
+              <p class="lifecycle-intro-lead">From in-country academic advising and global study pathways to student wellbeing, talent exploration, and institutional partnerships — through to human capital, HR transformation, and future workforce design.</p>
             </div>
-            <div class="hub-card-actions" data-aos="fade-up" data-aos-duration="850" data-aos-delay="120">
-              <a class="hub-card-btn" href="index5.html#pathways">
-                <span class="hub-card-title">Student Pathways &amp; Academic Advisory</span>
-                <span class="hub-card-cta">See courses</span>
-              </a>
-              <a class="hub-card-btn" href="index7.html#lifecycle">
-                <span class="hub-card-title">UAE Student Lifecycle Management</span>
-                <span class="hub-card-cta">See courses</span>
-              </a>
+            <figure class="lifecycle-intro-visual" data-aos="fade-left" data-aos-duration="850" data-aos-delay="80">
+              <img src="assets/emirati_student_success.png" width="760" height="570" alt="Students and professionals supported through pathways and transformation programmes" loading="lazy" decoding="async" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="svc-tabs-wrap">
+      <input class="svc-tab-input" type="radio" name="svc_main_tab" id="svc-tab-edu" checked />
+      <input class="svc-tab-input" type="radio" name="svc_main_tab" id="svc-tab-hc" />
+      <div class="svc-tab-bar" role="tablist" aria-label="Solution areas" aria-orientation="horizontal">
+        <button class="svc-tab-btn is-active" type="button" role="tab" id="svc-tab-btn-edu" aria-selected="true" aria-controls="svc-panel-edu" data-target="svc-tab-edu" data-hash="#education">Education &amp; student solutions</button>
+        <button class="svc-tab-btn" type="button" role="tab" id="svc-tab-btn-hc" aria-selected="false" aria-controls="svc-panel-hc" data-target="svc-tab-hc" data-hash="#human-capital" tabindex="-1">Human capital &amp; transformation</button>
+      </div>
+
+      <div class="svc-panel-edu" id="svc-panel-edu" role="tabpanel" aria-labelledby="svc-tab-btn-edu">
+
+        <section id="pathways" class="slc-section" aria-labelledby="pathways-heading">
+          <div class="slc-head">
+            <div data-aos="fade-up" data-aos-duration="800">
+              <span class="slc-eyebrow">Student pathways</span>
+              <h2 class="slc-title" id="pathways-heading">Student Pathways &amp; <br /><span>Academic Advisory</span></h2>
             </div>
+            <p class="slc-sub" data-aos="fade-left" data-aos-duration="750" data-aos-delay="60">Structured guidance, global mobility, and admissions support — aligned to each learner&rsquo;s context and ambition.</p>
+          </div>
+          <div class="slc-grid-wrap">
+            <article class="slc-card slc-card--ai" data-aos="zoom-in-up" data-aos-duration="750">
+              <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Student working on a laptop representing digital learning and academic planning" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">01</div>
+                  <h3><i class="fas fa-school"></i> Academic Advising (In-Country)</h3>
+                  <p class="slc-lead">Structured guidance for students exploring their future direction.</p>
+                  <ul class="slc-bullets">
+                    <li>Subject and stream selection (school level)</li>
+                    <li>Interest, strengths, and aptitude assessments</li>
+                    <li>University pathway awareness (local and international)</li>
+                    <li>Parent advisory and engagement</li>
+                    <li>Registration and application readiness</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Guidance</span><span class="slc-chip">Planning</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--v slc-card--ai" data-aos="fade-up" data-aos-duration="750" data-aos-delay="100">
+              <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Keyboard and workspace suggesting AI-assisted study and online learning abroad" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">02</div>
+                  <h3><i class="fas fa-earth-americas"></i> Academic Advising (Students Studying Abroad)</h3>
+                  <p class="slc-lead">Ongoing, holistic support beyond admission.</p>
+                  <ul class="slc-bullets">
+                    <li>Pre-departure readiness (academic, cultural, practical)</li>
+                    <li>Wellbeing, counselling, and emotional support</li>
+                    <li>Culture shock adaptation and integration</li>
+                    <li>Time management and academic discipline</li>
+                    <li>Ongoing check-ins and progress monitoring</li>
+                    <li>Parent communication and reporting</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Wellbeing</span><span class="slc-chip">Continuity</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--o slc-card--ai" data-aos="fade-up" data-aos-duration="750" data-aos-delay="200">
+              <img src="https://selecttraining.ae/wp-content/uploads/2024/10/5.webp" alt="Global education pathways and international opportunities" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">03</div>
+                  <h3><i class="fas fa-globe"></i> Global Study Pathways</h3>
+                  <p class="slc-lead">End-to-end support for international education.</p>
+                  <ul class="slc-bullets">
+                    <li>Country and university selection</li>
+                    <li>Programme and course alignment</li>
+                    <li>Application planning and timelines</li>
+                    <li>Visa and documentation guidance</li>
+                    <li>Pre-departure onboarding programmes</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Global</span><span class="slc-chip">Mobility</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--c slc-card--ai" data-aos="flip-left" data-aos-duration="780">
+              <img src="https://selecttraining.ae/wp-content/uploads/2022/08/Begin-With-The-End-In-Mind-scaled.jpg" alt="Structured university admissions planning and application support" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">04</div>
+                  <h3><i class="fas fa-file-signature"></i> University Admissions Support</h3>
+                  <p class="slc-lead">Positioning students for strong, competitive applications.</p>
+                  <ul class="slc-bullets">
+                    <li>Personal statement development</li>
+                    <li>Application review and refinement</li>
+                    <li>Interview preparation</li>
+                    <li>Deadline management</li>
+                    <li>Offer evaluation and decision support</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Admissions</span><span class="slc-chip">Excellence</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="student-success" class="slc-section" aria-labelledby="success-heading">
+          <div class="slc-head">
+            <div data-aos="fade-up" data-aos-duration="800">
+              <span class="slc-eyebrow">Engagement &amp; outcomes</span>
+              <h2 class="slc-title" id="success-heading">Student Success, <span>Wellbeing &amp; Engagement</span></h2>
+            </div>
+            <p class="slc-sub" data-aos="fade-left" data-aos-duration="750" data-aos-delay="60">Targeted support, wellbeing programmes, and structured check-ins across the student journey.</p>
+          </div>
+          <div class="slc-grid-wrap">
+            <article class="slc-card slc-card--ai" data-aos="zoom-in-up" data-aos-duration="750">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Analytics dashboard representing student success monitoring and data-informed intervention" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">01</div>
+                  <h3><i class="fas fa-chart-line"></i> Student Success &amp; Intervention</h3>
+                  <p class="slc-lead">Targeted support to improve outcomes and retention.</p>
+                  <ul class="slc-bullets">
+                    <li>Academic performance monitoring</li>
+                    <li>Early identification of at-risk students</li>
+                    <li>Intervention and recovery plans</li>
+                    <li>Behavioural and academic counselling</li>
+                    <li>Retention strategies (universities and sponsors)</li>
+                    <li>Reintegration support</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Outcomes</span><span class="slc-chip">Retention</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--v slc-card--ai" data-aos="fade-up" data-aos-duration="750" data-aos-delay="100">
+              <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Futuristic interface suggesting technology-enabled wellbeing and support services" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">02</div>
+                  <h3><i class="fas fa-heart-pulse"></i> Student Wellbeing Programmes</h3>
+                  <p class="slc-lead">Continuous support for student stability and performance.</p>
+                  <ul class="slc-bullets">
+                    <li>Mental health and emotional wellbeing support</li>
+                    <li>Stress, anxiety, and transition management</li>
+                    <li>Crisis support and escalation frameworks</li>
+                    <li>Peer and community support models</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Wellbeing</span><span class="slc-chip">Support</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--s slc-card--ai" data-aos="fade-up" data-aos-duration="750" data-aos-delay="200">
+              <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Technology and innovation backdrop for structured check-ins and engagement" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">03</div>
+                  <h3><i class="fas fa-calendar-check"></i> Seasonal Check-ins &amp; Engagement</h3>
+                  <p class="slc-lead">Structured follow-up during key transition periods.</p>
+                  <ul class="slc-bullets">
+                    <li>Summer and winter check-ins for students abroad</li>
+                    <li>Academic progress reviews during breaks</li>
+                    <li>Re-alignment sessions before new terms</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Check-ins</span><span class="slc-chip">Transitions</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="talent" class="slc-section" aria-labelledby="talent-heading">
+          <div class="slc-head">
+            <div data-aos="fade-up" data-aos-duration="800">
+              <span class="slc-eyebrow">Future readiness</span>
+              <h2 class="slc-title" id="talent-heading">Talent Awareness &amp; <span>Career Exploration</span></h2>
+            </div>
+            <p class="slc-sub" data-aos="fade-left" data-aos-duration="750" data-aos-delay="60">Career discovery, awareness programmes, exploratory paths, and immersive camps.</p>
+          </div>
+          <div class="slc-grid-wrap">
+            <article class="slc-card slc-card--ai" data-aos="zoom-in-up" data-aos-duration="750">
+              <img src="https://selecttraining.ae/wp-content/uploads/2022/08/Begin-With-The-End-In-Mind-scaled.jpg" alt="Career guidance workshop supporting students and professionals" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">01</div>
+                  <h3><i class="fas fa-compass"></i> Career Discovery &amp; Planning</h3>
+                  <p class="slc-lead">Helping students and individuals make informed decisions.</p>
+                  <ul class="slc-bullets">
+                    <li>Career assessments and profiling</li>
+                    <li>Strengths and interest identification</li>
+                    <li>Career pathway exploration</li>
+                    <li>Action planning and goal setting</li>
+                    <li>One-to-one advisory sessions</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Discovery</span><span class="slc-chip">Planning</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--v slc-card--ai" data-aos="fade-up" data-aos-duration="750" data-aos-delay="100">
+              <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Team collaborating in a modern office with technology" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">02</div>
+                  <h3><i class="fas fa-bullhorn"></i> Talent Awareness Programmes</h3>
+                  <p class="slc-lead">Early exposure to opportunities and future pathways.</p>
+                  <ul class="slc-bullets">
+                    <li>Career awareness sessions (schools and universities)</li>
+                    <li>Future of work and sector exposure</li>
+                    <li>Parent awareness sessions</li>
+                    <li>Industry engagement programmes</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Awareness</span><span class="slc-chip">Exposure</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--o slc-card--ai" data-aos="fade-up" data-aos-duration="750" data-aos-delay="200">
+              <img src="https://selecttraining.ae/wp-content/uploads/2021/10/communication-skills.jpg" alt="Exploratory learning and pre-major skills discovery" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">03</div>
+                  <h3><i class="fas fa-flask"></i> Exploratory &amp; Pre-Major Programmes</h3>
+                  <p class="slc-lead">Supporting students who are undecided.</p>
+                  <ul class="slc-bullets">
+                    <li>&ldquo;Try-a-major&rdquo; bootcamps</li>
+                    <li>First-year university exploration programmes</li>
+                    <li>Skills discovery (STEM, business, creative)</li>
+                    <li>Industry exposure (corporates and academies)</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Exploration</span><span class="slc-chip">Skills</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--c slc-card--ai" data-aos="flip-left" data-aos-duration="780">
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Digital learning and laptop immersion representing summer and winter skills programmes" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">04</div>
+                  <h3><i class="fas fa-sun"></i> Summer &amp; Winter Programmes / Camps</h3>
+                  <p class="slc-lead">Immersive experiences for growth and self-discovery.</p>
+                  <ul class="slc-bullets">
+                    <li>Student summer programmes (schools and universities)</li>
+                    <li>University-based summer immersion programmes</li>
+                    <li>Winter camps and short-term intensives</li>
+                    <li>Self-awareness and personal development camps</li>
+                    <li>Passion discovery and career exploration</li>
+                    <li>Leadership, communication, and life skills</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Immersion</span><span class="slc-chip">Growth</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="institutions" class="slc-section" aria-labelledby="institutions-heading">
+          <div class="slc-head">
+            <div data-aos="fade-up" data-aos-duration="800">
+              <span class="slc-eyebrow">Partnerships</span>
+              <h2 class="slc-title" id="institutions-heading">University &amp; <span>Institutional Partnerships</span></h2>
+            </div>
+            <p class="slc-sub" data-aos="fade-left" data-aos-duration="750" data-aos-delay="60">Programme design, onboarding, and industry-connected pathways for institutions.</p>
+          </div>
+          <div class="slc-grid-wrap">
+            <article class="slc-card slc-card--ai" data-aos="zoom-in-up" data-aos-duration="750">
+              <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Digital data network representing programme design and market insight" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">01</div>
+                  <h3><i class="fas fa-building-columns"></i> University &amp; Programme Advisory</h3>
+                  <p class="slc-lead">Supporting institutions in attracting and retaining students.</p>
+                  <ul class="slc-bullets">
+                    <li>Programme design and positioning</li>
+                    <li>Student demand and market insights</li>
+                    <li>Curriculum relevance and alignment</li>
+                    <li>Enrollment and retention strategies</li>
+                    <li>Student experience enhancement</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Programmes</span><span class="slc-chip">Positioning</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--v slc-card--ai" data-aos="fade-up" data-aos-duration="750" data-aos-delay="100">
+              <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Modern digital workspace suggesting AI-enabled onboarding and academic readiness" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">02</div>
+                  <h3><i class="fas fa-door-open"></i> University Onboarding &amp; Transition</h3>
+                  <p class="slc-lead">Structured transition into higher education.</p>
+                  <ul class="slc-bullets">
+                    <li>First-year onboarding programmes</li>
+                    <li>Academic readiness frameworks</li>
+                    <li>Transition support (school to university)</li>
+                    <li>Orientation and integration design</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Onboarding</span><span class="slc-chip">Transition</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--s slc-card--ai" data-aos="fade-up" data-aos-duration="750" data-aos-delay="200">
+              <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Business handshake representing institutional and workforce partnerships" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">03</div>
+                  <h3><i class="fas fa-handshake"></i> Institutional &amp; Workforce Partnerships</h3>
+                  <p class="slc-lead">Connecting education to industry.</p>
+                  <ul class="slc-bullets">
+                    <li>Talent pipeline design</li>
+                    <li>Internship and placement pathways</li>
+                    <li>Scholarship programme advisory and management</li>
+                    <li>Partnerships with academies and training institutes</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Industry</span><span class="slc-chip">Pathways</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="wellbeing" class="slc-section" aria-labelledby="wellbeing-heading">
+          <div class="slc-head">
+            <div data-aos="fade-up" data-aos-duration="800">
+              <span class="slc-eyebrow">Cross-sector</span>
+              <h2 class="slc-title" id="wellbeing-heading">Wellbeing <span>Programmes</span></h2>
+            </div>
+            <p class="slc-sub" data-aos="fade-left" data-aos-duration="750" data-aos-delay="60">Workforce, industrial, and education-sector wellbeing — designed for stability, performance, and retention.</p>
+          </div>
+          <div class="slc-grid-wrap">
+            <article class="slc-card slc-card--ai" data-aos="zoom-in-up" data-aos-duration="750">
+              <img src="https://selecttraining.ae/wp-content/uploads/2021/10/communication-skills-package.jpg" alt="Workforce wellbeing support and resilience programmes" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">01</div>
+                  <h3><i class="fas fa-briefcase"></i> Workforce Wellbeing</h3>
+                  <ul class="slc-bullets">
+                    <li>Employee wellbeing programmes (corporate and government)</li>
+                    <li>Burnout prevention and resilience</li>
+                    <li>Mental health awareness and support</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Corporate</span><span class="slc-chip">Resilience</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--v slc-card--photo-real" data-aos="fade-up" data-aos-duration="750" data-aos-delay="100">
+              <img src="https://selecttraining.ae/wp-content/uploads/2022/10/sales-courses-in-dubai-scaled.jpg" alt="Blue-collar wellbeing support in an industrial workplace" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">02</div>
+                  <h3><i class="fas fa-hard-hat"></i> Blue-Collar Wellbeing</h3>
+                  <ul class="slc-bullets">
+                    <li>Industrial workforce wellbeing initiatives</li>
+                    <li>Physical and mental health programmes</li>
+                    <li>Engagement and retention support</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Industrial</span><span class="slc-chip">Safety</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--c slc-card--ai" data-aos="flip-left" data-aos-duration="780">
+              <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Futuristic digital learning environment for education-sector wellbeing and faculty support" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">03</div>
+                  <h3><i class="fas fa-chalkboard-user"></i> Education Sector Wellbeing</h3>
+                  <ul class="slc-bullets">
+                    <li>Teacher wellbeing programmes</li>
+                    <li>Academic advisor and counsellor support</li>
+                    <li>University faculty and professor wellbeing</li>
+                    <li>Institutional wellbeing strategies</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Education</span><span class="slc-chip">Faculty</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="certification" class="slc-section" aria-labelledby="cert-heading">
+          <div class="slc-head">
+            <div data-aos="fade-up" data-aos-duration="800">
+              <span class="slc-eyebrow">Credentials</span>
+              <h2 class="slc-title" id="cert-heading">Professional <span>Certification</span></h2>
+            </div>
+            <p class="slc-sub" data-aos="fade-left" data-aos-duration="750" data-aos-delay="60">Career coaching certification aligned to international standards.</p>
+          </div>
+          <div class="slc-grid-wrap">
+            <article class="slc-card slc-card--wide slc-card--ai" data-aos="fade-up" data-aos-duration="900">
+              <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="AI-era workspace and keyboard representing modern career coaching and digital credentials" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div class="slc-left">
+                  <div class="slc-num">01</div>
+                  <h3><i class="fas fa-certificate"></i> Career Coaching Certification</h3>
+                  <ul class="slc-bullets">
+                    <li>Coaching frameworks and methodologies</li>
+                    <li>Career assessment tools and techniques</li>
+                    <li>Goal setting and development planning</li>
+                    <li>Practical coaching simulations</li>
+                    <li>Certification aligned to international standards</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">ICF-ready</span><span class="slc-chip">Practical</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <div class="svc-panel-hc" id="svc-panel-hc" role="tabpanel" aria-labelledby="svc-tab-btn-hc">
+        <section id="human-capital" class="slc-section" aria-labelledby="hc-heading">
+          <div class="slc-head">
+            <div data-aos="fade-up" data-aos-duration="800">
+              <span class="slc-eyebrow">Organisations</span>
+              <h2 class="slc-title" id="hc-heading">Human Capital &amp; <br /><span>Organisational Transformation</span></h2>
+            </div>
+            <p class="slc-sub" data-aos="fade-left" data-aos-duration="750" data-aos-delay="60">Strategy, HR transformation, talent, culture, and change — including blue-collar workforce development and AI-enabled workforce solutions.</p>
+          </div>
+          <div class="slc-grid-wrap">
+            <article class="slc-card slc-card--ai" data-aos="zoom-in-up" data-aos-duration="750">
+              <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Leadership team planning organisational strategy with technology in the workplace" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">01</div>
+                  <h3><i class="fas fa-diagram-project"></i> Organisational Strategy &amp; Design</h3>
+                  <ul class="slc-bullets">
+                    <li>Organisational design and restructuring</li>
+                    <li>Operating model and shared services design</li>
+                    <li>Governance and decision-making frameworks</li>
+                    <li>Workforce planning and capability mapping</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Design</span><span class="slc-chip">Operating model</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--v slc-card--ai" data-aos="fade-up" data-aos-duration="750" data-aos-delay="100">
+              <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Abstract digital network and data visualization representing HR technology" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">02</div>
+                  <h3><i class="fas fa-gears"></i> HR Transformation &amp; Digitisation</h3>
+                  <ul class="slc-bullets">
+                    <li>End-to-end HR transformation</li>
+                    <li>HR operating model redesign (including business partner models)</li>
+                    <li>Digital HR systems and automation</li>
+                    <li>Process re-engineering</li>
+                    <li>AI-enabled HR solutions and analytics</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Digital HR</span><span class="slc-chip">Automation</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--o slc-card--ai" data-aos="fade-up" data-aos-duration="750" data-aos-delay="200">
+              <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Technology and innovation representing modern talent acquisition" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">03</div>
+                  <h3><i class="fas fa-user-plus"></i> Talent Acquisition &amp; Workforce Transformation</h3>
+                  <ul class="slc-bullets">
+                    <li>Strategic recruitment for critical roles</li>
+                    <li>Recruitment process transformation</li>
+                    <li>Employer branding and EVP</li>
+                    <li>Transformation of existing teams</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">EVP</span><span class="slc-chip">Recruitment</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--c slc-card--ai" data-aos="flip-left" data-aos-duration="780">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Data dashboards supporting talent management and succession planning" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">04</div>
+                  <h3><i class="fas fa-users-gear"></i> Talent Management &amp; Succession</h3>
+                  <ul class="slc-bullets">
+                    <li>Talent identification frameworks</li>
+                    <li>Succession planning (critical roles)</li>
+                    <li>Performance management systems</li>
+                    <li>High-potential and leadership programmes</li>
+                    <li>Career pathways</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Succession</span><span class="slc-chip">Leadership</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--s slc-card--ai" data-aos="fade-up" data-aos-duration="750" data-aos-delay="100">
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Digital learning and laptop-based corporate academy and coaching" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">05</div>
+                  <h3><i class="fas fa-graduation-cap"></i> Learning, Development &amp; Coaching</h3>
+                  <ul class="slc-bullets">
+                    <li>Learning and development strategies</li>
+                    <li>Leadership development programmes</li>
+                    <li>Coaching and mentoring</li>
+                    <li>Capability frameworks</li>
+                    <li>Corporate academy design</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">L&amp;D</span><span class="slc-chip">Academy</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--ai" data-aos="zoom-in-up" data-aos-duration="750" data-aos-delay="200">
+              <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Futuristic digital experience representing culture and employee experience innovation" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">06</div>
+                  <h3><i class="fas fa-heart"></i> Culture, Engagement &amp; Employee Experience</h3>
+                  <ul class="slc-bullets">
+                    <li>Culture transformation programmes</li>
+                    <li>Employee engagement strategies and surveys</li>
+                    <li>Values and behavioural frameworks</li>
+                    <li>Internal communication strategies</li>
+                    <li>Employee experience design</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Culture</span><span class="slc-chip">EX</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--v slc-card--ai" data-aos="fade-up" data-aos-duration="750">
+              <img src="https://selecttraining.ae/wp-content/uploads/2022/10/leader-e1665416491999.jpg" alt="Leadership team driving change management and transformation delivery" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">07</div>
+                  <h3><i class="fas fa-arrows-spin"></i> Change Management &amp; Transformation Delivery</h3>
+                  <ul class="slc-bullets">
+                    <li>Change management frameworks</li>
+                    <li>Transformation roadmap design</li>
+                    <li>Stakeholder alignment and communication</li>
+                    <li>Programme governance and execution</li>
+                    <li>Adoption and impact tracking</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Change</span><span class="slc-chip">Governance</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--o slc-card--photo-real" data-aos="fade-up" data-aos-duration="750" data-aos-delay="100">
+              <img src="https://selecttraining.ae/wp-content/uploads/2022/10/sales-courses-in-dubai-scaled.jpg" alt="Blue-collar workforce development and frontline training" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">08</div>
+                  <h3><i class="fas fa-helmet-safety"></i> Blue-Collar Workforce Development</h3>
+                  <ul class="slc-bullets">
+                    <li>Blue-collar capability development programmes</li>
+                    <li>Frontline leadership and supervisor training</li>
+                    <li>Workforce productivity improvement</li>
+                    <li>Career progression pathways</li>
+                    <li>Wellbeing programmes for industrial workforce</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Frontline</span><span class="slc-chip">Industrial</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--c slc-card--ai" data-aos="flip-left" data-aos-duration="780">
+              <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Leadership and HR teams aligning strategy with technology-enabled business partnering" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">09</div>
+                  <h3><i class="fas fa-handshake"></i> Business Partnering Models</h3>
+                  <ul class="slc-bullets">
+                    <li>HR Business Partner model design and implementation</li>
+                    <li>Capability building for HRBPs</li>
+                    <li>Alignment between HR and business strategy</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">HRBP</span><span class="slc-chip">Alignment</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--wide slc-card--ai" data-aos="fade-up" data-aos-duration="900">
+              <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Hands interacting with a glowing AI interface and holographic data" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div class="slc-left">
+                  <div class="slc-num">10</div>
+                  <h3><i class="fas fa-robot"></i> AI &amp; Future Workforce Solutions</h3>
+                  <ul class="slc-bullets">
+                    <li>AI-driven workforce planning</li>
+                    <li>AI agents for HR operations and employee services</li>
+                    <li>Skills intelligence and future skills mapping</li>
+                    <li>Data-driven HR dashboards and insights</li>
+                    <li>Digital employee experience platforms</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">AI</span><span class="slc-chip">Future skills</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <section id="how-we-work" class="svc-band svc-band--soft" aria-labelledby="how-heading">
+      <div class="svc-band-inner">
+        <span class="svc-section-kicker">Our method</span>
+        <h2 class="svc-section-title svc-section-title--center" id="how-heading">How We Work</h2>
+        <p class="svc-lead">A clear sequence from discovery to delivery — so outcomes stay measurable and aligned.</p>
+        <div class="svc-steps">
+          <div class="svc-step svc-step--1" data-aos="fade-up" data-aos-duration="650">
+            <div class="svc-step__visual" aria-hidden="true"><div class="svc-card-media-overlay"></div></div>
+            <div class="svc-step__body"><strong>Understand</strong><p>Assess goals, needs, and context.</p></div>
+          </div>
+          <div class="svc-step svc-step--2" data-aos="fade-up" data-aos-duration="650" data-aos-delay="60">
+            <div class="svc-step__visual" aria-hidden="true"><div class="svc-card-media-overlay"></div></div>
+            <div class="svc-step__body"><strong>Align</strong><p>Map suitable pathways and solutions.</p></div>
+          </div>
+          <div class="svc-step svc-step--3" data-aos="fade-up" data-aos-duration="650" data-aos-delay="120">
+            <div class="svc-step__visual" aria-hidden="true"><div class="svc-card-media-overlay"></div></div>
+            <div class="svc-step__body"><strong>Plan</strong><p>Build structured, actionable roadmaps.</p></div>
+          </div>
+          <div class="svc-step svc-step--4" data-aos="fade-up" data-aos-duration="650" data-aos-delay="180">
+            <div class="svc-step__visual" aria-hidden="true"><div class="svc-card-media-overlay"></div></div>
+            <div class="svc-step__body"><strong>Deliver</strong><p>Support execution and measurable outcomes.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="journey" class="svc-band" aria-labelledby="journey-heading">
+      <div class="svc-band-inner">
+        <div class="svc-journey" data-aos="zoom-in" data-aos-duration="750">
+          <h2 id="journey-heading">Start Your Journey</h2>
+          <p>Whether supporting students, strengthening institutions, or transforming organisations, we provide the structure, expertise, and partnership to deliver meaningful outcomes.</p>
+          <p>Speak to our team to explore how we can support your goals.</p>
+          <div class="hero-cta-row">
+            <a class="hero-cta-btn" href="#contact">Speak to our team</a>
+            <a class="hero-cta-btn is-secondary" href="https://selecttraining.ae/contact/">Contact Select Training</a>
           </div>
         </div>
       </div>
@@ -3018,7 +3578,7 @@
             <form class="elementor-form" id="request-callback-form" method="post" name="RequestCallBack" aria-label="RequestCallBack" novalidate>
               <input type="hidden" name="post_id" value="16695" />
               <input type="hidden" name="form_id" value="66cd2a0" />
-              <input type="hidden" name="referer_title" value="UAE Student Lifecycle Management - Select Training" />
+              <input type="hidden" name="referer_title" value="Integrated Education &amp; Workforce Solutions - Select Training" />
               <input type="hidden" name="queried_id" value="33263" />
               <div class="elementor-form-fields-wrapper elementor-labels-above">
                 <input id="form-field-name" class="elementor-field elementor-size-sm elementor-field-textual" type="text" name="form_fields[name]" placeholder="First Name" required autocomplete="given-name" />
@@ -3464,8 +4024,8 @@
         </div>
       </div>
       <div class="footer-copy">© 2026 Select Training and Management Consultancy LLC Tax Registration Number: 100003031000003</div>
-        </div>
-    </footer>
+    </div>
+  </footer>
   <!-- ========== / FOOTER ========== -->
 
   <!-- ========== [4] Floating UI (not part of main/footer landmarks) ========== -->
@@ -3501,6 +4061,89 @@
           },
           { once: true }
         );
+        (function initSvcTabs() {
+          var edu = document.getElementById("svc-tab-edu");
+          var hc = document.getElementById("svc-tab-hc");
+          var tabButtons = Array.prototype.slice.call(document.querySelectorAll(".svc-tab-btn"));
+          if (!edu || !hc || !tabButtons.length) return;
+          var inputs = {
+            "svc-tab-edu": edu,
+            "svc-tab-hc": hc
+          };
+          function syncTabs() {
+            tabButtons.forEach(function (btn) {
+              var input = inputs[btn.getAttribute("data-target")];
+              var isActive = !!(input && input.checked);
+              btn.classList.toggle("is-active", isActive);
+              btn.setAttribute("aria-selected", isActive ? "true" : "false");
+              btn.tabIndex = isActive ? 0 : -1;
+            });
+          }
+          function setHashForTarget(targetId) {
+            var activeBtn = tabButtons.find(function (btn) {
+              return btn.getAttribute("data-target") === targetId;
+            });
+            if (!activeBtn) return;
+            var hash = activeBtn.getAttribute("data-hash");
+            if (!hash || window.location.hash === hash) return;
+            if (history && typeof history.replaceState === "function") {
+              history.replaceState(null, "", hash);
+            }
+          }
+          function activateTab(targetId) {
+            var input = inputs[targetId];
+            if (!input) return;
+            if (!input.checked) {
+              input.checked = true;
+              input.dispatchEvent(new Event("change", { bubbles: true }));
+              setHashForTarget(targetId);
+            } else {
+              syncTabs();
+              setHashForTarget(targetId);
+            }
+          }
+          tabButtons.forEach(function (btn, index) {
+            function setPressed(pressed) {
+              btn.classList.toggle("is-pressed", pressed);
+            }
+            btn.addEventListener("click", function () {
+              activateTab(btn.getAttribute("data-target"));
+            });
+            btn.addEventListener("keydown", function (event) {
+              if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                activateTab(btn.getAttribute("data-target"));
+                return;
+              }
+              if (!["ArrowRight", "ArrowLeft", "ArrowDown", "ArrowUp", "Home", "End"].includes(event.key)) return;
+              event.preventDefault();
+              var nextIndex = index;
+              if (event.key === "ArrowRight" || event.key === "ArrowDown") nextIndex = (index + 1) % tabButtons.length;
+              else if (event.key === "ArrowLeft" || event.key === "ArrowUp") nextIndex = (index - 1 + tabButtons.length) % tabButtons.length;
+              else if (event.key === "Home") nextIndex = 0;
+              else if (event.key === "End") nextIndex = tabButtons.length - 1;
+              var nextBtn = tabButtons[nextIndex];
+              if (!nextBtn) return;
+              nextBtn.focus();
+              activateTab(nextBtn.getAttribute("data-target"));
+            });
+            btn.addEventListener("mousedown", function () { setPressed(true); });
+            btn.addEventListener("mouseup", function () { setPressed(false); });
+            btn.addEventListener("mouseleave", function () { setPressed(false); });
+            btn.addEventListener("blur", function () { setPressed(false); });
+            btn.addEventListener("touchstart", function () { setPressed(true); }, { passive: true });
+            btn.addEventListener("touchend", function () { setPressed(false); }, { passive: true });
+            btn.addEventListener("touchcancel", function () { setPressed(false); }, { passive: true });
+          });
+          if (window.location.hash === "#human-capital" || window.location.hash === "#hc") {
+            activateTab("svc-tab-hc");
+          } else if (window.location.hash === "#education" || window.location.hash === "#edu") {
+            activateTab("svc-tab-edu");
+          }
+          edu.addEventListener("change", syncTabs);
+          hc.addEventListener("change", syncTabs);
+          syncTabs();
+        })();
         /* Tab panels use display:none; AOS must refresh when a panel becomes visible or content stays invisible */
         (function initSvcTabAOSRefresh() {
           var edu = document.getElementById("svc-tab-edu");
