@@ -2308,7 +2308,9 @@
       @apply [flex-wrap:wrap];
       @apply [gap:10px];
       @apply [justify-content:center];
-      @apply [margin-bottom:clamp(24px,_4vw,_36px)];
+      @apply [margin-bottom:-2px];
+      @apply [position:relative];
+      @apply [z-index:3];
     }
     .svc-tab-btn {
       @apply [position:relative];
@@ -2333,8 +2335,9 @@
       @apply [appearance:none];
       @apply [user-select:none];
       @apply [-webkit-tap-highlight-color:transparent];
-      @apply [box-shadow:0_2px_8px_rgba(11,_54,_93,_0.06),_inset_0_1px_0_rgba(255,_255,_255,_0.8)];
-      @apply [transition:border-color_0.2s_ease,_color_0.2s_ease,_background-color_0.2s_ease,_box-shadow_0.2s_ease,_transform_0.15s_ease];
+      @apply [opacity:0.88];
+      @apply [box-shadow:0_5px_14px_rgba(11,_54,_93,_0.1),_inset_0_1px_0_rgba(255,_255,_255,_0.75)];
+      @apply [transition:border-color_0.22s_ease,_color_0.22s_ease,_background-color_0.22s_ease,_box-shadow_0.22s_ease,_transform_0.16s_cubic-bezier(0.22,_1,_0.36,_1),_filter_0.22s_ease];
     }
     .svc-tab-btn::before {
       @apply [content:""];
@@ -2342,22 +2345,32 @@
       @apply [inset:0];
       @apply [border-radius:inherit];
       @apply [background:linear-gradient(180deg,_rgba(255,_255,_255,_0.58),_rgba(255,_255,_255,_0))];
-      @apply [opacity:0.9];
+      @apply [opacity:0.86];
       @apply [pointer-events:none];
       @apply [z-index:-1];
+      @apply [transition:opacity_0.22s_ease];
     }
     .svc-tab-btn:hover {
       @apply [border-color:rgba(0,_150,_143,_0.45)];
       @apply [color:var(--brand-primary)];
-      @apply [transform:translateY(-1px)];
-      @apply [box-shadow:0_8px_20px_rgba(11,_54,_93,_0.1),_inset_0_1px_0_rgba(255,_255,_255,_0.9)];
+      @apply [transform:translateY(-2px)];
+      @apply [box-shadow:0_14px_30px_rgba(11,_54,_93,_0.18),_inset_0_1px_0_rgba(255,_255,_255,_0.94)];
+      @apply [filter:brightness(1.02)];
+    }
+    .svc-tab-btn:hover::before {
+      @apply [opacity:0.95];
     }
     .svc-tab-btn:active {
-      @apply [transform:translateY(1px)];
+      @apply [transform:translateY(2px)_scale(0.994)];
+      @apply [box-shadow:0_2px_8px_rgba(11,_54,_93,_0.18),_inset_0_2px_3px_rgba(0,_0,_0,_0.1)];
     }
-    .svc-tab-btn.is-pressed {
-      @apply [transform:translateY(1px)_scale(0.997)];
-      @apply [box-shadow:0_3px_10px_rgba(11,_54,_93,_0.1),_inset_0_1px_0_rgba(255,_255,_255,_0.5)];
+    .svc-tab-btn.is-pressed,
+    .svc-tab-btn.is-active.is-pressed,
+    .svc-tab-btn[data-variant="edu"].is-pressed,
+    .svc-tab-btn[data-variant="hc"].is-pressed {
+      @apply [transform:translateY(2px)_scale(0.994)];
+      @apply [box-shadow:0_2px_8px_rgba(11,_54,_93,_0.18),_inset_0_2px_3px_rgba(0,_0,_0,_0.1)];
+      @apply [filter:brightness(0.97)_saturate(0.96)];
     }
     .svc-tab-btn:focus-visible {
       @apply [outline:3px_solid_rgba(0,_150,_143,_0.3)];
@@ -2367,12 +2380,63 @@
       @apply [border-color:var(--brand-primary)];
       @apply [color:var(--brand-primary)];
       @apply [background:rgba(0,_150,_143,_0.07)];
-      @apply [box-shadow:0_6px_20px_rgba(0,_150,_143,_0.12)];
+      @apply [opacity:1];
+      @apply [box-shadow:0_10px_24px_rgba(0,_150,_143,_0.2),_inset_0_1px_0_rgba(255,_255,_255,_0.7)];
       @apply [cursor:default];
+      @apply [transform:translateY(2px)];
+    }
+    .svc-tab-btn.is-active::after {
+      @apply [content:""];
+      @apply [position:absolute];
+      @apply [left:14px];
+      @apply [right:14px];
+      @apply [bottom:-10px];
+      @apply [height:12px];
+      @apply [background:#ffffff];
+      @apply [pointer-events:none];
+      @apply [z-index:2];
     }
     .svc-tab-btn.is-active:hover {
-      @apply [transform:none];
-      @apply [box-shadow:0_6px_20px_rgba(0,_150,_143,_0.12)];
+      @apply [transform:translateY(2px)];
+      @apply [box-shadow:0_12px_28px_rgba(0,_150,_143,_0.22)];
+    }
+    .svc-tab-btn[data-variant="edu"] {
+      @apply [border-color:rgba(0,_150,_143,_0.38)];
+      @apply [color:#0a6f6a];
+      @apply [background:linear-gradient(180deg,_#e8faf8_0%,_#d8f3f0_100%)];
+      @apply [text-shadow:none];
+    }
+    .svc-tab-btn[data-variant="edu"]:hover {
+      @apply [border-color:var(--brand-primary-dark)];
+      @apply [color:#ffffff];
+      @apply [background:var(--brand-primary-dark)];
+    }
+    .svc-tab-btn[data-variant="edu"].is-active {
+      @apply [border-color:var(--brand-primary-dark)];
+      @apply [color:#ffffff];
+      @apply [background:var(--brand-primary-dark)];
+      @apply [opacity:1];
+      @apply [box-shadow:0_10px_24px_rgba(0,_150,_143,_0.24),_inset_0_2px_4px_rgba(0,_0,_0,_0.14)];
+      @apply [transform:translateY(2px)];
+    }
+    .svc-tab-btn[data-variant="hc"] {
+      @apply [border-color:rgba(0,_48,_87,_0.34)];
+      @apply [color:#1d3c5b];
+      @apply [background:linear-gradient(180deg,_#edf2f8_0%,_#dfe8f2_100%)];
+      @apply [text-shadow:none];
+    }
+    .svc-tab-btn[data-variant="hc"]:hover {
+      @apply [border-color:#0e4474];
+      @apply [color:#ffffff];
+      @apply [background:#0e4474];
+    }
+    .svc-tab-btn[data-variant="hc"].is-active {
+      @apply [border-color:#0a2f50];
+      @apply [color:#ffffff];
+      @apply [background:#0a2f50];
+      @apply [opacity:1];
+      @apply [box-shadow:0_10px_24px_rgba(11,_54,_93,_0.28),_inset_0_2px_4px_rgba(0,_0,_0,_0.15)];
+      @apply [transform:translateY(2px)];
     }
     .svc-tab-btn[disabled],
     .svc-tab-btn[aria-disabled="true"] {
@@ -2383,10 +2447,32 @@
     .svc-panel-edu,
     .svc-panel-hc {
       @apply [display:none];
+      @apply [position:relative];
+      @apply [margin-top:0];
+      @apply [background:#ffffff];
+      @apply [border-radius:20px];
+      @apply [overflow:hidden];
     }
     #svc-tab-edu:checked ~ .svc-panel-edu,
     #svc-tab-hc:checked ~ .svc-panel-hc {
       @apply [display:block];
+    }
+    @media (max-width: 767px) {
+      .svc-tab-bar {
+        @apply [margin-bottom:8px];
+      }
+      .svc-tab-btn.is-active,
+      .svc-tab-btn[data-variant="edu"].is-active,
+      .svc-tab-btn[data-variant="hc"].is-active {
+        @apply [transform:none];
+      }
+      .svc-tab-btn.is-active::after {
+        @apply [content:none];
+      }
+      .svc-panel-edu,
+      .svc-panel-hc {
+        @apply [border-radius:16px];
+      }
     }
     .svc-band {
       @apply [padding:clamp(44px,_7vw,_64px)_0];
@@ -2924,8 +3010,8 @@
       <input class="svc-tab-input" type="radio" name="svc_main_tab" id="svc-tab-edu" checked />
       <input class="svc-tab-input" type="radio" name="svc_main_tab" id="svc-tab-hc" />
       <div class="svc-tab-bar" role="tablist" aria-label="Solution areas" aria-orientation="horizontal">
-        <button class="svc-tab-btn is-active" type="button" role="tab" id="svc-tab-btn-edu" aria-selected="true" aria-controls="svc-panel-edu" data-target="svc-tab-edu" data-hash="#education">Education &amp; student solutions</button>
-        <button class="svc-tab-btn" type="button" role="tab" id="svc-tab-btn-hc" aria-selected="false" aria-controls="svc-panel-hc" data-target="svc-tab-hc" data-hash="#human-capital" tabindex="-1">Human capital &amp; transformation</button>
+        <button class="svc-tab-btn is-active" data-variant="edu" type="button" role="tab" id="svc-tab-btn-edu" aria-selected="true" aria-controls="svc-panel-edu" data-target="svc-tab-edu" data-hash="#education">Education &amp; student solutions</button>
+        <button class="svc-tab-btn" data-variant="hc" type="button" role="tab" id="svc-tab-btn-hc" aria-selected="false" aria-controls="svc-panel-hc" data-target="svc-tab-hc" data-hash="#human-capital" tabindex="-1">Human capital &amp; transformation</button>
       </div>
 
       <div class="svc-panel-edu" id="svc-panel-edu" role="tabpanel" aria-labelledby="svc-tab-btn-edu">
@@ -4113,6 +4199,9 @@
             });
             btn.addEventListener("keydown", function (event) {
               if (event.key === "Enter" || event.key === " ") {
+                setPressed(true);
+              }
+              if (event.key === "Enter" || event.key === " ") {
                 event.preventDefault();
                 activateTab(btn.getAttribute("data-target"));
                 return;
@@ -4131,6 +4220,7 @@
             });
             btn.addEventListener("mousedown", function () { setPressed(true); });
             btn.addEventListener("mouseup", function () { setPressed(false); });
+            btn.addEventListener("keyup", function () { setPressed(false); });
             btn.addEventListener("mouseleave", function () { setPressed(false); });
             btn.addEventListener("blur", function () { setPressed(false); });
             btn.addEventListener("touchstart", function () { setPressed(true); }, { passive: true });
