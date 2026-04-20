@@ -1,0 +1,4351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Clarity, direction, capability, and impact — integrated solutions across education pathways, student success, workforce transformation, and organisational change." />
+  <title>Integrated Education &amp; Workforce Solutions · Select Training</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <link rel="dns-prefetch" href="https://cdn.trustindex.io" />
+  <style>
+    :root {
+      --brand-primary: #00968f;
+      --brand-primary-dark: #008680;
+      --brand-navy: #0b365d;
+      --brand-yellow: #ffcd00;
+      --text-main: #123e63;
+      --text-muted: #74859b;
+      --line: #d9dee4;
+      --bg-soft: #f3f4f6;
+      --container: 1140px;
+      --header-overlap: 72px;
+      /* Same green screen as .top-hero banner */
+      --hero-green-overlay: rgba(0, 150, 143, 0.84);
+      /* Service cards: teal + navy gradient (matches strips / brand) */
+      --slc-overlay-gradient: linear-gradient(
+        138deg,
+        rgba(11, 54, 93, 0.9) 0%,
+        rgba(0, 150, 143, 0.76) 42%,
+        rgba(0, 72, 88, 0.92) 100%
+      );
+      --slc-overlay-vignette: linear-gradient(
+        180deg,
+        rgba(0, 24, 48, 0.35) 0%,
+        transparent 38%,
+        rgba(0, 48, 87, 0.55) 100%
+      );
+    }
+    * { box-sizing: border-box; }
+    html {
+      /* clip avoids horizontal scroll without breaking position:sticky like overflow-x:hidden often does */
+      overflow-x: clip;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+    html, body { margin: 0; padding: 0; font-family: "Mulish", Arial, Helvetica, sans-serif; color: var(--text-main); background: #ffffff; }
+    body { overflow-x: visible; }
+    #main-content {
+      overflow-x: clip;
+      min-width: 0;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container {
+      width: min(var(--container), calc(100% - clamp(20px, 4vw, 40px)));
+      margin: 0 auto;
+      padding-left: env(safe-area-inset-left, 0);
+      padding-right: env(safe-area-inset-right, 0);
+    }
+    .hero-nav-sticky {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      margin-bottom: calc(-1 * var(--header-overlap));
+      background: transparent;
+      border-bottom: 1px solid transparent;
+      box-shadow: none;
+      transition: background-color 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+    }
+    .hero-nav-sticky.is-scrolled {
+      background: #ffffff;
+      border-bottom-color: #e5e8ec;
+      box-shadow: 0 2px 14px rgba(0, 0, 0, 0.08);
+    }
+    .hero-nav-sticky:not(.is-scrolled) .hero-links > a,
+    .hero-nav-sticky:not(.is-scrolled) .menu-item > a {
+      color: #ffffff;
+      transition: color 0.2s ease, opacity 0.2s ease;
+    }
+    .hero-nav-sticky:not(.is-scrolled) .menu-item i {
+      color: #ffffff;
+      opacity: 0.9;
+    }
+    .hero-nav-sticky:not(.is-scrolled) .hero-actions a {
+      color: #ffffff;
+      transition: color 0.2s ease, opacity 0.2s ease;
+    }
+    .hero-nav-sticky:not(.is-scrolled) .hero-links > a:hover,
+    .hero-nav-sticky:not(.is-scrolled) .menu-item > a:hover {
+      color: #ffffff;
+      opacity: 0.88;
+    }
+    .hero-nav-sticky:not(.is-scrolled) .hero-actions a:hover {
+      color: var(--brand-yellow);
+      opacity: 1;
+    }
+    .hero-nav-sticky.is-scrolled .hero-links > a,
+    .hero-nav-sticky.is-scrolled .menu-item > a {
+      color: #111111;
+      transition: color 0.2s ease;
+    }
+    .hero-nav-sticky.is-scrolled .menu-item i {
+      color: #111111;
+      opacity: 0.75;
+    }
+    .hero-nav-sticky.is-scrolled .hero-actions a {
+      color: #111111;
+      transition: color 0.2s ease;
+    }
+    .hero-nav-sticky.is-scrolled .hero-links > a:hover,
+    .hero-nav-sticky.is-scrolled .menu-item > a:hover {
+      color: var(--brand-primary);
+      opacity: 1;
+    }
+    .hero-nav-sticky.is-scrolled .hero-actions a:hover {
+      color: var(--brand-primary);
+      opacity: 1;
+    }
+    .top-hero {
+      position: relative;
+      z-index: 0;
+      margin-top: calc(-1 * var(--header-overlap));
+      padding-top: var(--header-overlap);
+      min-height: 300px;
+      color: #ffffff;
+      background: linear-gradient(140deg, var(--hero-green-overlay), var(--hero-green-overlay)), url("https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=2400&q=80") center/cover;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+    }
+    .hero-nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 400; }
+    .hero-nav-left { display: flex; align-items: center; gap: 8px; }
+    .hero-nav-left a.hero-logo-link {
+      display: inline-flex;
+      align-items: center;
+      line-height: 0;
+      text-decoration: none;
+    }
+    .hero-nav-left a.hero-logo-link:focus-visible {
+      outline: 2px solid var(--brand-yellow);
+      outline-offset: 4px;
+      border-radius: 2px;
+    }
+    .hero-nav-left img {
+      height: 40px;
+      width: auto;
+      display: block;
+      transition: filter 0.28s ease;
+    }
+    .hero-nav-sticky:not(.is-scrolled) .hero-nav-left img {
+      filter: brightness(0) invert(1);
+    }
+    .hero-nav-sticky.is-scrolled .hero-nav-left img {
+      filter: none;
+    }
+    .hero-links { display: flex; align-items: center; gap: 28px; opacity: 0.98; font-size: 11px; font-weight: 400; }
+    .hero-links > a { position: relative; padding-bottom: 8px; font-weight: 400; }
+    .menu-item > a {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding-bottom: 8px;
+      font-weight: 400;
+    }
+    .hero-links > a:hover,
+    .menu-item > a:hover { opacity: 0.95; }
+    .active-link::after {
+      display: none;
+    }
+    .hero-actions { display: flex; align-items: center; gap: 12px; }
+    .hero-actions a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      font-size: 14px;
+      opacity: 0.95;
+    }
+    .menu-toggle-btn {
+      display: none;
+      border: 0;
+      background: transparent;
+      color: inherit;
+      width: 40px;
+      height: 40px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 18px;
+      margin-left: auto;
+    }
+    .menu-toggle-btn:focus-visible {
+      outline: 2px solid var(--brand-yellow);
+      outline-offset: 2px;
+    }
+    .menu-toggle-btn .icon-close { display: none; }
+    .hero-nav-sticky.mobile-menu-open .menu-toggle-btn .icon-open { display: none; }
+    .hero-nav-sticky.mobile-menu-open .menu-toggle-btn .icon-close { display: inline-block; }
+    .menu-item { position: relative; display: inline-flex; align-items: center; }
+    .menu-item > a i {
+      flex-shrink: 0;
+      font-size: 10px;
+      opacity: 0.95;
+      margin-top: 1px;
+    }
+    .hero-links .lang-link {
+      gap: 6px;
+      align-items: center;
+    }
+    .hero-links .lang-link img {
+      width: 18px;
+      height: 12px;
+      object-fit: cover;
+      display: inline-block;
+    }
+    .dropdown {
+      position: absolute;
+      top: calc(100% + 14px);
+      left: 50%;
+      min-width: 200px;
+      padding: 0;
+      background: #ffffff;
+      color: #0b1628;
+      border: none;
+      border-top: 3px solid var(--brand-yellow);
+      border-radius: 0;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18), 0 4px 12px rgba(0, 0, 0, 0.08);
+      opacity: 0;
+      visibility: hidden;
+      transform: translate(-50%, 10px);
+      transition: opacity 0.22s ease, visibility 0.22s ease, transform 0.22s ease;
+      z-index: 1010;
+      overflow: hidden;
+      text-transform: none;
+      letter-spacing: 0.02em;
+      font-size: 13px;
+      font-weight: 400;
+    }
+    .dropdown a {
+      display: block;
+      padding: 18px 28px;
+      text-align: center;
+      color: #0b1628;
+      font-weight: 400;
+    }
+    .dropdown a:hover {
+      background: #f4f7fa;
+      color: #0b1628;
+    }
+    .menu-item:hover .dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(-50%, 0);
+    }
+    .top-hero .container {
+      padding: clamp(40px, 8vw, 52px) 0 clamp(48px, 9vw, 64px);
+      padding-left: max(0px, env(safe-area-inset-left, 0));
+      padding-right: max(0px, env(safe-area-inset-right, 0));
+    }
+    .hero-title {
+      margin: 0;
+      font-size: clamp(1.65rem, 2.8vw + 1rem, 3.25rem);
+      line-height: 1.06;
+      font-weight: 800;
+      max-width: min(900px, 100%);
+      text-wrap: balance;
+    }
+    .hero-subheadline {
+      margin: clamp(14px, 2.5vw, 18px) 0 0;
+      max-width: 52rem;
+      font-size: clamp(0.95rem, 0.55vw + 0.82rem, 1.25rem);
+      line-height: 1.62;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.94);
+    }
+    .hero-cta-row {
+      margin-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    .hero-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 190px;
+      padding: 14px 22px;
+      border: 2px solid #ffcc02;
+      color: #003057;
+      background: #ffcc02;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .hero-cta-btn:hover {
+      transform: translateY(-1px);
+    }
+    .hero-cta-btn.is-secondary {
+      color: #ffffff;
+      background: transparent;
+      border-color: rgba(255, 255, 255, 0.8);
+    }
+    .hero-cta-btn.is-secondary:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+    .lifecycle-intro {
+      position: relative;
+      padding: 88px 0 72px;
+      overflow: hidden;
+      background: linear-gradient(165deg, #f5faf9 0%, #ffffff 42%, #f0f7f6 100%);
+    }
+    .lifecycle-intro::before {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      right: -120px;
+      top: -100px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0, 150, 143, 0.09) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .lifecycle-intro::after {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      left: -80px;
+      bottom: -60px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 205, 0, 0.08) 0%, transparent 68%);
+      pointer-events: none;
+    }
+    .lifecycle-intro-inner {
+      position: relative;
+      z-index: 1;
+      width: min(1140px, calc(100% - clamp(20px, 4vw, 40px)));
+      margin: 0 auto;
+    }
+    .lifecycle-intro-content {
+      padding: clamp(28px, 4vw, 48px) clamp(24px, 4vw, 52px);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(0, 150, 143, 0.14);
+      box-shadow:
+        0 4px 6px rgba(0, 48, 87, 0.04),
+        0 22px 50px rgba(0, 48, 87, 0.07);
+    }
+    .lifecycle-intro-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(240px, 380px);
+      gap: clamp(28px, 4vw, 48px);
+      align-items: center;
+    }
+    .lifecycle-intro-visual {
+      position: relative;
+      margin: 0;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow:
+        0 12px 28px rgba(0, 48, 87, 0.12),
+        0 0 0 1px rgba(0, 150, 143, 0.12);
+      aspect-ratio: 4 / 3;
+      background: linear-gradient(145deg, rgba(0, 150, 143, 0.08), rgba(0, 48, 87, 0.06));
+    }
+    .lifecycle-intro-visual img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+    .lifecycle-intro-content:hover .lifecycle-intro-visual img {
+      transform: scale(1.03);
+    }
+    .lifecycle-intro-visual::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 55%, rgba(0, 48, 87, 0.12) 100%);
+      pointer-events: none;
+    }
+    .lifecycle-intro-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 16px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--brand-primary);
+    }
+    .lifecycle-intro-kicker::before {
+      content: "";
+      width: 32px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--brand-primary), rgba(0, 150, 143, 0.35));
+      border-radius: 2px;
+    }
+    .lifecycle-intro h2 {
+      margin: 0 0 14px;
+      color: #003057;
+      font-size: clamp(30px, 4.2vw, 48px);
+      line-height: 1.12;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .lifecycle-intro h2 .lifecycle-intro-em {
+      color: var(--brand-primary);
+      font-weight: 800;
+    }
+    .lifecycle-intro .lifecycle-intro-rule {
+      display: block;
+      width: 100%;
+      max-width: 220px;
+      margin: 0 0 26px;
+      padding: 0;
+      border: 0;
+      border-top: 4px solid var(--brand-yellow);
+      height: 0;
+      box-sizing: border-box;
+    }
+    .lifecycle-intro-lead {
+      margin: 0;
+      max-width: 52em;
+      color: #4a5568;
+      font-size: clamp(17px, 1.9vw, 19px);
+      line-height: 1.82;
+      font-weight: 400;
+    }
+    @media (max-width: 900px) {
+      .lifecycle-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .lifecycle-intro-visual {
+        order: -1;
+        max-width: 520px;
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+    /* Teal band: Request a call back + Hear from delegates (screenshot match) */
+    .contact-section.contact-delegates-section {
+      background: #00968f;
+      padding: clamp(48px, 9vw, 72px) 0 clamp(56px, 11vw, 88px);
+    }
+    .contact-delegates-inner {
+      width: min(960px, calc(100% - clamp(24px, 5vw, 40px)));
+      margin: 0 auto;
+      padding: 0 max(12px, env(safe-area-inset-right, 0px)) 0 max(12px, env(safe-area-inset-left, 0px));
+    }
+    .call-back-form-col {
+      width: 100%;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+    @media (min-width: 960px) {
+      .call-back-form-col {
+        max-width: min(520px, 50vw);
+      }
+    }
+    #call-back {
+      scroll-margin-top: 88px;
+    }
+    .call-back-panel {
+      position: relative;
+      margin: 0 auto;
+      padding: 0 0 8px;
+      overflow: visible;
+      text-align: center;
+      border-radius: 0;
+      background: transparent;
+    }
+    .call-back-panel__inner {
+      position: relative;
+      z-index: 1;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    .call-back-title {
+      margin: 0 0 12px;
+      font-size: clamp(18px, 2.2vw, 24px);
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.02em;
+      text-align: center;
+    }
+    .call-back-divider {
+      display: none;
+    }
+    .call-back-divider .elementor-divider-separator {
+      display: none;
+    }
+    .call-back-lead {
+      margin: 0 0 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #ffffff;
+      text-align: center;
+      font-weight: 400;
+    }
+    .elementor-form .elementor-form-fields-wrapper {
+      display: grid;
+      gap: 14px;
+      text-align: left;
+    }
+    .elementor-form .elementor-field {
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid #e5e7eb;
+      background: #ffffff;
+      color: #1c3f63;
+      font: inherit;
+      font-size: 14px;
+      padding: 12px 14px;
+      min-height: 46px;
+      outline: none;
+      border-radius: 6px;
+    }
+    .elementor-form .elementor-field::placeholder {
+      color: #9ca3af;
+    }
+    .elementor-form select.elementor-field {
+      appearance: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding-right: 40px;
+      background-color: #ffffff;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+    }
+    .elementor-form .elementor-field:focus {
+      border-color: #00897b;
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.25);
+    }
+    .elementor-form .elementor-button {
+      width: 100%;
+      border: 0;
+      background: #002d54;
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: none;
+      padding: 14px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.15s ease;
+    }
+    .elementor-form .elementor-button:hover {
+      background: #003b6e;
+    }
+    .elementor-form .elementor-field-type-recaptcha_v3 {
+      margin: 0;
+      padding: 0;
+      min-height: 0;
+    }
+    .elementor-form .elementor-g-recaptcha {
+      min-height: 0;
+    }
+    .section-title { margin: 0 0 8px; font-size: 24px; color: var(--brand-navy); font-weight: 800; }
+    .section-subtitle { margin: 0 0 4px; font-size: 12px; color: var(--text-muted); font-weight: 500; }
+    .accent-line { width: 44px; height: 2px; margin: 16px 0 20px; background: var(--brand-yellow); }
+    .form-grid { display: grid; gap: 14px; }
+    .form-grid label { font-size: 12px; font-weight: 700; color: #1c3f63; }
+    .form-grid input, .form-grid select, .form-grid textarea { width: 100%; border: 1px solid #aeb8c3; background: #ffffff; color: #1c3f63; font: inherit; font-size: 13px; padding: 12px 14px; outline: none; border-radius: 0; }
+    .form-grid textarea { min-height: 130px; resize: vertical; }
+    .form-grid button { border: 0; background: var(--brand-navy); color: #ffffff; font-size: 13px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; padding: 14px 16px; cursor: pointer; }
+    .form-status { margin: 12px 0 0; font-size: 12px; color: #e0f2f1; font-weight: 700; text-align: center; }
+    .call-back-panel .form-note {
+      margin: 16px 0 0;
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.72);
+      text-align: center;
+      line-height: 1.65;
+    }
+    .call-back-panel .form-note-recaptcha {
+      margin-top: 10px;
+      font-size: 10px;
+      color: rgba(255, 255, 255, 0.58);
+    }
+    .call-back-panel .form-note a {
+      color: rgba(255, 255, 255, 0.92);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      transition: color 0.2s ease, opacity 0.2s ease;
+    }
+    .call-back-panel .form-note a:hover,
+    .call-back-panel .form-note a:focus-visible {
+      color: #ffffff;
+      outline: none;
+    }
+    #lifecycle.slc-section {
+      padding: 70px 0;
+      background: #f8fafc;
+      border-top: 1px solid #eceff4;
+      border-bottom: 1px solid #eceff4;
+    }
+    .slc-head,
+    .slc-grid-wrap {
+      width: min(1140px, calc(100% - clamp(24px, 5vw, 48px)));
+      margin: 0 auto;
+    }
+    .slc-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 28px;
+      margin-bottom: 42px;
+    }
+    .slc-eyebrow {
+      display: block;
+      margin-bottom: 12px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #00968f;
+    }
+    .slc-title {
+      margin: 0;
+      font-size: clamp(32px, 5vw, 64px);
+      line-height: 1.04;
+      color: #003057;
+    }
+    .slc-title span {
+      color: #00968f;
+    }
+    .slc-sub {
+      max-width: 480px;
+      margin: 0;
+      color: #4b5563;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    .slc-grid-wrap {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+    .slc-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      min-height: 390px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.13);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+    .slc-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.18);
+    }
+    .slc-card img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.55s ease;
+    }
+    .slc-card:hover img {
+      transform: scale(1.05);
+    }
+    .slc-overlay {
+      position: absolute;
+      inset: 0;
+      background: var(--slc-overlay-gradient);
+      transition: opacity 0.35s ease, filter 0.35s ease;
+    }
+    .slc-overlay::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--slc-overlay-vignette);
+      pointer-events: none;
+      opacity: 0.95;
+    }
+    .slc-card:hover .slc-overlay {
+      opacity: 0.94;
+      filter: saturate(1.05);
+    }
+    .slc-content {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      padding: 34px;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+      transition: transform 0.35s ease;
+    }
+    .slc-card:hover .slc-content {
+      transform: translateY(-4px);
+    }
+    .slc-num {
+      font-size: 58px;
+      font-weight: 900;
+      line-height: 1;
+      opacity: 0.25;
+      margin-bottom: 14px;
+    }
+    .slc-card h3 {
+      margin: 0 0 10px;
+      font-size: 28px;
+      line-height: 1.2;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .slc-card h3 i {
+      flex-shrink: 0;
+      margin-top: 0.2em;
+      font-size: 0.88em;
+      opacity: 0.95;
+    }
+    .slc-card p {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.7;
+      opacity: 0.95;
+    }
+    .slc-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .slc-chip {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 7px 12px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.26);
+    }
+    .slc-card--wide {
+      grid-column: span 3;
+      min-height: 290px;
+    }
+    .slc-card--wide .slc-content {
+      flex-direction: row;
+      align-items: center;
+      gap: 24px;
+    }
+    .slc-card--wide .slc-left {
+      max-width: 760px;
+    }
+    @media (max-width: 1100px) {
+      .slc-grid-wrap {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .slc-card--wide {
+        grid-column: span 2;
+      }
+    }
+    @media (max-width: 768px) {
+      .slc-head {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 30px;
+      }
+      .slc-grid-wrap {
+        grid-template-columns: 1fr;
+        width: min(1140px, 100% - 28px);
+      }
+      .slc-card--wide {
+        grid-column: auto;
+      }
+      .slc-card--wide .slc-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .slc-card h3 {
+        font-size: 23px;
+      }
+    }
+    /* Service grids using slc-cards with bullet lists (aligned to index7 lifecycle cards) */
+    .slc-card .slc-lead {
+      margin: 0 0 8px;
+      font-size: 14px;
+      line-height: 1.55;
+      opacity: 0.95;
+    }
+    .slc-card .slc-bullets {
+      margin: 8px 0 0;
+      padding: 0 0 0 1.12em;
+      font-size: 13px;
+      line-height: 1.52;
+      color: rgba(255, 255, 255, 0.93);
+    }
+    .slc-card .slc-bullets li {
+      margin-bottom: 5px;
+    }
+    .slc-card .slc-bullets li:last-child {
+      margin-bottom: 0;
+    }
+    /* List-heavy cards: main column grows so chips stay bottom-aligned */
+    .slc-card .slc-content > div:first-child {
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+    .slc-card .slc-chips {
+      flex-shrink: 0;
+    }
+    /* AI / tech imagery: focal point tuned for gradient + vignette */
+    .slc-card--ai img {
+      object-position: 50% 38%;
+    }
+    /* Non-AI photo cards (e.g. industrial): neutral framing */
+    .slc-card--photo-real img {
+      object-position: 50% 45%;
+    }
+    #pathways .slc-grid-wrap,
+    #talent .slc-grid-wrap {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    #pathways .slc-card,
+    #talent .slc-card,
+    #student-success .slc-card,
+    #institutions .slc-card,
+    #wellbeing .slc-card {
+      min-height: 430px;
+    }
+    #certification .slc-grid-wrap {
+      grid-template-columns: 1fr;
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #certification .slc-card--wide {
+      min-height: 300px;
+    }
+    #certification .slc-card--wide .slc-content {
+      align-items: center;
+      justify-content: space-between;
+      gap: clamp(20px, 3vw, 36px);
+    }
+    #certification .slc-card--wide .slc-left {
+      flex: 1;
+      min-width: 0;
+      max-width: none;
+    }
+    #certification .slc-card--wide .slc-chips {
+      align-self: center;
+      flex-shrink: 0;
+    }
+    @media (max-width: 768px) {
+      #certification .slc-card--wide .slc-chips {
+        align-self: flex-start;
+      }
+    }
+    @media (max-width: 900px) {
+      #pathways .slc-grid-wrap,
+      #talent .slc-grid-wrap {
+        grid-template-columns: 1fr;
+      }
+    }
+    /* Human Capital: 10 cards — 3×3 grid + full-width capstone (no orphan in 3-col) */
+    #human-capital .slc-grid-wrap {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: stretch;
+      gap: clamp(20px, 2.4vw, 28px);
+    }
+    #human-capital .slc-card {
+      min-height: clamp(380px, 36vw, 460px);
+      display: flex;
+      flex-direction: column;
+    }
+    #human-capital .slc-card .slc-content {
+      height: auto;
+      flex: 1 1 auto;
+      min-height: 0;
+    }
+    #human-capital .slc-card--wide {
+      grid-column: 1 / -1;
+      min-height: clamp(280px, 32vw, 380px);
+    }
+    #human-capital .slc-card--wide .slc-content {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: clamp(20px, 3vw, 40px);
+    }
+    #human-capital .slc-card--wide .slc-left {
+      min-width: 0;
+    }
+    #human-capital .slc-card--wide .slc-chips {
+      align-self: center;
+      justify-self: end;
+    }
+    @media (max-width: 768px) {
+      #human-capital .slc-card--wide .slc-content {
+        grid-template-columns: 1fr;
+        justify-items: start;
+      }
+      #human-capital .slc-card--wide .slc-chips {
+        justify-self: start;
+        align-self: flex-start;
+      }
+    }
+    /* Tablet: 2 columns — centre card 9 so the row is not half-empty */
+    @media (max-width: 1099px) and (min-width: 641px) {
+      #human-capital .slc-grid-wrap {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      #human-capital .slc-grid-wrap > .slc-card:nth-child(9) {
+        grid-column: 1 / -1;
+        max-width: min(560px, 100%);
+        justify-self: center;
+      }
+    }
+    @media (max-width: 640px) {
+      #human-capital .slc-grid-wrap {
+        grid-template-columns: 1fr;
+      }
+      #human-capital .slc-grid-wrap > .slc-card:nth-child(9) {
+        grid-column: auto;
+        max-width: none;
+        justify-self: stretch;
+      }
+    }
+    .pm-section {
+      padding: 96px 0 72px;
+      margin-bottom: 80px;
+      background: linear-gradient(180deg, #fbfdff 0%, #f4f8fb 100%);
+    }
+    .pm-shell {
+      width: min(1140px, calc(100% - clamp(20px, 4vw, 40px)));
+      margin: 0 auto;
+    }
+    .pm-head {
+      text-align: center;
+      margin-bottom: 54px;
+    }
+    .pm-head h2 {
+      margin: 0;
+      color: #003057;
+      font-size: clamp(34px, 4vw, 56px);
+      line-height: 1.08;
+      font-weight: 800;
+    }
+    .pm-head p {
+      max-width: 720px;
+      margin: 18px auto 0;
+      color: #6b7280;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+    .pm-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
+      align-items: stretch;
+    }
+    .pm-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 34px;
+      border-radius: 12px;
+      border: 1px solid rgba(0, 48, 87, 0.1);
+      background: #ffffff;
+      box-shadow: 0 20px 50px rgba(0, 48, 87, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .pm-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 26px 60px rgba(0, 48, 87, 0.12);
+    }
+    .pm-card:hover .pm-cta {
+      transform: translateY(-1px);
+    }
+    .pm-card--featured {
+      background: linear-gradient(180deg, #003057 0%, #012540 100%);
+      color: #ffffff;
+      border-color: rgba(0, 188, 212, 0.2);
+      box-shadow: 0 28px 70px rgba(0, 48, 87, 0.28);
+      overflow: hidden;
+    }
+    .pm-card--featured:hover {
+      transform: translateY(-6px);
+    }
+    .pm-badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 16px 18px;
+      border-bottom-left-radius: 12px;
+      background: #00bcd4;
+      color: #003057;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+    .pm-label {
+      display: block;
+      margin-bottom: 18px;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: #9ca3af;
+    }
+    .pm-card:not(.pm-card--featured) .pm-label {
+      color: #00bcd4;
+    }
+    .pm-card--featured .pm-label {
+      color: #00bcd4;
+    }
+    .pm-tier {
+      margin: 0 0 18px;
+      font-size: clamp(1.45rem, 2.2vw + 0.85rem, 2rem);
+      line-height: 1.15;
+      color: #003057;
+      font-weight: 800;
+    }
+    .pm-card--featured .pm-tier {
+      color: #ffffff;
+    }
+    .pm-name {
+      margin: 0 0 16px;
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1.6;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #00968f;
+    }
+    .pm-card--featured .pm-name {
+      color: #00bcd4;
+    }
+    .pm-copy {
+      margin: 0 0 24px;
+      font-size: 16px;
+      line-height: 1.8;
+      color: #6b7280;
+    }
+    .pm-card--featured .pm-copy {
+      color: rgba(255, 255, 255, 0.82);
+    }
+    .pm-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 28px;
+    }
+    .pm-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+      font-size: 15px;
+      line-height: 1.7;
+      color: #5b6472;
+    }
+    .pm-card--featured .pm-list li {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    .pm-list i {
+      margin-top: 3px;
+      color: #00968f;
+    }
+    .pm-card--featured .pm-list i {
+      color: #00bcd4;
+    }
+    .pm-cta {
+      display: inline-block;
+      padding: 15px 24px;
+      border-radius: 12px;
+      text-align: center;
+      font-size: 15px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      border: 2px solid #003057;
+      color: #003057;
+      background: #ffffff;
+    }
+    .pm-cta:hover {
+      background: #003057;
+      color: #ffffff;
+    }
+    .pm-card--featured .pm-cta {
+      border-color: transparent;
+      color: #003057;
+      background: linear-gradient(90deg, #00bcd4 0%, #c9ae5e 100%);
+      box-shadow: 0 14px 30px rgba(0, 188, 212, 0.22);
+    }
+    .pm-card--featured .pm-cta:hover {
+      filter: brightness(1.03);
+      transform: translateY(-1px);
+    }
+    @media (max-width: 1024px) {
+      .pm-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .pm-card--featured {
+        grid-column: span 2;
+      }
+      .pm-card--featured:hover {
+        transform: translateY(-4px);
+      }
+    }
+    @media (max-width: 767px) {
+      .pm-shell {
+        width: min(1140px, calc(100% - 24px));
+      }
+      .pm-section {
+        padding: 68px 0 56px;
+      }
+      .pm-grid {
+        grid-template-columns: 1fr;
+      }
+      .pm-card,
+      .pm-card--featured {
+        grid-column: auto;
+        padding: 26px;
+        border-radius: 12px;
+        transform: none;
+      }
+      .pm-card--featured:hover {
+        transform: translateY(-4px);
+      }
+    }
+    .em-section {
+      padding: 80px 0;
+      background: transparent;
+      overflow: hidden;
+      position: relative;
+    }
+    .em-section::before,
+    .em-section::after {
+      content: "";
+      position: absolute;
+      border-radius: 12px;
+      filter: blur(90px);
+      opacity: 0.18;
+      pointer-events: none;
+    }
+    .em-section::before {
+      width: 280px;
+      height: 280px;
+      top: -40px;
+      left: -60px;
+      background: white;
+    }
+    .em-section::after {
+      width: 260px;
+      height: 260px;
+      right: -40px;
+      bottom: 20px;
+      background: white;
+    }
+    .em-shell {
+      width: min(1140px, calc(100% - clamp(20px, 4vw, 40px)));
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .em-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+    .em-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: #00bcd4;
+    }
+    .em-kicker::before {
+      content: "";
+      display: block;
+      width: 36px;
+      height: 2px;
+      background: #00bcd4;
+    }
+    .em-title {
+      margin: 0;
+      color: #003057;
+      font-size: clamp(32px, 5vw, 64px);
+      line-height: 1.04;
+    }
+    .em-title span {
+      color: #00968f;
+    }
+    .em-quote {
+      max-width: 360px;
+      margin: 0;
+      text-align: right;
+      color: #6b7280;
+      font-size: 14px;
+      font-style: italic;
+      line-height: 1.8;
+    }
+    .em-layout {
+      display: grid;
+      grid-template-columns: 340px minmax(0, 1fr);
+      gap: 32px;
+      align-items: start;
+    }
+    .em-nav {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      align-content: start;
+      grid-auto-rows: 1fr;
+      width: 100%;
+      align-self: stretch;
+    }
+    .em-tile {
+      width: 100%;
+      min-height: 102px;
+      border: 1.5px solid #d7e0ea;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 16px 18px;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: stretch;
+      gap: 12px;
+      position: relative;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+      box-shadow: 0 4px 10px rgba(0, 48, 87, 0.05);
+    }
+    .em-tile:hover {
+      transform: translateY(-1px);
+      background: #fbfdff;
+      border-color: #9edff0;
+      box-shadow: 0 8px 18px rgba(0, 48, 87, 0.09);
+    }
+    .em-tile.is-active {
+      background: linear-gradient(135deg, #003057 0%, #00446f 100%);
+      border-color: #00bcd4;
+      box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.12), 0 10px 24px rgba(0, 48, 87, 0.24);
+      transform: translateY(0);
+    }
+    .em-tile:active {
+      transform: translateY(1px);
+    }
+    .em-tile:focus-visible {
+      outline: none;
+      border-color: #00bcd4;
+      box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.18), 0 8px 18px rgba(0, 48, 87, 0.1);
+    }
+    .em-tile::after {
+      content: "";
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 0;
+      height: 3px;
+      border-radius: 999px;
+      background: transparent;
+      transition: background-color 0.2s ease, opacity 0.2s ease;
+      opacity: 0;
+    }
+    .em-tile:hover::after {
+      background: rgba(0, 188, 212, 0.22);
+      opacity: 1;
+    }
+    .em-tile.is-active::after {
+      background: #00bcd4;
+      opacity: 1;
+    }
+    .em-tile-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0;
+    }
+    .em-tile-num {
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.18em;
+      color: #9ca3af;
+      line-height: 1;
+    }
+    .em-tile.is-active .em-tile-num {
+      color: rgba(255, 255, 255, 0.72);
+    }
+    .em-tile-arrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: #e9f9fc;
+      color: #00bcd4;
+      font-size: 12px;
+      font-weight: 800;
+      transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+      flex-shrink: 0;
+    }
+    .em-tile:hover .em-tile-arrow {
+      transform: translateX(2px);
+    }
+    .em-tile.is-active .em-tile-arrow {
+      background: rgba(255, 255, 255, 0.14);
+      color: #ffffff;
+    }
+    .em-tile-month {
+      display: block;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      color: #003057;
+      text-transform: uppercase;
+      line-height: 1.15;
+      text-align: left;
+    }
+    .em-tile.is-active .em-tile-month {
+      color: #ffffff;
+    }
+    .em-tile:hover .em-tile-month {
+      color: #003057;
+    }
+    .em-tile.is-active:hover .em-tile-month {
+      color: #ffffff;
+    }
+    .em-tile:hover .em-tile-num {
+      color: #00bcd4;
+    }
+    .em-tile.is-active:hover .em-tile-num {
+      color: rgba(255, 255, 255, 0.72);
+    }
+    .em-card {
+      position: relative;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.65);
+      border-radius: 12px;
+      padding: 36px;
+      box-shadow: 0 28px 70px rgba(0, 48, 87, 0.14);
+      transition: transform 0.35s ease, opacity 0.35s ease;
+    }
+    .em-card:hover {
+      box-shadow: 0 34px 80px rgba(0, 48, 87, 0.18);
+    }
+    .em-icon-bg {
+      position: absolute;
+      right: -10px;
+      bottom: -12px;
+      font-size: 10rem;
+      opacity: 0.05;
+      line-height: 1;
+      pointer-events: none;
+    }
+    .em-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 34px;
+    }
+    .em-phase {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .em-badge {
+      width: 58px;
+      height: 58px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 22px;
+      font-weight: 800;
+      background: #00bcd4;
+      box-shadow: 0 18px 30px rgba(0, 188, 212, 0.28);
+    }
+    .em-month {
+      margin: 0 0 8px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #9ca3af;
+    }
+    .em-dots {
+      display: flex;
+      gap: 6px;
+    }
+    .em-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 12px;
+      background: #d7dee7;
+      transition: all 0.25s ease;
+    }
+    .em-dot.is-active {
+      width: 26px;
+      background: #00bcd4;
+    }
+    .em-session {
+      padding: 8px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(0, 48, 87, 0.1);
+      background: rgba(255, 255, 255, 0.72);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #003057;
+    }
+    .em-body {
+      display: grid;
+      grid-template-columns: 1.2fr 0.9fr;
+      gap: 36px;
+      position: relative;
+      z-index: 1;
+    }
+    .em-body h3 {
+      margin: 0 0 16px;
+      font-size: clamp(34px, 4vw, 54px);
+      line-height: 1.05;
+      color: #003057;
+    }
+    .em-body p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.75;
+      color: #5b6472;
+      font-weight: 300;
+    }
+    .em-side {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .em-outcome {
+      background: #f8fbfd;
+      border-radius: 12px;
+      padding: 24px;
+      border-left: 7px solid #00bcd4;
+      border: 1px solid rgba(0, 48, 87, 0.06);
+    }
+    .em-outcome-kicker {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #00bcd4;
+    }
+    .em-outcome-kicker::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 12px;
+      background: currentColor;
+    }
+    .em-outcome-text {
+      margin: 0;
+      color: #003057;
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.35;
+      text-transform: uppercase;
+    }
+    .em-support {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .em-avatars {
+      display: flex;
+      margin-right: 2px;
+    }
+    .em-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      border: 2px solid #fff;
+      margin-left: -10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 800;
+    }
+    .em-avatar:first-child {
+      margin-left: 0;
+    }
+    .em-avatar.cm {
+      background: linear-gradient(135deg, #00bcd4, #3b82f6);
+    }
+    .em-avatar.st {
+      background: linear-gradient(135deg, #00968f, #22c55e);
+    }
+    .em-support-title {
+      display: block;
+      color: #003057;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .em-support-sub {
+      display: block;
+      color: #8a94a6;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    @media (max-width: 980px) {
+      .em-layout,
+      .em-body {
+        grid-template-columns: 1fr;
+      }
+      .em-nav {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (max-width: 767px) {
+      .em-section {
+        padding: 64px 0;
+      }
+      .em-shell {
+        width: min(1140px, calc(100% - 24px));
+      }
+      .em-head {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 34px;
+      }
+      .em-quote {
+        text-align: left;
+      }
+      .em-nav {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .em-tile {
+        min-height: 78px;
+        padding: 12px 14px;
+      }
+      .em-card {
+        padding: 24px;
+        border-radius: 12px;
+      }
+      .em-card-top {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 24px;
+      }
+      .em-icon-bg {
+        font-size: 7rem;
+      }
+      .em-body p {
+        font-size: 16px;
+      }
+    }
+    .delegates-block {
+      margin-top: 64px;
+      padding-top: 0;
+    }
+    .delegates-block .elementor-widget-heading .elementor-heading-title {
+      margin: 0 0 20px;
+      font-size: clamp(18px, 2.2vw, 24px);
+      line-height: 1.12;
+      color: #ffffff;
+      font-weight: 800;
+      text-align: center;
+    }
+    .delegates-block .elementor-shortcode {
+      max-width: 100%;
+      margin: 0 auto;
+      min-height: 100px;
+      padding: 0;
+    }
+    .discover-strip { background: #f0f0f0; padding: clamp(48px, 8vw, 72px) 0 clamp(56px, 9vw, 78px); }
+    .discover-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: clamp(28px, 5vw, 72px);
+      align-items: start;
+      max-width: 1020px;
+      margin: 0 auto;
+    }
+    .discover-grid h2 {
+      margin: 0 0 10px;
+      font-size: clamp(1.75rem, 3.2vw + 1rem, 3.5rem);
+      line-height: 1.05;
+      color: var(--brand-navy);
+      font-weight: 800;
+    }
+    .discover-grid .elementor-divider-separator { display: block; width: 100%; max-width: 260px; margin: 0 0 30px; border-top: 5px solid var(--brand-yellow); height: 0; box-sizing: border-box; }
+    .discover-grid p { margin: 0; max-width: 620px; color: #102a46; font-size: 16px; line-height: 1.95; }
+    .video-box {
+      border: 0;
+      background: #d8dce1;
+      aspect-ratio: 16 / 9;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      display: block;
+    }
+    .video-box img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .yt-play { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 68px; height: 48px; border-radius: 12px; background: rgba(255, 0, 0, 0.92); color: #fff; display: grid; place-items: center; font-size: 20px; }
+    .stats-row {
+      margin: clamp(40px, 7vw, 68px) auto clamp(28px, 5vw, 42px);
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(24px, 4vw, 56px);
+      text-align: center;
+      max-width: 980px;
+    }
+    .stats-row h3 {
+      margin: 0;
+      color: var(--brand-yellow);
+      font-size: clamp(2rem, 4vw + 1.1rem, 3.5rem);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: 0.01em;
+    }
+    .stats-row p { margin: 10px 0 0; font-size: 14px; color: var(--brand-navy); font-weight: 800; letter-spacing: 0.22em; }
+    .pill-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(10px, 2vw, 18px);
+      max-width: 980px;
+      margin: 0 auto;
+    }
+    .pill {
+      background: var(--brand-navy);
+      color: #ffffff;
+      border-radius: 999px;
+      text-align: center;
+      font-size: clamp(12px, 0.4vw + 11px, 14px);
+      padding: clamp(11px, 1.8vw, 15px) clamp(12px, 2vw, 16px);
+      font-weight: 600;
+      line-height: 1.35;
+      white-space: normal;
+      hyphens: auto;
+      word-break: break-word;
+    }
+    .partners-band { background: var(--brand-primary); color: #ffffff; text-align: center; padding: clamp(40px, 6vw, 58px) 0 clamp(28px, 4vw, 34px); }
+    .partners-band h2,
+    .partners-band h3 { margin: 0 0 22px; font-size: clamp(1.25rem, 1.2vw + 1rem, 1.65rem); font-weight: 200; }
+    .partners-elementor-swiper { width: 100%; max-width: var(--container); margin: 0 auto; position: relative; padding: 0 28px 6px; box-sizing: border-box; }
+    .partners-elementor-swiper .elementor-main-swiper { width: 100%; max-width: 100%; overflow: hidden; }
+    .partners-elementor-swiper .swiper-slide { display: flex; align-items: center; justify-content: center; height: auto; box-sizing: border-box; }
+    .partners-elementor-swiper .elementor-carousel-image {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 76px;
+    }
+    .partners-elementor-swiper .elementor-carousel-image img {
+      display: block;
+      width: auto;
+      max-width: 100%;
+      height: clamp(52px, 5.5vw, 72px);
+      object-fit: contain;
+      filter: brightness(0) invert(1) opacity(0.92);
+    }
+    .partners-elementor-swiper .swiper-button-prev,
+    .partners-elementor-swiper .swiper-button-next {
+      width: auto !important;
+      height: auto !important;
+      margin-top: 0 !important;
+    }
+    .partners-elementor-swiper .swiper-button-prev::after,
+    .partners-elementor-swiper .swiper-button-next::after {
+      display: none !important;
+      content: "" !important;
+    }
+    .partners-elementor-swiper .elementor-swiper-button {
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+      transform: translateY(-50%);
+      width: auto;
+      height: auto;
+      margin: 0;
+      padding: 8px 6px;
+      border: 0;
+      border-radius: 0;
+      background: none;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: color 0.2s ease, opacity 0.2s ease;
+    }
+    .partners-elementor-swiper .elementor-swiper-button:hover { color: var(--brand-yellow); }
+    .partners-elementor-swiper .elementor-swiper-button.swiper-button-disabled { opacity: 0.35; cursor: default; }
+    .partners-elementor-swiper .elementor-swiper-button-prev { left: 0; }
+    .partners-elementor-swiper .elementor-swiper-button-next { right: 0; }
+    .partners-elementor-swiper .elementor-swiper-button i { font-size: 15px; line-height: 1; }
+    .partners-elementor-swiper .swiper-pagination {
+      position: relative;
+      margin-top: 18px;
+      bottom: auto !important;
+    }
+    .partners-elementor-swiper .swiper-pagination-bullet {
+      width: 9px;
+      height: 9px;
+      background: rgba(255, 255, 255, 0.35);
+      opacity: 1;
+    }
+    .partners-elementor-swiper .swiper-pagination-bullet-active { background: var(--brand-yellow); }
+    @media (max-width: 600px) {
+      .partners-elementor-swiper { padding: 0 22px 4px; }
+    }
+    .site-footer { background: var(--brand-primary); color: #d3eded; padding: 0 0 50px; }
+    .site-footer .partners-band { padding-bottom: 40px; }
+    .site-footer .footer-grid { padding-top: 42px; }
+    .footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+    .footer-col h4 {
+      margin: 0 0 6px;
+      color: #ffffff;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-weight: 800;
+      padding-bottom: 0;
+    }
+    .footer-col .elementor-divider-separator {
+      display: block;
+      width: 100%;
+      margin: 0 0 12px;
+      padding: 0;
+      border: 0;
+      border-top: 2px solid var(--brand-yellow);
+      height: 0;
+      box-sizing: border-box;
+    }
+    .footer-col ul { list-style: none; margin: 0; padding: 0; }
+    .footer-col li { margin: 0 0 4px; font-size: 11px; line-height: 1.35; }
+    .footer-col a {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 8px 10px;
+      margin: 0;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 0;
+      transition: background-color 0.18s ease, color 0.18s ease;
+    }
+    .footer-col a:hover {
+      background-color: var(--brand-navy);
+      color: #ffffff;
+    }
+    .footer-col a:focus-visible {
+      outline: 2px solid var(--brand-yellow);
+      outline-offset: 2px;
+      background-color: var(--brand-navy);
+      color: #ffffff;
+    }
+    .footer-bottom {
+      margin-top: 34px;
+      padding-top: 30px;
+      border-top: 2px solid rgba(255, 205, 0, 0.9);
+    }
+    .footer-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .footer-address p {
+      margin: 0 0 6px;
+      font-size: 11px;
+      line-height: 1.35;
+      color: #d3eded;
+    }
+    .footer-address p:last-child { margin-bottom: 0; }
+    .footer-address strong { color: #ffffff; }
+    .footer-social {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .footer-social a {
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 17px;
+      transition: all 0.2s ease;
+    }
+    .footer-social a:hover {
+      border-color: var(--brand-yellow);
+      color: var(--brand-yellow);
+    }
+    .footer-policy {
+      margin-top: 14px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+    }
+    .footer-policy a:hover { color: var(--brand-yellow); }
+    .footer-payments {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 6px 8px;
+      margin-bottom: 10px;
+      max-width: 100%;
+    }
+    .footer-payments img {
+      width: 36px;
+      height: 22px;
+      object-fit: contain;
+      background: #fff;
+      border-radius: 3px;
+      padding: 2px;
+    }
+    .footer-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    .footer-copy {
+      margin-top: 12px;
+      text-align: center;
+      font-size: clamp(9px, 0.35vw + 8px, 10px);
+      color: #c8e7e7;
+      letter-spacing: 0.04em;
+      line-height: 1.5;
+      padding: 0 max(0px, env(safe-area-inset-left)) 0 max(0px, env(safe-area-inset-right));
+      word-wrap: break-word;
+      overflow-wrap: anywhere;
+    }
+    /* Hide Google reCAPTCHA badge (fixed bottom-right clashes with chat launcher). Disclosure is shown in .form-note per Google policy. */
+    .grecaptcha-badge {
+      visibility: hidden !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+      width: 0 !important;
+      height: 0 !important;
+      overflow: hidden !important;
+      position: fixed !important;
+      right: -9999px !important;
+      bottom: 0 !important;
+    }
+    .chat-bot-launcher-button {
+      position: fixed;
+      right: max(24px, env(safe-area-inset-right, 0px));
+      bottom: max(24px, env(safe-area-inset-bottom, 0px));
+      width: 66px;
+      height: 66px;
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+      cursor: pointer;
+      z-index: 2300;
+    }
+    #chat-bot-message-container.chat-bot-message-container {
+      position: fixed;
+      right: max(24px, env(safe-area-inset-right, 0px));
+      bottom: 102px;
+      width: min(320px, calc(100vw - 30px));
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.22);
+      padding: 12px 40px 12px 14px;
+      z-index: 2299;
+      opacity: 0;
+      transform: translateY(10px);
+      pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    #chat-bot-message-container.slide-in {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    #chat-bot-message-container .overflow {
+      overflow: hidden;
+    }
+    #chat-bot-message-container .chat-bot-message-label div {
+      font-size: 14px;
+      line-height: 1.4;
+      color: #132f4c;
+      font-weight: 600;
+    }
+    #chat-bot-message-close {
+      position: absolute;
+      right: 12px;
+      top: 11px;
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+      opacity: 0.75;
+    }
+    #chat-bot-message-close::before,
+    #chat-bot-message-close::after {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 1px;
+      width: 2px;
+      height: 16px;
+      background: #73839a;
+      border-radius: 1px;
+    }
+    #chat-bot-message-close::before { transform: rotate(45deg); }
+    #chat-bot-message-close::after { transform: rotate(-45deg); }
+    .scroll-up-trigger {
+      position: fixed;
+      left: max(24px, env(safe-area-inset-left, 0px));
+      bottom: max(30px, env(safe-area-inset-bottom, 0px));
+      border: 0;
+      background: transparent;
+      padding: 0;
+      line-height: 0;
+      cursor: pointer;
+      z-index: 2300;
+      opacity: 0;
+      transform: translateY(8px);
+      pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    .scroll-up-trigger img {
+      width: 44px;
+      height: 44px;
+      display: block;
+    }
+    .scroll-up-trigger.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    .floating-ui {
+      position: static;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+    }
+    @media (max-width: 1280px) {
+      .hero-links { gap: 16px; font-size: 10px; }
+      .menu-item > a,
+      .hero-links > a { padding-bottom: 6px; }
+      .hero-actions { gap: 8px; }
+      .hero-actions a { width: 22px; height: 22px; font-size: 13px; }
+      .discover-grid { gap: 42px; }
+      .discover-grid p { font-size: 15px; line-height: 1.8; }
+      .stats-row { gap: 30px; margin-top: 54px; }
+      .pill-row { gap: 14px; }
+      .pill { font-size: 13px; padding: 13px 12px; }
+    }
+    @media (max-width: 1100px) {
+      .em-layout {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+    }
+    @media (max-width: 1100px) and (min-width: 981px) {
+      .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (max-width: 980px) {
+      /* Fixed bar on small screens so the header always stays visible while scrolling (sticky is unreliable with overflow + mobile UA) */
+      .hero-nav-sticky {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 100%;
+        max-width: 100vw;
+        margin-bottom: 0;
+        padding-top: env(safe-area-inset-top, 0px);
+        z-index: 1000;
+      }
+      .top-hero {
+        margin-top: 0;
+        /* Clear fixed header + notch; header uses padding-top: safe-area itself */
+        padding-top: calc(var(--header-overlap) + env(safe-area-inset-top, 0px));
+      }
+      .container { width: min(var(--container), calc(100% - clamp(18px, 4vw, 28px))); }
+      .hero-nav { position: relative; }
+      .menu-toggle-btn {
+        display: inline-flex;
+        width: 40px;
+        height: 46px;
+        border: 0;
+        border-radius: 0;
+        margin-left: 10px;
+        font-size: 24px;
+        line-height: 1;
+        background: transparent;
+        box-shadow: none;
+      }
+      .hero-nav-sticky:not(.is-scrolled) .menu-toggle-btn { color: #ffffff; }
+      .hero-nav-sticky.is-scrolled .menu-toggle-btn { color: #111111; }
+      .hero-nav-sticky:not(.is-scrolled) .menu-toggle-btn:hover { color: var(--brand-yellow); }
+      .hero-nav-sticky.is-scrolled .menu-toggle-btn:hover { color: var(--brand-primary); }
+      .hero-links {
+        display: none;
+        position: absolute;
+        top: calc(100% - 1px);
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        padding: 14px 0 16px;
+        flex-direction: column;
+        align-items: center;
+        background: #ffffff;
+        border: 0;
+        box-shadow: 0 18px 35px rgba(0, 0, 0, 0.14);
+        border-radius: 0;
+        z-index: 1300;
+        max-height: calc(100vh - 90px);
+        overflow: auto;
+      }
+      .hero-nav-sticky.mobile-menu-open .hero-links {
+        display: flex;
+      }
+      .hero-links > * + * {
+        border-left: 0;
+      }
+      .hero-links > a,
+      .menu-item > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 14px 20px;
+        color: #10233c !important;
+        font-size: 17px;
+        font-weight: 400;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        line-height: 1.05;
+      }
+      .hero-links .active-link::after {
+        display: none;
+      }
+      .hero-links .active-link {
+        color: var(--brand-yellow) !important;
+      }
+      .menu-item {
+        display: block;
+      }
+      .menu-item > a i {
+        margin-left: 6px;
+        font-size: 18px;
+        color: #07386a !important;
+        opacity: 1;
+        line-height: 1;
+        display: inline-block;
+        transform: translateY(1px);
+      }
+      .dropdown {
+        position: static;
+        top: auto;
+        left: auto;
+        transform: none;
+        min-width: 0;
+        width: 100%;
+        display: none;
+        visibility: visible;
+        opacity: 1;
+        border-top: 0;
+        box-shadow: none;
+        background: transparent;
+      }
+      .menu-item:hover .dropdown {
+        transform: none;
+      }
+      .menu-item.mobile-open .dropdown {
+        display: block;
+      }
+      .dropdown a {
+        text-align: center;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.2;
+        padding: 10px 24px;
+        color: #07386a;
+      }
+      .dropdown a:hover {
+        background: transparent;
+        color: #07386a;
+      }
+      .hero-actions {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-left: auto;
+      }
+      .hero-actions a {
+        width: 40px;
+        height: 46px;
+        font-size: 20px;
+      }
+      .hero-nav { padding: 8px 0; min-height: 64px; }
+      .hero-nav-left img { height: 38px; }
+      .top-hero { min-height: clamp(220px, 42vw, 250px); }
+      .top-hero .container { padding: 44px 0 40px; }
+      .contact-section.contact-delegates-section { padding: 52px 0 64px; }
+      .contact-grid, .discover-grid, .footer-grid { grid-template-columns: 1fr; }
+      .call-back-panel { padding: 0 0 4px; }
+      .delegates-block { margin-top: 44px; }
+      .discover-strip { padding: 64px 0 72px; }
+      .discover-grid { gap: 30px; max-width: 100%; }
+      .discover-grid .elementor-divider-separator { max-width: 220px; margin-bottom: 20px; }
+      .discover-grid p { font-size: 15px; line-height: 1.75; max-width: 100%; }
+      .video-box { max-width: 100%; }
+      .stats-row { grid-template-columns: 1fr; gap: 20px; margin: 42px auto 28px; }
+      .stats-row p { font-size: 12px; letter-spacing: 0.16em; }
+      .pill-row { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .pill { font-size: 12px; padding: 11px 10px; }
+      .footer-grid { gap: 28px; }
+      .footer-meta { flex-direction: column; align-items: flex-start; }
+      .footer-right { align-items: flex-start; }
+      .footer-payments { justify-content: flex-start; }
+      .footer-policy { justify-content: flex-start; }
+      .chat-bot-launcher-button { width: 58px; height: 58px; right: max(16px, env(safe-area-inset-right, 0px)); bottom: max(16px, env(safe-area-inset-bottom, 0px)); }
+      #chat-bot-message-container.chat-bot-message-container { right: max(12px, env(safe-area-inset-right, 0px)); bottom: 84px; width: min(300px, calc(100vw - 24px)); }
+      .scroll-up-trigger { left: max(14px, env(safe-area-inset-left, 0px)); bottom: max(20px, env(safe-area-inset-bottom, 0px)); }
+      .scroll-up-trigger img { width: 40px; height: 40px; }
+    }
+    @media (max-width: 760px) {
+      .hero-nav { min-height: 56px; }
+      .menu-toggle-btn { width: 42px; height: 42px; font-size: 21px; }
+      .hero-actions a { width: 34px; height: 42px; font-size: 17px; }
+      .hero-nav-left img { height: 34px; }
+      .top-hero { min-height: 220px; }
+      .top-hero .container { padding: 42px 0 36px; }
+      .hero-links > a,
+      .menu-item > a { font-size: 15px; padding: 13px 18px; }
+      .dropdown a { font-size: 14px; padding: 9px 20px; }
+      .contact-section.contact-delegates-section { padding: 44px 0 56px; }
+      .call-back-panel { padding: 0; }
+      .delegates-block { margin-top: 40px; }
+      .section-title { font-size: 22px; }
+      .discover-strip { padding: 52px 0 58px; }
+      .video-box { max-width: 100%; }
+      .pill-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 22px; }
+    }
+    @media (max-width: 560px) {
+      .container { width: min(var(--container), calc(100% - clamp(16px, 5vw, 24px))); }
+      .hero-cta-row { margin-top: 20px; gap: 10px; }
+      .hero-cta-btn { min-width: 160px; padding: 12px 16px; font-size: 12px; }
+      .lifecycle-intro { padding: 56px 0 40px; }
+      .lifecycle-intro-inner { width: min(1140px, calc(100% - 24px)); }
+      .lifecycle-intro-content { padding: 22px 20px; border-radius: 12px; }
+      .lifecycle-intro-kicker { letter-spacing: 0.16em; font-size: 10px; }
+      .lifecycle-intro-lead { font-size: 16px; line-height: 1.8; }
+      .hero-actions a { width: 30px; height: 38px; font-size: 15px; }
+      .hero-links > a,
+      .menu-item > a { font-size: 14px; padding: 12px 14px; }
+      .dropdown a { font-size: 13px; padding: 8px 16px; }
+      .form-grid input, .form-grid select, .form-grid textarea { font-size: 12px; padding: 10px 12px; }
+      .elementor-form .elementor-field { font-size: 12px; padding: 10px 12px; }
+      .discover-grid p { font-size: 14px; line-height: 1.65; }
+      .stats-row { margin-top: 32px; margin-bottom: 22px; }
+      .footer-meta { align-items: center; text-align: center; }
+      .footer-social { justify-content: center; width: 100%; }
+      .footer-address { text-align: center; width: 100%; }
+      .footer-right { align-items: center; width: 100%; }
+      .footer-payments { justify-content: center; }
+      .footer-policy { justify-content: center; }
+      .chat-bot-launcher-button { width: 52px; height: 52px; right: max(10px, env(safe-area-inset-right, 0px)); bottom: max(10px, env(safe-area-inset-bottom, 0px)); }
+      #chat-bot-message-container.chat-bot-message-container { right: max(8px, env(safe-area-inset-right, 0px)); width: min(280px, calc(100vw - 16px)); }
+      .scroll-up-trigger { left: max(10px, env(safe-area-inset-left, 0px)); bottom: max(14px, env(safe-area-inset-bottom, 0px)); }
+      .scroll-up-trigger img { width: 34px; height: 34px; }
+    }
+
+    /* Subtle motion (AOS handles scroll; these add ambient polish) */
+    @keyframes chat-float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    .chat-bot-launcher-button {
+      animation: chat-float 3.6s ease-in-out infinite;
+    }
+    .scroll-up-trigger.is-visible {
+      animation: chat-float 2.8s ease-in-out infinite;
+    }
+    a.hero-cta-btn,
+    .pm-cta {
+      transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+    }
+    a.hero-cta-btn:hover,
+    .pm-cta:hover {
+      transform: translateY(-2px);
+    }
+    .slc-card {
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .chat-bot-launcher-button,
+      .scroll-up-trigger.is-visible {
+        animation: none !important;
+      }
+      a.hero-cta-btn:hover,
+      .pm-cta:hover {
+        transform: none;
+      }
+    }
+
+    /* —— Services / solutions page (index5 extended content) —— */
+    .svc-pillar-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin: 0 0 clamp(20px, 3vw, 28px);
+    }
+    .svc-pillar {
+      font-size: clamp(11px, 1.1vw, 13px);
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brand-primary);
+      padding: 10px 16px;
+      border: 2px solid rgba(0, 150, 143, 0.35);
+      border-radius: 999px;
+      background: #ffffff;
+    }
+    .svc-lead {
+      text-align: center;
+      max-width: 52rem;
+      margin: 0 auto clamp(28px, 4vw, 40px);
+      font-size: clamp(16px, 1.7vw, 19px);
+      line-height: 1.78;
+      color: #4a5568;
+    }
+    .svc-tabs-wrap {
+      width: min(1140px, calc(100% - clamp(20px, 4vw, 40px)));
+      margin: 0 auto;
+      padding: 0 0 clamp(48px, 8vw, 72px);
+      position: relative;
+    }
+    .svc-tab-input {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      border: 0;
+      clip: rect(0, 0, 0, 0);
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .svc-tab-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: clamp(24px, 4vw, 36px);
+    }
+    .svc-tab-btn {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 13px 20px;
+      min-height: 48px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 2px solid #d7e0ea;
+      background: #ffffff;
+      color: var(--text-main);
+      font-family: inherit;
+      line-height: 1.15;
+      appearance: none;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+      box-shadow: 0 2px 8px rgba(11, 54, 93, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+    }
+    .svc-tab-btn::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0));
+      opacity: 0.9;
+      pointer-events: none;
+      z-index: -1;
+    }
+    .svc-tab-btn:hover {
+      border-color: rgba(0, 150, 143, 0.45);
+      color: var(--brand-primary);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(11, 54, 93, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    }
+    .svc-tab-btn:active {
+      transform: translateY(1px);
+    }
+    .svc-tab-btn.is-pressed {
+      transform: translateY(1px) scale(0.997);
+      box-shadow: 0 3px 10px rgba(11, 54, 93, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    }
+    .svc-tab-btn:focus-visible {
+      outline: 3px solid rgba(0, 150, 143, 0.3);
+      outline-offset: 2px;
+    }
+    .svc-tab-btn.is-active {
+      border-color: var(--brand-primary);
+      color: var(--brand-primary);
+      background: rgba(0, 150, 143, 0.07);
+      box-shadow: 0 6px 20px rgba(0, 150, 143, 0.12);
+      cursor: default;
+    }
+    .svc-tab-btn.is-active:hover {
+      transform: none;
+      box-shadow: 0 6px 20px rgba(0, 150, 143, 0.12);
+    }
+    .svc-tab-btn[disabled],
+    .svc-tab-btn[aria-disabled="true"] {
+      opacity: 0.55;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+    .svc-panel-edu,
+    .svc-panel-hc {
+      display: none;
+    }
+    #svc-tab-edu:checked ~ .svc-panel-edu,
+    #svc-tab-hc:checked ~ .svc-panel-hc {
+      display: block;
+    }
+    .svc-band {
+      padding: clamp(44px, 7vw, 64px) 0;
+    }
+    .svc-band--soft {
+      background: #f8fafc;
+      border-top: 1px solid #eceff4;
+      border-bottom: 1px solid #eceff4;
+    }
+    .svc-band--navy {
+      background: linear-gradient(180deg, #fbfdff 0%, #f4f8fb 100%);
+    }
+    .svc-band-inner {
+      width: min(1140px, calc(100% - clamp(20px, 4vw, 40px)));
+      margin: 0 auto;
+    }
+    .svc-section-kicker {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--brand-primary);
+    }
+    .svc-section-title {
+      margin: 0 0 10px;
+      font-size: clamp(22px, 2.6vw, 32px);
+      font-weight: 800;
+      color: #003057;
+      line-height: 1.12;
+    }
+    .svc-section-intro {
+      margin: 0 0 clamp(22px, 3vw, 32px);
+      max-width: 46rem;
+      font-size: 15px;
+      line-height: 1.75;
+      color: #5b6578;
+    }
+    .svc-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(16px, 2.5vw, 22px);
+    }
+    .svc-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(16px, 2.5vw, 22px);
+    }
+    @media (max-width: 980px) {
+      .svc-grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 900px) {
+      .svc-grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+    .svc-card {
+      background: #ffffff;
+      border: 1px solid rgba(0, 48, 87, 0.1);
+      border-radius: 12px;
+      padding: clamp(20px, 3vw, 26px) clamp(18px, 2.5vw, 24px);
+      box-shadow: 0 10px 32px rgba(0, 48, 87, 0.06);
+    }
+    .svc-card h3 {
+      margin: 0 0 10px;
+      font-size: clamp(16px, 1.4vw, 18px);
+      font-weight: 800;
+      color: #003057;
+      line-height: 1.25;
+    }
+    .svc-card .svc-card-lead {
+      margin: 0 0 14px;
+      font-size: 14px;
+      line-height: 1.65;
+      color: #5b6578;
+    }
+    .svc-list {
+      margin: 0;
+      padding: 0 0 0 1.2em;
+      font-size: 14px;
+      line-height: 1.65;
+      color: #374151;
+    }
+    .svc-list li {
+      margin-bottom: 8px;
+    }
+    .svc-list li:last-child {
+      margin-bottom: 0;
+    }
+    .svc-hc-block {
+      margin-bottom: clamp(22px, 3vw, 28px);
+      padding-bottom: clamp(18px, 2.5vw, 24px);
+      border-bottom: 1px solid #e5e8ec;
+    }
+    .svc-hc-block:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+    .svc-hc-block h3 {
+      margin: 0 0 12px;
+      font-size: 16px;
+      font-weight: 800;
+      color: #003057;
+    }
+    .svc-steps {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(14px, 2vw, 18px);
+      max-width: 1020px;
+      margin: 0 auto;
+    }
+    @media (max-width: 900px) {
+      .svc-steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (max-width: 560px) {
+      .svc-steps {
+        grid-template-columns: 1fr;
+      }
+    }
+    .svc-journey {
+      text-align: center;
+      padding: clamp(40px, 6vw, 56px) clamp(20px, 4vw, 32px);
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(180deg, #003057 0%, #012540 100%);
+      color: #ffffff;
+      border-radius: 14px;
+      max-width: 920px;
+      margin: 0 auto;
+      border: 1px solid rgba(0, 188, 212, 0.2);
+      box-shadow: 0 22px 50px rgba(0, 48, 87, 0.2);
+    }
+    .svc-journey::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(118deg, rgba(0, 150, 143, 0.88) 0%, rgba(0, 45, 84, 0.92) 100%),
+        url("https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1800&q=80") center/cover;
+      opacity: 0.35;
+      pointer-events: none;
+    }
+    .svc-journey > * {
+      position: relative;
+      z-index: 1;
+    }
+    .svc-journey h2 {
+      margin: 0 0 14px;
+      font-size: clamp(22px, 2.8vw, 30px);
+      font-weight: 800;
+    }
+    .svc-journey p {
+      margin: 0 auto 22px;
+      max-width: 38rem;
+      font-size: 15px;
+      line-height: 1.75;
+      opacity: 0.92;
+    }
+    .svc-journey .hero-cta-row {
+      justify-content: center;
+      margin-top: 8px;
+    }
+    .svc-journey .hero-cta-btn.is-secondary {
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.88);
+    }
+    .svc-journey .hero-cta-btn.is-secondary:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+    .hero-title .hero-title-line {
+      white-space: nowrap;
+    }
+    @media (max-width: 560px) {
+      .hero-title .hero-title-line {
+        white-space: normal;
+      }
+    }
+
+    /* Services: section strips + image cards (theme-aligned) */
+    .svc-section-head {
+      margin-bottom: clamp(22px, 3.5vw, 34px);
+    }
+    .svc-section-head .svc-section-intro {
+      margin-bottom: 0;
+    }
+    .svc-band--soft .svc-section-title--center {
+      text-align: center;
+      width: 100%;
+    }
+    #how-we-work .svc-lead {
+      margin-bottom: 32px !important;
+    }
+    #how-we-work .svc-band-inner {
+      text-align: center;
+    }
+    .svc-strip {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: clamp(26px, 4vw, 38px);
+      min-height: clamp(140px, 22vw, 200px);
+      box-shadow: 0 18px 45px rgba(0, 48, 87, 0.12);
+    }
+    .svc-strip__bg {
+      position: absolute;
+      inset: 0;
+      background-position: center;
+      background-size: cover;
+      transform: scale(1.02);
+    }
+    .svc-strip__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        118deg,
+        rgba(0, 150, 143, 0.92) 0%,
+        rgba(11, 54, 93, 0.82) 48%,
+        rgba(0, 45, 84, 0.94) 100%
+      );
+    }
+    .svc-strip__overlay::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: min(220px, 42%);
+      height: 4px;
+      background: var(--brand-yellow);
+      border-radius: 2px 2px 0 0;
+    }
+    .svc-strip__inner {
+      position: relative;
+      z-index: 1;
+      padding: clamp(22px, 4vw, 36px) clamp(22px, 4vw, 40px);
+      color: #ffffff;
+      max-width: 52rem;
+    }
+    .svc-strip .svc-section-kicker {
+      color: rgba(255, 255, 255, 0.88);
+      margin-bottom: 8px;
+    }
+    .svc-strip .svc-section-title {
+      color: #ffffff;
+      margin: 0 0 10px;
+    }
+    .svc-strip .svc-section-intro {
+      color: rgba(255, 255, 255, 0.9);
+      margin: 0;
+      max-width: 40rem;
+    }
+    .svc-strip--pathways .svc-strip__bg {
+      background-image: url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80");
+    }
+    .svc-strip--success .svc-strip__bg {
+      background-image: url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80");
+    }
+    .svc-strip--talent .svc-strip__bg {
+      background-image: url("https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80");
+    }
+    .svc-strip--institutions .svc-strip__bg {
+      background-image: url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80");
+    }
+    .svc-strip--wellbeing .svc-strip__bg {
+      background-image: url("https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80");
+    }
+    .svc-strip--cert .svc-strip__bg {
+      background-image: url("https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80");
+    }
+    .svc-strip--hc .svc-strip__bg {
+      background-image: url("https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80");
+    }
+
+    .svc-card--media {
+      padding: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .svc-card-media {
+      position: relative;
+      height: clamp(132px, 18vw, 168px);
+      flex-shrink: 0;
+    }
+    .svc-card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .svc-card-media-overlay {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 54, 93, 0.05) 0%,
+        rgba(0, 54, 93, 0.45) 100%
+      ),
+        linear-gradient(135deg, rgba(0, 150, 143, 0.4) 0%, rgba(11, 54, 93, 0.35) 100%);
+    }
+    .svc-card-body {
+      padding: clamp(18px, 2.8vw, 24px) clamp(18px, 2.5vw, 24px) clamp(20px, 3vw, 26px);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .svc-card--media .svc-card-body {
+      flex: 1;
+    }
+    .svc-card--media h3 {
+      margin-top: 0;
+    }
+
+    .svc-step {
+      position: relative;
+      overflow: hidden;
+      text-align: left;
+      padding: 0;
+      border: 0;
+      border-radius: 12px;
+      background: #ffffff;
+      border: 1px solid rgba(0, 150, 143, 0.14);
+      box-shadow: 0 12px 36px rgba(0, 48, 87, 0.08);
+      display: flex;
+      flex-direction: column;
+    }
+    .svc-step__visual {
+      position: relative;
+      height: 100px;
+      flex-shrink: 0;
+      border-radius: 12px 12px 0 0;
+      overflow: hidden;
+    }
+    .svc-step__body {
+      padding: 18px 16px 20px;
+      text-align: center;
+    }
+    .svc-step__body strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--brand-primary);
+    }
+    .svc-step__body p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #4b5563;
+    }
+    .svc-step--1 .svc-step__visual {
+      background-image: url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80");
+      background-size: cover;
+      background-position: center;
+    }
+    .svc-step--2 .svc-step__visual {
+      background-image: url("https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=80");
+      background-size: cover;
+      background-position: center;
+    }
+    .svc-step--3 .svc-step__visual {
+      background-image: url("https://selecttraining.ae/wp-content/uploads/2022/08/Begin-With-The-End-In-Mind-scaled.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    .svc-step--4 .svc-step__visual {
+      background-image: url("https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80");
+      background-size: cover;
+      background-position: center;
+    }
+    .svc-step__visual .svc-card-media-overlay {
+      position: absolute;
+      inset: 0;
+    }
+
+    .svc-hc-main {
+      min-width: 0;
+    }
+    .svc-hc-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+      gap: clamp(24px, 4vw, 40px);
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .svc-hc-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+    .svc-hc-aside {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      min-height: 280px;
+      box-shadow: 0 16px 40px rgba(0, 48, 87, 0.12);
+    }
+    .svc-hc-aside__bg {
+      position: absolute;
+      inset: 0;
+      background: url("https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80") center/cover;
+    }
+    .svc-hc-aside__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(200deg, rgba(0, 150, 143, 0.25) 0%, rgba(0, 45, 84, 0.88) 100%);
+    }
+    .svc-hc-aside__caption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 20px 22px;
+      color: #ffffff;
+      font-size: 14px;
+      line-height: 1.55;
+      font-weight: 600;
+    }
+    .svc-hc-aside__caption span {
+      display: block;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--brand-yellow);
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    Page structure (landmarks):
+      [1] header#site-header     — Sticky nav, logo, mobile menu
+      [2] main#main-content      — All page sections (hero → discover)
+      [3] footer#site-footer     — Partners, footer links, legal
+      [4] aside + scripts        — Floating UI & vendors (outside landmarks)
+  -->
+
+  <!-- ========== [1] HEADER ========== -->
+  <header class="hero-nav-sticky" id="site-header">
+    <div class="container">
+      <div class="hero-nav">
+        <div class="hero-nav-left">
+          <a href="https://selecttraining.ae/" class="hero-logo-link" aria-label="Select Training — Home"><img src="https://selecttraining.ae/wp-content/uploads/2022/11/Select-Logo_Horizontal-1400x447.png" alt="Select Training" /></a>
+        </div>
+        <nav id="mobile-primary-nav" class="hero-links">
+          <div class="menu-item">
+            <a href="https://selecttraining.ae/our-journey/">About us<i class="fa-solid fa-caret-down" aria-hidden="true"></i></a>
+            <div class="dropdown">
+              <a href="https://selecttraining.ae/our-journey/">Our Journey</a>
+              <a href="https://selecttraining.ae/our-methodology/">Select&#8217;s Way</a>
+              <a href="https://selecttraining.ae/our-team/">Our Team</a>
+              <a href="https://selecttraining.ae/why-select/">Why Select?</a>
+              <a href="https://selecttraining.ae/our-partners/">Our Partners</a>
+              <a href="https://selecttraining.ae/careers/">Careers</a>
+            </div>
+          </div>
+          <div class="menu-item">
+            <a href="https://selecttraining.ae/courses/">Solutions<i class="fa-solid fa-caret-down" aria-hidden="true"></i></a>
+            <div class="dropdown">
+              <a href="https://selecttraining.ae/team-building-activities-in-dubai/">Team Building</a>
+              <a href="https://selecttraining.ae/courses/">Courses</a>
+              <a href="https://selecttraining.ae/weselectselflearning/">E-learning</a>
+              <a href="https://selecttraining.ae/business-simulation-in-uae/">Simulations</a>
+              <a href="https://selecttraining.ae/business-coaching/">Coaching</a>
+              <a href="https://selecttraining.ae/business-consultancy/">Consultancy</a>
+              <a href="https://selecttraining.ae/business-development-programmes/">Programmes</a>
+              <a href="https://selecttraining.ae/ai-programmes/">AI Programmes</a>
+            </div>
+          </div>
+          <div class="menu-item">
+            <a href="https://selecttraining.ae/library/">Blog<i class="fa-solid fa-caret-down" aria-hidden="true"></i></a>
+            <div class="dropdown">
+              <a href="https://selecttraining.ae/category/team-building/">Team Building</a>
+              <a href="https://selecttraining.ae/category/artificial-intelligence/">Artificial Intelligence</a>
+              <a href="https://selecttraining.ae/category/communication-skills/">Communication Skills</a>
+              <a href="https://selecttraining.ae/category/personal-development/">Personal Development</a>
+              <a href="https://selecttraining.ae/category/project-management/">Project Management</a>
+              <a href="https://selecttraining.ae/category/management-and-leadership/">Management and Leadership</a>
+              <a href="https://selecttraining.ae/category/human-resources/">Human Resources</a>
+              <a href="https://selecttraining.ae/category/customer-service/">Customer Service</a>
+              <a href="https://selecttraining.ae/category/sales/">Sales</a>
+            </div>
+          </div>
+          <a href="https://selecttraining.ae/contact/" class="active-link">Contact us</a>
+          <a href="https://selecttraining.ae/wp-login.php">Sign in</a>
+          <a href="https://selecttraining.ae/ar/%d8%aa%d9%88%d8%a7%d8%b5%d9%84/" class="lang-link"><img src="https://selecttraining.ae/wp-content/plugins/translatepress-multilingual/assets/images/flags/ar.png" alt="AR flag " /> AR</a>
+        </nav>
+        <div class="hero-actions">
+          <a href="https://selecttraining.ae/?s=" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
+          <a href="https://selecttraining.ae/cart/" aria-label="Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+          <a href="https://selecttraining.ae/courses/" aria-label="Calendar"><i class="fa-regular fa-calendar"></i></a>
+        </div>
+        <button id="mobile-menu-toggle" class="menu-toggle-btn" aria-label="Toggle navigation" aria-controls="mobile-primary-nav" aria-expanded="false"><i class="fa-solid fa-bars icon-open" aria-hidden="true"></i><i class="fa-solid fa-xmark icon-close" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </header>
+  <!-- ========== / HEADER ========== -->
+
+  <!-- ========== [2] MAIN ========== -->
+  <main id="main-content" aria-label="Primary content">
+    <!-- Page hero -->
+    <section class="top-hero" role="region" aria-labelledby="hero-title">
+      <div class="container">
+        <h1 id="hero-title" class="hero-title" data-aos="fade-down" data-aos-duration="900"><span class="hero-title-line">Clarity.</span> <span class="hero-title-line">Direction.</span> <span class="hero-title-line">Capability.</span> <span class="hero-title-line">Impact.</span></h1>
+        <p class="hero-subheadline" data-aos="fade-up" data-aos-duration="800" data-aos-delay="120">We support students, institutions, and organisations through integrated solutions across education pathways, student success, and workforce transformation.</p>
+        <div class="hero-cta-row" data-aos="fade-up" data-aos-duration="750" data-aos-delay="220">
+          <a class="hero-cta-btn" href="#contact">Request a call back</a>
+          <a class="hero-cta-btn is-secondary" href="#services-overview">Explore solutions</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services-overview" class="lifecycle-intro" aria-labelledby="services-overview-heading">
+      <div class="lifecycle-intro-inner">
+        <div class="lifecycle-intro-content" data-aos="fade-up" data-aos-duration="850">
+          <div class="lifecycle-intro-grid">
+            <div class="lifecycle-intro-text" data-aos="fade-right" data-aos-duration="800" data-aos-delay="50">
+              <p class="lifecycle-intro-kicker">Integrated solutions</p>
+              <h2 id="services-overview-heading">One partner for <span class="lifecycle-intro-em">pathways, success, and transformation</span></h2>
+              <span class="elementor-divider-separator lifecycle-intro-rule" aria-hidden="true"></span>
+              <div class="svc-pillar-row" aria-hidden="true">
+                <span class="svc-pillar">Clarity</span>
+                <span class="svc-pillar">Direction</span>
+                <span class="svc-pillar">Capability</span>
+                <span class="svc-pillar">Impact</span>
+              </div>
+              <p class="lifecycle-intro-lead">From in-country academic advising and global study pathways to student wellbeing, talent exploration, and institutional partnerships — through to human capital, HR transformation, and future workforce design.</p>
+            </div>
+            <figure class="lifecycle-intro-visual" data-aos="fade-left" data-aos-duration="850" data-aos-delay="80">
+              <img src="assets/emirati_student_success.png" width="760" height="570" alt="Students and professionals supported through pathways and transformation programmes" loading="lazy" decoding="async" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="svc-tabs-wrap">
+      <input class="svc-tab-input" type="radio" name="svc_main_tab" id="svc-tab-edu" checked />
+      <input class="svc-tab-input" type="radio" name="svc_main_tab" id="svc-tab-hc" />
+      <div class="svc-tab-bar" role="tablist" aria-label="Solution areas" aria-orientation="horizontal">
+        <button class="svc-tab-btn is-active" type="button" role="tab" id="svc-tab-btn-edu" aria-selected="true" aria-controls="svc-panel-edu" data-target="svc-tab-edu" data-hash="#education">Education &amp; student solutions</button>
+        <button class="svc-tab-btn" type="button" role="tab" id="svc-tab-btn-hc" aria-selected="false" aria-controls="svc-panel-hc" data-target="svc-tab-hc" data-hash="#human-capital" tabindex="-1">Human capital &amp; transformation</button>
+      </div>
+
+      <div class="svc-panel-edu" id="svc-panel-edu" role="tabpanel" aria-labelledby="svc-tab-btn-edu">
+
+        <section id="pathways" class="slc-section" aria-labelledby="pathways-heading">
+          <div class="slc-head">
+            <div data-aos="fade-up" data-aos-duration="800">
+              <span class="slc-eyebrow">Student pathways</span>
+              <h2 class="slc-title" id="pathways-heading">Student Pathways &amp; <br /><span>Academic Advisory</span></h2>
+            </div>
+            <p class="slc-sub" data-aos="fade-left" data-aos-duration="750" data-aos-delay="60">Structured guidance, global mobility, and admissions support — aligned to each learner&rsquo;s context and ambition.</p>
+          </div>
+          <div class="slc-grid-wrap">
+            <article class="slc-card slc-card--ai" data-aos="zoom-in-up" data-aos-duration="750">
+              <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Student working on a laptop representing digital learning and academic planning" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">01</div>
+                  <h3><i class="fas fa-school"></i> Academic Advising (In-Country)</h3>
+                  <p class="slc-lead">Structured guidance for students exploring their future direction.</p>
+                  <ul class="slc-bullets">
+                    <li>Subject and stream selection (school level)</li>
+                    <li>Interest, strengths, and aptitude assessments</li>
+                    <li>University pathway awareness (local and international)</li>
+                    <li>Parent advisory and engagement</li>
+                    <li>Registration and application readiness</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Guidance</span><span class="slc-chip">Planning</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--v slc-card--ai" data-aos="fade-up" data-aos-duration="750" data-aos-delay="100">
+              <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Keyboard and workspace suggesting AI-assisted study and online learning abroad" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">02</div>
+                  <h3><i class="fas fa-earth-americas"></i> Academic Advising (Students Studying Abroad)</h3>
+                  <p class="slc-lead">Ongoing, holistic support beyond admission.</p>
+                  <ul class="slc-bullets">
+                    <li>Pre-departure readiness (academic, cultural, practical)</li>
+                    <li>Wellbeing, counselling, and emotional support</li>
+                    <li>Culture shock adaptation and integration</li>
+                    <li>Time management and academic discipline</li>
+                    <li>Ongoing check-ins and progress monitoring</li>
+                    <li>Parent communication and reporting</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Wellbeing</span><span class="slc-chip">Continuity</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--o slc-card--ai" data-aos="fade-up" data-aos-duration="750" data-aos-delay="200">
+              <img src="https://selecttraining.ae/wp-content/uploads/2024/10/5.webp" alt="Global education pathways and international opportunities" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">03</div>
+                  <h3><i class="fas fa-globe"></i> Global Study Pathways</h3>
+                  <p class="slc-lead">End-to-end support for international education.</p>
+                  <ul class="slc-bullets">
+                    <li>Country and university selection</li>
+                    <li>Programme and course alignment</li>
+                    <li>Application planning and timelines</li>
+                    <li>Visa and documentation guidance</li>
+                    <li>Pre-departure onboarding programmes</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Global</span><span class="slc-chip">Mobility</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--c slc-card--ai" data-aos="flip-left" data-aos-duration="780">
+              <img src="https://selecttraining.ae/wp-content/uploads/2022/08/Begin-With-The-End-In-Mind-scaled.jpg" alt="Structured university admissions planning and application support" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">04</div>
+                  <h3><i class="fas fa-file-signature"></i> University Admissions Support</h3>
+                  <p class="slc-lead">Positioning students for strong, competitive applications.</p>
+                  <ul class="slc-bullets">
+                    <li>Personal statement development</li>
+                    <li>Application review and refinement</li>
+                    <li>Interview preparation</li>
+                    <li>Deadline management</li>
+                    <li>Offer evaluation and decision support</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Admissions</span><span class="slc-chip">Excellence</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="student-success" class="slc-section" aria-labelledby="success-heading">
+          <div class="slc-head">
+            <div data-aos="fade-up" data-aos-duration="800">
+              <span class="slc-eyebrow">Engagement &amp; outcomes</span>
+              <h2 class="slc-title" id="success-heading">Student Success, <span>Wellbeing &amp; Engagement</span></h2>
+            </div>
+            <p class="slc-sub" data-aos="fade-left" data-aos-duration="750" data-aos-delay="60">Targeted support, wellbeing programmes, and structured check-ins across the student journey.</p>
+          </div>
+          <div class="slc-grid-wrap">
+            <article class="slc-card slc-card--ai" data-aos="zoom-in-up" data-aos-duration="750">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Analytics dashboard representing student success monitoring and data-informed intervention" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">01</div>
+                  <h3><i class="fas fa-chart-line"></i> Student Success &amp; Intervention</h3>
+                  <p class="slc-lead">Targeted support to improve outcomes and retention.</p>
+                  <ul class="slc-bullets">
+                    <li>Academic performance monitoring</li>
+                    <li>Early identification of at-risk students</li>
+                    <li>Intervention and recovery plans</li>
+                    <li>Behavioural and academic counselling</li>
+                    <li>Retention strategies (universities and sponsors)</li>
+                    <li>Reintegration support</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Outcomes</span><span class="slc-chip">Retention</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--v slc-card--ai" data-aos="fade-up" data-aos-duration="750" data-aos-delay="100">
+              <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Futuristic interface suggesting technology-enabled wellbeing and support services" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">02</div>
+                  <h3><i class="fas fa-heart-pulse"></i> Student Wellbeing Programmes</h3>
+                  <p class="slc-lead">Continuous support for student stability and performance.</p>
+                  <ul class="slc-bullets">
+                    <li>Mental health and emotional wellbeing support</li>
+                    <li>Stress, anxiety, and transition management</li>
+                    <li>Crisis support and escalation frameworks</li>
+                    <li>Peer and community support models</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Wellbeing</span><span class="slc-chip">Support</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--s slc-card--ai" data-aos="fade-up" data-aos-duration="750" data-aos-delay="200">
+              <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Technology and innovation backdrop for structured check-ins and engagement" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">03</div>
+                  <h3><i class="fas fa-calendar-check"></i> Seasonal Check-ins &amp; Engagement</h3>
+                  <p class="slc-lead">Structured follow-up during key transition periods.</p>
+                  <ul class="slc-bullets">
+                    <li>Summer and winter check-ins for students abroad</li>
+                    <li>Academic progress reviews during breaks</li>
+                    <li>Re-alignment sessions before new terms</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Check-ins</span><span class="slc-chip">Transitions</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="talent" class="slc-section" aria-labelledby="talent-heading">
+          <div class="slc-head">
+            <div data-aos="fade-up" data-aos-duration="800">
+              <span class="slc-eyebrow">Future readiness</span>
+              <h2 class="slc-title" id="talent-heading">Talent Awareness &amp; <span>Career Exploration</span></h2>
+            </div>
+            <p class="slc-sub" data-aos="fade-left" data-aos-duration="750" data-aos-delay="60">Career discovery, awareness programmes, exploratory paths, and immersive camps.</p>
+          </div>
+          <div class="slc-grid-wrap">
+            <article class="slc-card slc-card--ai" data-aos="zoom-in-up" data-aos-duration="750">
+              <img src="https://selecttraining.ae/wp-content/uploads/2022/08/Begin-With-The-End-In-Mind-scaled.jpg" alt="Career guidance workshop supporting students and professionals" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">01</div>
+                  <h3><i class="fas fa-compass"></i> Career Discovery &amp; Planning</h3>
+                  <p class="slc-lead">Helping students and individuals make informed decisions.</p>
+                  <ul class="slc-bullets">
+                    <li>Career assessments and profiling</li>
+                    <li>Strengths and interest identification</li>
+                    <li>Career pathway exploration</li>
+                    <li>Action planning and goal setting</li>
+                    <li>One-to-one advisory sessions</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Discovery</span><span class="slc-chip">Planning</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--v slc-card--ai" data-aos="fade-up" data-aos-duration="750" data-aos-delay="100">
+              <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Team collaborating in a modern office with technology" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">02</div>
+                  <h3><i class="fas fa-bullhorn"></i> Talent Awareness Programmes</h3>
+                  <p class="slc-lead">Early exposure to opportunities and future pathways.</p>
+                  <ul class="slc-bullets">
+                    <li>Career awareness sessions (schools and universities)</li>
+                    <li>Future of work and sector exposure</li>
+                    <li>Parent awareness sessions</li>
+                    <li>Industry engagement programmes</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Awareness</span><span class="slc-chip">Exposure</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--o slc-card--ai" data-aos="fade-up" data-aos-duration="750" data-aos-delay="200">
+              <img src="https://selecttraining.ae/wp-content/uploads/2021/10/communication-skills.jpg" alt="Exploratory learning and pre-major skills discovery" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">03</div>
+                  <h3><i class="fas fa-flask"></i> Exploratory &amp; Pre-Major Programmes</h3>
+                  <p class="slc-lead">Supporting students who are undecided.</p>
+                  <ul class="slc-bullets">
+                    <li>&ldquo;Try-a-major&rdquo; bootcamps</li>
+                    <li>First-year university exploration programmes</li>
+                    <li>Skills discovery (STEM, business, creative)</li>
+                    <li>Industry exposure (corporates and academies)</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Exploration</span><span class="slc-chip">Skills</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--c slc-card--ai" data-aos="flip-left" data-aos-duration="780">
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Digital learning and laptop immersion representing summer and winter skills programmes" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">04</div>
+                  <h3><i class="fas fa-sun"></i> Summer &amp; Winter Programmes / Camps</h3>
+                  <p class="slc-lead">Immersive experiences for growth and self-discovery.</p>
+                  <ul class="slc-bullets">
+                    <li>Student summer programmes (schools and universities)</li>
+                    <li>University-based summer immersion programmes</li>
+                    <li>Winter camps and short-term intensives</li>
+                    <li>Self-awareness and personal development camps</li>
+                    <li>Passion discovery and career exploration</li>
+                    <li>Leadership, communication, and life skills</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Immersion</span><span class="slc-chip">Growth</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="institutions" class="slc-section" aria-labelledby="institutions-heading">
+          <div class="slc-head">
+            <div data-aos="fade-up" data-aos-duration="800">
+              <span class="slc-eyebrow">Partnerships</span>
+              <h2 class="slc-title" id="institutions-heading">University &amp; <span>Institutional Partnerships</span></h2>
+            </div>
+            <p class="slc-sub" data-aos="fade-left" data-aos-duration="750" data-aos-delay="60">Programme design, onboarding, and industry-connected pathways for institutions.</p>
+          </div>
+          <div class="slc-grid-wrap">
+            <article class="slc-card slc-card--ai" data-aos="zoom-in-up" data-aos-duration="750">
+              <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Digital data network representing programme design and market insight" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">01</div>
+                  <h3><i class="fas fa-building-columns"></i> University &amp; Programme Advisory</h3>
+                  <p class="slc-lead">Supporting institutions in attracting and retaining students.</p>
+                  <ul class="slc-bullets">
+                    <li>Programme design and positioning</li>
+                    <li>Student demand and market insights</li>
+                    <li>Curriculum relevance and alignment</li>
+                    <li>Enrollment and retention strategies</li>
+                    <li>Student experience enhancement</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Programmes</span><span class="slc-chip">Positioning</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--v slc-card--ai" data-aos="fade-up" data-aos-duration="750" data-aos-delay="100">
+              <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Modern digital workspace suggesting AI-enabled onboarding and academic readiness" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">02</div>
+                  <h3><i class="fas fa-door-open"></i> University Onboarding &amp; Transition</h3>
+                  <p class="slc-lead">Structured transition into higher education.</p>
+                  <ul class="slc-bullets">
+                    <li>First-year onboarding programmes</li>
+                    <li>Academic readiness frameworks</li>
+                    <li>Transition support (school to university)</li>
+                    <li>Orientation and integration design</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Onboarding</span><span class="slc-chip">Transition</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--s slc-card--ai" data-aos="fade-up" data-aos-duration="750" data-aos-delay="200">
+              <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Business handshake representing institutional and workforce partnerships" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">03</div>
+                  <h3><i class="fas fa-handshake"></i> Institutional &amp; Workforce Partnerships</h3>
+                  <p class="slc-lead">Connecting education to industry.</p>
+                  <ul class="slc-bullets">
+                    <li>Talent pipeline design</li>
+                    <li>Internship and placement pathways</li>
+                    <li>Scholarship programme advisory and management</li>
+                    <li>Partnerships with academies and training institutes</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Industry</span><span class="slc-chip">Pathways</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="wellbeing" class="slc-section" aria-labelledby="wellbeing-heading">
+          <div class="slc-head">
+            <div data-aos="fade-up" data-aos-duration="800">
+              <span class="slc-eyebrow">Cross-sector</span>
+              <h2 class="slc-title" id="wellbeing-heading">Wellbeing <span>Programmes</span></h2>
+            </div>
+            <p class="slc-sub" data-aos="fade-left" data-aos-duration="750" data-aos-delay="60">Workforce, industrial, and education-sector wellbeing — designed for stability, performance, and retention.</p>
+          </div>
+          <div class="slc-grid-wrap">
+            <article class="slc-card slc-card--ai" data-aos="zoom-in-up" data-aos-duration="750">
+              <img src="https://selecttraining.ae/wp-content/uploads/2021/10/communication-skills-package.jpg" alt="Workforce wellbeing support and resilience programmes" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">01</div>
+                  <h3><i class="fas fa-briefcase"></i> Workforce Wellbeing</h3>
+                  <ul class="slc-bullets">
+                    <li>Employee wellbeing programmes (corporate and government)</li>
+                    <li>Burnout prevention and resilience</li>
+                    <li>Mental health awareness and support</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Corporate</span><span class="slc-chip">Resilience</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--v slc-card--photo-real" data-aos="fade-up" data-aos-duration="750" data-aos-delay="100">
+              <img src="https://selecttraining.ae/wp-content/uploads/2022/10/sales-courses-in-dubai-scaled.jpg" alt="Blue-collar wellbeing support in an industrial workplace" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">02</div>
+                  <h3><i class="fas fa-hard-hat"></i> Blue-Collar Wellbeing</h3>
+                  <ul class="slc-bullets">
+                    <li>Industrial workforce wellbeing initiatives</li>
+                    <li>Physical and mental health programmes</li>
+                    <li>Engagement and retention support</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Industrial</span><span class="slc-chip">Safety</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--c slc-card--ai" data-aos="flip-left" data-aos-duration="780">
+              <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Futuristic digital learning environment for education-sector wellbeing and faculty support" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">03</div>
+                  <h3><i class="fas fa-chalkboard-user"></i> Education Sector Wellbeing</h3>
+                  <ul class="slc-bullets">
+                    <li>Teacher wellbeing programmes</li>
+                    <li>Academic advisor and counsellor support</li>
+                    <li>University faculty and professor wellbeing</li>
+                    <li>Institutional wellbeing strategies</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Education</span><span class="slc-chip">Faculty</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="certification" class="slc-section" aria-labelledby="cert-heading">
+          <div class="slc-head">
+            <div data-aos="fade-up" data-aos-duration="800">
+              <span class="slc-eyebrow">Credentials</span>
+              <h2 class="slc-title" id="cert-heading">Professional <span>Certification</span></h2>
+            </div>
+            <p class="slc-sub" data-aos="fade-left" data-aos-duration="750" data-aos-delay="60">Career coaching certification aligned to international standards.</p>
+          </div>
+          <div class="slc-grid-wrap">
+            <article class="slc-card slc-card--wide slc-card--ai" data-aos="fade-up" data-aos-duration="900">
+              <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="AI-era workspace and keyboard representing modern career coaching and digital credentials" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div class="slc-left">
+                  <div class="slc-num">01</div>
+                  <h3><i class="fas fa-certificate"></i> Career Coaching Certification</h3>
+                  <ul class="slc-bullets">
+                    <li>Coaching frameworks and methodologies</li>
+                    <li>Career assessment tools and techniques</li>
+                    <li>Goal setting and development planning</li>
+                    <li>Practical coaching simulations</li>
+                    <li>Certification aligned to international standards</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">ICF-ready</span><span class="slc-chip">Practical</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <div class="svc-panel-hc" id="svc-panel-hc" role="tabpanel" aria-labelledby="svc-tab-btn-hc">
+        <section id="human-capital" class="slc-section" aria-labelledby="hc-heading">
+          <div class="slc-head">
+            <div data-aos="fade-up" data-aos-duration="800">
+              <span class="slc-eyebrow">Organisations</span>
+              <h2 class="slc-title" id="hc-heading">Human Capital &amp; <br /><span>Organisational Transformation</span></h2>
+            </div>
+            <p class="slc-sub" data-aos="fade-left" data-aos-duration="750" data-aos-delay="60">Strategy, HR transformation, talent, culture, and change — including blue-collar workforce development and AI-enabled workforce solutions.</p>
+          </div>
+          <div class="slc-grid-wrap">
+            <article class="slc-card slc-card--ai" data-aos="zoom-in-up" data-aos-duration="750">
+              <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Leadership team planning organisational strategy with technology in the workplace" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">01</div>
+                  <h3><i class="fas fa-diagram-project"></i> Organisational Strategy &amp; Design</h3>
+                  <ul class="slc-bullets">
+                    <li>Organisational design and restructuring</li>
+                    <li>Operating model and shared services design</li>
+                    <li>Governance and decision-making frameworks</li>
+                    <li>Workforce planning and capability mapping</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Design</span><span class="slc-chip">Operating model</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--v slc-card--ai" data-aos="fade-up" data-aos-duration="750" data-aos-delay="100">
+              <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Abstract digital network and data visualization representing HR technology" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">02</div>
+                  <h3><i class="fas fa-gears"></i> HR Transformation &amp; Digitisation</h3>
+                  <ul class="slc-bullets">
+                    <li>End-to-end HR transformation</li>
+                    <li>HR operating model redesign (including business partner models)</li>
+                    <li>Digital HR systems and automation</li>
+                    <li>Process re-engineering</li>
+                    <li>AI-enabled HR solutions and analytics</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Digital HR</span><span class="slc-chip">Automation</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--o slc-card--ai" data-aos="fade-up" data-aos-duration="750" data-aos-delay="200">
+              <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Technology and innovation representing modern talent acquisition" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">03</div>
+                  <h3><i class="fas fa-user-plus"></i> Talent Acquisition &amp; Workforce Transformation</h3>
+                  <ul class="slc-bullets">
+                    <li>Strategic recruitment for critical roles</li>
+                    <li>Recruitment process transformation</li>
+                    <li>Employer branding and EVP</li>
+                    <li>Transformation of existing teams</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">EVP</span><span class="slc-chip">Recruitment</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--c slc-card--ai" data-aos="flip-left" data-aos-duration="780">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Data dashboards supporting talent management and succession planning" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">04</div>
+                  <h3><i class="fas fa-users-gear"></i> Talent Management &amp; Succession</h3>
+                  <ul class="slc-bullets">
+                    <li>Talent identification frameworks</li>
+                    <li>Succession planning (critical roles)</li>
+                    <li>Performance management systems</li>
+                    <li>High-potential and leadership programmes</li>
+                    <li>Career pathways</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Succession</span><span class="slc-chip">Leadership</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--s slc-card--ai" data-aos="fade-up" data-aos-duration="750" data-aos-delay="100">
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Digital learning and laptop-based corporate academy and coaching" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">05</div>
+                  <h3><i class="fas fa-graduation-cap"></i> Learning, Development &amp; Coaching</h3>
+                  <ul class="slc-bullets">
+                    <li>Learning and development strategies</li>
+                    <li>Leadership development programmes</li>
+                    <li>Coaching and mentoring</li>
+                    <li>Capability frameworks</li>
+                    <li>Corporate academy design</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">L&amp;D</span><span class="slc-chip">Academy</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--ai" data-aos="zoom-in-up" data-aos-duration="750" data-aos-delay="200">
+              <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Futuristic digital experience representing culture and employee experience innovation" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">06</div>
+                  <h3><i class="fas fa-heart"></i> Culture, Engagement &amp; Employee Experience</h3>
+                  <ul class="slc-bullets">
+                    <li>Culture transformation programmes</li>
+                    <li>Employee engagement strategies and surveys</li>
+                    <li>Values and behavioural frameworks</li>
+                    <li>Internal communication strategies</li>
+                    <li>Employee experience design</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Culture</span><span class="slc-chip">EX</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--v slc-card--ai" data-aos="fade-up" data-aos-duration="750">
+              <img src="https://selecttraining.ae/wp-content/uploads/2022/10/leader-e1665416491999.jpg" alt="Leadership team driving change management and transformation delivery" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">07</div>
+                  <h3><i class="fas fa-arrows-spin"></i> Change Management &amp; Transformation Delivery</h3>
+                  <ul class="slc-bullets">
+                    <li>Change management frameworks</li>
+                    <li>Transformation roadmap design</li>
+                    <li>Stakeholder alignment and communication</li>
+                    <li>Programme governance and execution</li>
+                    <li>Adoption and impact tracking</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Change</span><span class="slc-chip">Governance</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--o slc-card--photo-real" data-aos="fade-up" data-aos-duration="750" data-aos-delay="100">
+              <img src="https://selecttraining.ae/wp-content/uploads/2022/10/sales-courses-in-dubai-scaled.jpg" alt="Blue-collar workforce development and frontline training" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">08</div>
+                  <h3><i class="fas fa-helmet-safety"></i> Blue-Collar Workforce Development</h3>
+                  <ul class="slc-bullets">
+                    <li>Blue-collar capability development programmes</li>
+                    <li>Frontline leadership and supervisor training</li>
+                    <li>Workforce productivity improvement</li>
+                    <li>Career progression pathways</li>
+                    <li>Wellbeing programmes for industrial workforce</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">Frontline</span><span class="slc-chip">Industrial</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--c slc-card--ai" data-aos="flip-left" data-aos-duration="780">
+              <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Leadership and HR teams aligning strategy with technology-enabled business partnering" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div>
+                  <div class="slc-num">09</div>
+                  <h3><i class="fas fa-handshake"></i> Business Partnering Models</h3>
+                  <ul class="slc-bullets">
+                    <li>HR Business Partner model design and implementation</li>
+                    <li>Capability building for HRBPs</li>
+                    <li>Alignment between HR and business strategy</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">HRBP</span><span class="slc-chip">Alignment</span></div>
+              </div>
+            </article>
+            <article class="slc-card slc-card--wide slc-card--ai" data-aos="fade-up" data-aos-duration="900">
+              <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Hands interacting with a glowing AI interface and holographic data" loading="lazy" decoding="async" />
+              <div class="slc-overlay"></div>
+              <div class="slc-content">
+                <div class="slc-left">
+                  <div class="slc-num">10</div>
+                  <h3><i class="fas fa-robot"></i> AI &amp; Future Workforce Solutions</h3>
+                  <ul class="slc-bullets">
+                    <li>AI-driven workforce planning</li>
+                    <li>AI agents for HR operations and employee services</li>
+                    <li>Skills intelligence and future skills mapping</li>
+                    <li>Data-driven HR dashboards and insights</li>
+                    <li>Digital employee experience platforms</li>
+                  </ul>
+                </div>
+                <div class="slc-chips"><span class="slc-chip">AI</span><span class="slc-chip">Future skills</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <section id="how-we-work" class="svc-band svc-band--soft" aria-labelledby="how-heading">
+      <div class="svc-band-inner">
+        <span class="svc-section-kicker">Our method</span>
+        <h2 class="svc-section-title svc-section-title--center" id="how-heading">How We Work</h2>
+        <p class="svc-lead">A clear sequence from discovery to delivery — so outcomes stay measurable and aligned.</p>
+        <div class="svc-steps">
+          <div class="svc-step svc-step--1" data-aos="fade-up" data-aos-duration="650">
+            <div class="svc-step__visual" aria-hidden="true"><div class="svc-card-media-overlay"></div></div>
+            <div class="svc-step__body"><strong>Understand</strong><p>Assess goals, needs, and context.</p></div>
+          </div>
+          <div class="svc-step svc-step--2" data-aos="fade-up" data-aos-duration="650" data-aos-delay="60">
+            <div class="svc-step__visual" aria-hidden="true"><div class="svc-card-media-overlay"></div></div>
+            <div class="svc-step__body"><strong>Align</strong><p>Map suitable pathways and solutions.</p></div>
+          </div>
+          <div class="svc-step svc-step--3" data-aos="fade-up" data-aos-duration="650" data-aos-delay="120">
+            <div class="svc-step__visual" aria-hidden="true"><div class="svc-card-media-overlay"></div></div>
+            <div class="svc-step__body"><strong>Plan</strong><p>Build structured, actionable roadmaps.</p></div>
+          </div>
+          <div class="svc-step svc-step--4" data-aos="fade-up" data-aos-duration="650" data-aos-delay="180">
+            <div class="svc-step__visual" aria-hidden="true"><div class="svc-card-media-overlay"></div></div>
+            <div class="svc-step__body"><strong>Deliver</strong><p>Support execution and measurable outcomes.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="journey" class="svc-band" aria-labelledby="journey-heading">
+      <div class="svc-band-inner">
+        <div class="svc-journey" data-aos="zoom-in" data-aos-duration="750">
+          <h2 id="journey-heading">Start Your Journey</h2>
+          <p>Whether supporting students, strengthening institutions, or transforming organisations, we provide the structure, expertise, and partnership to deliver meaningful outcomes.</p>
+          <p>Speak to our team to explore how we can support your goals.</p>
+          <div class="hero-cta-row">
+            <a class="hero-cta-btn" href="#contact">Speak to our team</a>
+            <a class="hero-cta-btn is-secondary" href="https://selecttraining.ae/contact/">Contact Select Training</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Teal CTA: callback form + TrustIndex delegates -->
+    <section id="contact" class="contact-section contact-delegates-section" aria-labelledby="callback-heading">
+      <div class="contact-delegates-inner">
+        <!-- Callback form -->
+        <div id="call-back" class="call-back-panel" data-aos="fade-up" data-aos-duration="800">
+          <div class="call-back-panel__inner">
+            <h2 id="callback-heading" class="call-back-title elementor-heading-title">Request a call back</h2>
+            <div class="call-back-divider" aria-hidden="true">
+              <div class="elementor-divider">
+                <span class="elementor-divider-separator"></span>
+              </div>
+            </div>
+            <p class="call-back-lead">Slots are limited, so request your call back as soon as possible.</p>
+            <div class="call-back-form-col">
+            <form class="elementor-form" id="request-callback-form" method="post" name="RequestCallBack" aria-label="RequestCallBack" novalidate>
+              <input type="hidden" name="post_id" value="16695" />
+              <input type="hidden" name="form_id" value="66cd2a0" />
+              <input type="hidden" name="referer_title" value="Integrated Education &amp; Workforce Solutions - Select Training" />
+              <input type="hidden" name="queried_id" value="33263" />
+              <div class="elementor-form-fields-wrapper elementor-labels-above">
+                <input id="form-field-name" class="elementor-field elementor-size-sm elementor-field-textual" type="text" name="form_fields[name]" placeholder="First Name" required autocomplete="given-name" />
+                <input id="form-field-email" class="elementor-field elementor-size-sm elementor-field-textual" type="text" name="form_fields[email]" placeholder="Last Name" required autocomplete="family-name" />
+                <input id="contact-email" class="elementor-field elementor-size-sm elementor-field-textual" type="email" name="form_fields[field_1bb7aa2]" placeholder="Email Address" required autocomplete="email" />
+                <input id="contact-confirm-email" class="elementor-field elementor-size-sm elementor-field-textual" type="email" name="form_fields[field_d705a16]" placeholder="Confirm Email Address" required autocomplete="email" />
+                <input id="form-field-field_dcceabf" class="elementor-field elementor-size-sm elementor-field-textual" type="text" name="form_fields[field_dcceabf]" placeholder="Phone Number" required autocomplete="tel" />
+                <select id="form-field-country_code" class="elementor-field elementor-size-sm elementor-field-textual" name="form_fields[country_code]" required>
+              <option value="Select country" selected="selected">Select country</option>
+              <option value="Afghanistan (+93)">Afghanistan (+93)</option>
+              <option value="Albania (+355)">Albania (+355)</option>
+              <option value="Algeria (+213)">Algeria (+213)</option>
+              <option value="Andorra (+376)">Andorra (+376)</option>
+              <option value="Angola (+244)">Angola (+244)</option>
+              <option value="Antigua and Barbuda (+1-268)">Antigua and Barbuda (+1-268)</option>
+              <option value="Argentina (+54)">Argentina (+54)</option>
+              <option value="Armenia (+374)">Armenia (+374)</option>
+              <option value="Australia (+61)">Australia (+61)</option>
+              <option value="Austria (+43)">Austria (+43)</option>
+              <option value="Azerbaijan (+994)">Azerbaijan (+994)</option>
+              <option value="Bahamas (+1-242)">Bahamas (+1-242)</option>
+              <option value="Bahrain (+973)">Bahrain (+973)</option>
+              <option value="Bangladesh (+880)">Bangladesh (+880)</option>
+              <option value="Barbados (+1-246)">Barbados (+1-246)</option>
+              <option value="Belarus (+375)">Belarus (+375)</option>
+              <option value="Belgium (+32)">Belgium (+32)</option>
+              <option value="Belize (+501)">Belize (+501)</option>
+              <option value="Benin (+229)">Benin (+229)</option>
+              <option value="Bhutan (+975)">Bhutan (+975)</option>
+              <option value="Bolivia (+591)">Bolivia (+591)</option>
+              <option value="Bosnia and Herzegovina (+387)">Bosnia and Herzegovina (+387)</option>
+              <option value="Botswana (+267)">Botswana (+267)</option>
+              <option value="Brazil (+55)">Brazil (+55)</option>
+              <option value="Brunei (+673)">Brunei (+673)</option>
+              <option value="Bulgaria (+359)">Bulgaria (+359)</option>
+              <option value="Burkina Faso (+226)">Burkina Faso (+226)</option>
+              <option value="Burundi (+257)">Burundi (+257)</option>
+              <option value="Cabo Verde (+238)">Cabo Verde (+238)</option>
+              <option value="Cambodia (+855)">Cambodia (+855)</option>
+              <option value="Cameroon (+237)">Cameroon (+237)</option>
+              <option value="Canada (+1)">Canada (+1)</option>
+              <option value="Central African Republic (+236)">Central African Republic (+236)</option>
+              <option value="Chad (+235)">Chad (+235)</option>
+              <option value="Chile (+56)">Chile (+56)</option>
+              <option value="China (+86)">China (+86)</option>
+              <option value="Colombia (+57)">Colombia (+57)</option>
+              <option value="Comoros (+269)">Comoros (+269)</option>
+              <option value="Congo, Democratic Republic of the (+243)">Congo, Democratic Republic of the (+243)</option>
+              <option value="Congo, Republic of the (+242)">Congo, Republic of the (+242)</option>
+              <option value="Costa Rica (+506)">Costa Rica (+506)</option>
+              <option value="Cote d&#039;Ivoire (+225)">Cote d&#039;Ivoire (+225)</option>
+              <option value="Croatia (+385)">Croatia (+385)</option>
+              <option value="Cuba (+53)">Cuba (+53)</option>
+              <option value="Cyprus (+357)">Cyprus (+357)</option>
+              <option value="Czech Republic (+420)">Czech Republic (+420)</option>
+              <option value="Denmark (+45)">Denmark (+45)</option>
+              <option value="Djibouti (+253)">Djibouti (+253)</option>
+              <option value="Dominica (+1-767)">Dominica (+1-767)</option>
+              <option value="Dominican Republic (+1-809, +1-829, +1-849)">Dominican Republic (+1-809, +1-829, +1-849)</option>
+              <option value="East Timor (Timor-Leste) (+670)">East Timor (Timor-Leste) (+670)</option>
+              <option value="Ecuador (+593)">Ecuador (+593)</option>
+              <option value="Egypt (+20)">Egypt (+20)</option>
+              <option value="El Salvador (+503)">El Salvador (+503)</option>
+              <option value="Equatorial Guinea (+240)">Equatorial Guinea (+240)</option>
+              <option value="Eritrea (+291)">Eritrea (+291)</option>
+              <option value="Estonia (+372)">Estonia (+372)</option>
+              <option value="Eswatini (+268)">Eswatini (+268)</option>
+              <option value="Ethiopia (+251)">Ethiopia (+251)</option>
+              <option value="Fiji (+679)">Fiji (+679)</option>
+              <option value="Finland (+358)">Finland (+358)</option>
+              <option value="France (+33)">France (+33)</option>
+              <option value="Gabon (+241)">Gabon (+241)</option>
+              <option value="Gambia (+220)">Gambia (+220)</option>
+              <option value="Georgia (+995)">Georgia (+995)</option>
+              <option value="Germany (+49)">Germany (+49)</option>
+              <option value="Ghana (+233)">Ghana (+233)</option>
+              <option value="Greece (+30)">Greece (+30)</option>
+              <option value="Grenada (+1-473)">Grenada (+1-473)</option>
+              <option value="Guatemala (+502)">Guatemala (+502)</option>
+              <option value="Guinea (+224)">Guinea (+224)</option>
+              <option value="Guinea-Bissau (+245)">Guinea-Bissau (+245)</option>
+              <option value="Guyana (+592)">Guyana (+592)</option>
+              <option value="Haiti (+509)">Haiti (+509)</option>
+              <option value="Honduras (+504)">Honduras (+504)</option>
+              <option value="Hungary (+36)">Hungary (+36)</option>
+              <option value="Iceland (+354)">Iceland (+354)</option>
+              <option value="India (+91)">India (+91)</option>
+              <option value="Indonesia (+62)">Indonesia (+62)</option>
+              <option value="Iran (+98)">Iran (+98)</option>
+              <option value="Iraq (+964)">Iraq (+964)</option>
+              <option value="Ireland (+353)">Ireland (+353)</option>
+              <option value="Israel (+972)">Israel (+972)</option>
+              <option value="Italy (+39)">Italy (+39)</option>
+              <option value="Jamaica (+1-876)">Jamaica (+1-876)</option>
+              <option value="Japan (+81)">Japan (+81)</option>
+              <option value="Jordan (+962)">Jordan (+962)</option>
+              <option value="Kazakhstan (+7)">Kazakhstan (+7)</option>
+              <option value="Kenya (+254)">Kenya (+254)</option>
+              <option value="Kiribati (+686)">Kiribati (+686)</option>
+              <option value="Korea, North (+850)">Korea, North (+850)</option>
+              <option value="Korea, South (+82)">Korea, South (+82)</option>
+              <option value="Kosovo (+383)">Kosovo (+383)</option>
+              <option value="Kuwait (+965)">Kuwait (+965)</option>
+              <option value="Kyrgyzstan (+996)">Kyrgyzstan (+996)</option>
+              <option value="Laos (+856)">Laos (+856)</option>
+              <option value="Latvia (+371)">Latvia (+371)</option>
+              <option value="Lebanon (+961)">Lebanon (+961)</option>
+              <option value="Lesotho (+266)">Lesotho (+266)</option>
+              <option value="Liberia (+231)">Liberia (+231)</option>
+              <option value="Libya (+218)">Libya (+218)</option>
+              <option value="Liechtenstein (+423)">Liechtenstein (+423)</option>
+              <option value="Lithuania (+370)">Lithuania (+370)</option>
+              <option value="Luxembourg (+352)">Luxembourg (+352)</option>
+              <option value="Madagascar (+261)">Madagascar (+261)</option>
+              <option value="Malawi (+265)">Malawi (+265)</option>
+              <option value="Malaysia (+60)">Malaysia (+60)</option>
+              <option value="Maldives (+960)">Maldives (+960)</option>
+              <option value="Mali (+223)">Mali (+223)</option>
+              <option value="Malta (+356)">Malta (+356)</option>
+              <option value="Marshall Islands (+692)">Marshall Islands (+692)</option>
+              <option value="Mauritania (+222)">Mauritania (+222)</option>
+              <option value="Mauritius (+230)">Mauritius (+230)</option>
+              <option value="Mexico (+52)">Mexico (+52)</option>
+              <option value="Micronesia (+691)">Micronesia (+691)</option>
+              <option value="Moldova (+373)">Moldova (+373)</option>
+              <option value="Monaco (+377)">Monaco (+377)</option>
+              <option value="Mongolia (+976)">Mongolia (+976)</option>
+              <option value="Montenegro (+382)">Montenegro (+382)</option>
+              <option value="Morocco (+212)">Morocco (+212)</option>
+              <option value="Mozambique (+258)">Mozambique (+258)</option>
+              <option value="Myanmar (+95)">Myanmar (+95)</option>
+              <option value="Namibia (+264)">Namibia (+264)</option>
+              <option value="Nauru (+674)">Nauru (+674)</option>
+              <option value="Nepal (+977)">Nepal (+977)</option>
+              <option value="Netherlands (+31)">Netherlands (+31)</option>
+              <option value="New Zealand (+64)">New Zealand (+64)</option>
+              <option value="Nicaragua (+505)">Nicaragua (+505)</option>
+              <option value="Niger (+227)">Niger (+227)</option>
+              <option value="Nigeria (+234)">Nigeria (+234)</option>
+              <option value="North Macedonia (+389)">North Macedonia (+389)</option>
+              <option value="Norway (+47)">Norway (+47)</option>
+              <option value="Oman (+968)">Oman (+968)</option>
+              <option value="Pakistan (+92)">Pakistan (+92)</option>
+              <option value="Palau (+680)">Palau (+680)</option>
+              <option value="Palestine (+970)">Palestine (+970)</option>
+              <option value="Panama (+507)">Panama (+507)</option>
+              <option value="Papua New Guinea (+675)">Papua New Guinea (+675)</option>
+              <option value="Paraguay (+595)">Paraguay (+595)</option>
+              <option value="Peru (+51)">Peru (+51)</option>
+              <option value="Philippines (+63)">Philippines (+63)</option>
+              <option value="Poland (+48)">Poland (+48)</option>
+              <option value="Portugal (+351)">Portugal (+351)</option>
+              <option value="Qatar (+974)">Qatar (+974)</option>
+              <option value="Romania (+40)">Romania (+40)</option>
+              <option value="Russia (+7)">Russia (+7)</option>
+              <option value="Rwanda (+250)">Rwanda (+250)</option>
+              <option value="Saint Kitts and Nevis (+1-869)">Saint Kitts and Nevis (+1-869)</option>
+              <option value="Saint Lucia (+1-758)">Saint Lucia (+1-758)</option>
+              <option value="Saint Vincent and the Grenadines (+1-784)">Saint Vincent and the Grenadines (+1-784)</option>
+              <option value="Samoa (+685)">Samoa (+685)</option>
+              <option value="San Marino (+378)">San Marino (+378)</option>
+              <option value="Sao Tome and Principe (+239)">Sao Tome and Principe (+239)</option>
+              <option value="Saudi Arabia (+966)">Saudi Arabia (+966)</option>
+              <option value="Senegal (+221)">Senegal (+221)</option>
+              <option value="Serbia (+381)">Serbia (+381)</option>
+              <option value="Seychelles (+248)">Seychelles (+248)</option>
+              <option value="Sierra Leone (+232)">Sierra Leone (+232)</option>
+              <option value="Singapore (+65)">Singapore (+65)</option>
+              <option value="Slovakia (+421)">Slovakia (+421)</option>
+              <option value="Slovenia (+386)">Slovenia (+386)</option>
+              <option value="Solomon Islands (+677)">Solomon Islands (+677)</option>
+              <option value="Somalia (+252)">Somalia (+252)</option>
+              <option value="South Africa (+27)">South Africa (+27)</option>
+              <option value="South Sudan (+211)">South Sudan (+211)</option>
+              <option value="Spain (+34)">Spain (+34)</option>
+              <option value="Sri Lanka (+94)">Sri Lanka (+94)</option>
+              <option value="Sudan (+249)">Sudan (+249)</option>
+              <option value="Suriname (+597)">Suriname (+597)</option>
+              <option value="Sweden (+46)">Sweden (+46)</option>
+              <option value="Switzerland (+41)">Switzerland (+41)</option>
+              <option value="Syria (+963)">Syria (+963)</option>
+              <option value="Taiwan (+886)">Taiwan (+886)</option>
+              <option value="Tajikistan (+992)">Tajikistan (+992)</option>
+              <option value="Tanzania (+255)">Tanzania (+255)</option>
+              <option value="Thailand (+66)">Thailand (+66)</option>
+              <option value="Togo (+228)">Togo (+228)</option>
+              <option value="Tonga (+676)">Tonga (+676)</option>
+              <option value="Trinidad and Tobago (+1-868)">Trinidad and Tobago (+1-868)</option>
+              <option value="Tunisia (+216)">Tunisia (+216)</option>
+              <option value="Turkey (+90)">Turkey (+90)</option>
+              <option value="Turkmenistan (+993)">Turkmenistan (+993)</option>
+              <option value="Tuvalu (+688)">Tuvalu (+688)</option>
+              <option value="Uganda (+256)">Uganda (+256)</option>
+              <option value="Ukraine (+380)">Ukraine (+380)</option>
+              <option value="United Arab Emirates (+971)">United Arab Emirates (+971)</option>
+              <option value="United Kingdom (+44)">United Kingdom (+44)</option>
+              <option value="United States (+1)">United States (+1)</option>
+              <option value="Uruguay (+598)">Uruguay (+598)</option>
+              <option value="Uzbekistan (+998)">Uzbekistan (+998)</option>
+              <option value="Vanuatu (+678)">Vanuatu (+678)</option>
+              <option value="Vatican City (+379)">Vatican City (+379)</option>
+              <option value="Venezuela (+58)">Venezuela (+58)</option>
+              <option value="Vietnam (+84)">Vietnam (+84)</option>
+              <option value="Yemen (+967)">Yemen (+967)</option>
+              <option value="Zambia (+260)">Zambia (+260)</option>
+              <option value="Zimbabwe (+263)">Zimbabwe (+263)</option>
+            </select>
+
+                <select id="form-field-field_3a8aac9" class="elementor-field elementor-size-sm elementor-field-textual" name="form_fields[field_3a8aac9]" required>
+                  <option value="How did you hear about us?" selected="selected">How did you hear about us?</option>
+                  <option value="Google search">Google search</option>
+                  <option value="Social media">Social media</option>
+                  <option value="Word of mouth">Word of mouth</option>
+                  <option value="Email promotion">Email promotion</option>
+                  <option value="Event or Training">Event or Training</option>
+                </select>
+
+                <div class="elementor-field-group e-form__buttons">
+                  <button class="elementor-button elementor-size-sm" type="submit">
+                    <span class="elementor-button-content-wrapper">
+                      <span class="elementor-button-text">Submit</span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <p class="form-status" id="form-status-message" hidden>Thanks! Your message has been captured.</p>
+            </form>
+            <p class="form-note">
+              We'll be in touch as soon as possible. For job applications, head over to our
+              <a href="https://selecttraining.ae/careers/">CAREERS page</a>
+            </p>
+            <p class="form-note form-note-recaptcha" aria-live="polite">
+              This site is protected by reCAPTCHA and the Google
+              <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Privacy Policy</a>
+              and
+              <a href="https://policies.google.com/terms" rel="noopener noreferrer" target="_blank">Terms of Service</a>
+              apply.
+            </p>
+            </div>
+            </div>
+        </div>
+
+        <!-- Hear from recent delegates (TrustIndex) -->
+        <div class="delegates-block elementor-section" aria-labelledby="delegates-heading" data-aos="fade-up" data-aos-duration="800" data-aos-delay="80">
+          <div class="elementor-element elementor-element-52d87e3 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+              <h2 id="delegates-heading" class="elementor-heading-title elementor-size-default">Hear from recent delegates</h2>
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-4479c0e e-flex e-con-boxed e-con e-parent" data-element_type="container">
+            <div class="e-con-inner">
+              <div class="elementor-element elementor-element-de340fa elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
+                <div class="elementor-widget-container">
+                  <div class="elementor-shortcode"><div data-src="https://cdn.trustindex.io/loader.js?ad570a756607586bc776cc6a04d"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Discover Select + stats -->
+    <section class="discover-strip">
+      <div class="container">
+        <div class="discover-grid">
+          <div data-aos="fade-right" data-aos-duration="800">
+            <h2>Discover Select</h2>
+            <span class="elementor-divider-separator"></span>
+            <p>Select Training is an internationally recognised Learning and Development provider with more than 20 years of experience in the field of corporate training and consultancy.</p>
+          </div>
+          <a class="video-box" href="https://www.youtube.com/watch?v=zt5eiqSaynU" target="_blank" rel="noopener" data-aos="fade-left" data-aos-duration="850" data-aos-delay="60"><img src="https://img.youtube.com/vi/zt5eiqSaynU/hqdefault.jpg" alt="Discover Select video" /><span class="yt-play">▶</span></a>
+        </div>
+        <div class="stats-row">
+          <div data-aos="flip-up" data-aos-duration="700" data-aos-delay="0"><h3 class="js-stat-count" data-target="100000" data-suffix="+">0+</h3><p>DELEGATES</p></div>
+          <div data-aos="flip-up" data-aos-duration="700" data-aos-delay="80"><h3 class="js-stat-count" data-target="7500" data-suffix="+">0+</h3><p>HAPPY CLIENTS</p></div>
+          <div data-aos="flip-up" data-aos-duration="700" data-aos-delay="160"><h3 class="js-stat-count" data-target="40000" data-suffix="+">0+</h3><p>TRAINING HOURS</p></div>
+        </div>
+        <div class="pill-row">
+          <div class="pill" data-aos="fade-up" data-aos-duration="650" data-aos-delay="0">✔ Qualified Trainers</div>
+          <div class="pill" data-aos="fade-up" data-aos-duration="650" data-aos-delay="60">✔ English &amp; Arabic</div>
+          <div class="pill" data-aos="fade-up" data-aos-duration="650" data-aos-delay="120">✔ Customer Focused</div>
+          <div class="pill" data-aos="fade-up" data-aos-duration="650" data-aos-delay="180">✔ Internationally Qualified</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <!-- ========== / MAIN ========== -->
+
+  <!-- ========== [3] FOOTER ========== -->
+  <footer class="site-footer" id="site-footer">
+    <!-- Partner logos -->
+    <section class="partners-band" aria-labelledby="footer-partners-heading">
+      <div class="container">
+        <h2 id="footer-partners-heading" data-aos="fade-up" data-aos-duration="750">Our partners</h2>
+        <div class="elementor-swiper partners-elementor-swiper" data-aos="fade-up" data-aos-duration="800" data-aos-delay="80">
+          <div
+            class="swiper elementor-main-swiper swiper-horizontal swiper-pointer-events js-partners-swiper"
+            role="region"
+            aria-roledescription="carousel"
+            aria-label="Partner logos"
+          >
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" role="group" aria-roledescription="slide">
+                <div class="elementor-carousel-image">
+                  <img src="https://selecttraining.ae/wp-content/uploads/2022/06/10.png" alt="Burlington English" width="200" height="80" loading="lazy" decoding="async" />
+                </div>
+              </div>
+              <div class="swiper-slide" role="group" aria-roledescription="slide">
+                <div class="elementor-carousel-image">
+                  <img src="https://selecttraining.ae/wp-content/uploads/2022/06/8.png" alt="IAAP" width="200" height="80" loading="lazy" decoding="async" />
+                </div>
+              </div>
+              <div class="swiper-slide" role="group" aria-roledescription="slide">
+                <div class="elementor-carousel-image">
+                  <img src="https://selecttraining.ae/wp-content/uploads/2022/06/9.png" alt="PMI" width="200" height="80" loading="lazy" decoding="async" />
+                </div>
+              </div>
+              <div class="swiper-slide" role="group" aria-roledescription="slide">
+                <div class="elementor-carousel-image">
+                  <img src="https://selecttraining.ae/wp-content/uploads/2022/06/6.png" alt="MTa Learning" width="200" height="80" loading="lazy" decoding="async" />
+                </div>
+              </div>
+              <div class="swiper-slide" role="group" aria-roledescription="slide">
+                <div class="elementor-carousel-image">
+                  <img src="https://selecttraining.ae/wp-content/uploads/2022/06/4.png" alt="Northgate" width="200" height="80" loading="lazy" decoding="async" />
+                </div>
+              </div>
+              <div class="swiper-slide" role="group" aria-roledescription="slide">
+                <div class="elementor-carousel-image">
+                  <img src="https://selecttraining.ae/wp-content/uploads/2022/06/2.png" alt="Training partner" width="200" height="80" loading="lazy" decoding="async" />
+                </div>
+              </div>
+              <div class="swiper-slide" role="group" aria-roledescription="slide">
+                <div class="elementor-carousel-image">
+                  <img src="https://selecttraining.ae/wp-content/uploads/2022/06/3.png" alt="Training partner" width="200" height="80" loading="lazy" decoding="async" />
+                </div>
+              </div>
+              <div class="swiper-slide" role="group" aria-roledescription="slide">
+                <div class="elementor-carousel-image">
+                  <img src="https://selecttraining.ae/wp-content/uploads/2022/06/5.png" alt="Training partner" width="200" height="80" loading="lazy" decoding="async" />
+                </div>
+              </div>
+            </div>
+            <div class="elementor-swiper-button elementor-swiper-button-prev swiper-button-prev" role="button" tabindex="0" aria-label="Previous slide">
+              <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </div>
+            <div class="elementor-swiper-button elementor-swiper-button-next swiper-button-next" role="button" tabindex="0" aria-label="Next slide">
+              <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </div>
+            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer navigation columns -->
+    <nav class="container footer-grid" aria-label="Footer">
+      <div class="footer-col" data-aos="fade-up" data-aos-duration="700" data-aos-delay="0">
+        <h4>Courses</h4>
+        <span class="elementor-divider-separator"></span>
+        <ul>
+          <li><a href="https://selecttraining.ae/management-and-leadership-courses-in-uae/">Management and Leadership</a></li>
+          <li><a href="https://selecttraining.ae/project-management-courses-uae/">Project Management</a></li>
+          <li><a href="https://selecttraining.ae/supply-chain-management-courses-uae/">Supply Chain Management</a></li>
+          <li><a href="https://selecttraining.ae/human-resource-management-courses-uae/">Human Resource Management</a></li>
+          <li><a href="https://selecttraining.ae/administration-courses-in-uae/">Administration</a></li>
+          <li><a href="https://selecttraining.ae/finance-courses-in-uae/">Finance</a></li>
+          <li><a href="https://selecttraining.ae/sales-courses-in-uae/">Sales</a></li>
+          <li><a href="https://selecttraining.ae/communications-courses-in-uae/">Communications</a></li>
+          <li><a href="https://selecttraining.ae/customer-service-courses-in-uae/">Customer Service</a></li>
+          <li><a href="https://selecttraining.ae/self-development-courses-in-uae/">Self-Development</a></li>
+          <li><a href="https://selecttraining.ae/information-technology-courses-in-uae/">Information Technology (IT)</a></li>
+          <li><a href="https://selecttraining.ae/business-writing-courses-in-uae/">Business Writing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col" data-aos="fade-up" data-aos-duration="700" data-aos-delay="80">
+        <h4>Training</h4>
+        <span class="elementor-divider-separator"></span>
+        <ul>
+          <li><a href="https://selecttraining.ae/team-building-activities-in-dubai/">Team Building</a></li>
+          <li><a href="https://selecttraining.ae/courses/">Public/In-house Courses</a></li>
+          <li><a href="https://selecttraining.ae/weselectselflearning/">Remote E-learning</a></li>
+          <li><a href="https://selecttraining.ae/business-simulation-in-uae/">Business Simulation</a></li>
+          <li><a href="https://selecttraining.ae/business-consultancy/">Business Consulting</a></li>
+          <li><a href="https://selecttraining.ae/business-development-programmes/">Training Programmes</a></li>
+          <li><a href="https://selecttraining.ae/business-coaching/">Business Coaching</a></li>
+        </ul>
+      </div>
+      <div class="footer-col" data-aos="fade-up" data-aos-duration="700" data-aos-delay="160">
+        <h4>About Us</h4>
+        <span class="elementor-divider-separator"></span>
+        <ul>
+          <li><a href="https://selecttraining.ae/our-journey/">Our Journey</a></li>
+          <li><a href="https://selecttraining.ae/our-methodology/">Our Methodology</a></li>
+          <li><a href="https://selecttraining.ae/our-team/">Our Team</a></li>
+          <li><a href="https://selecttraining.ae/why-select/">Why Select?</a></li>
+          <li><a href="https://selecttraining.ae/our-partners/">Our Partners</a></li>
+          <li><a href="https://selecttraining.ae/careers/">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col" data-aos="fade-up" data-aos-duration="700" data-aos-delay="240">
+        <h4>Recent Articles</h4>
+        <span class="elementor-divider-separator"></span>
+        <ul>
+          <li><a href="https://selecttraining.ae/ai-maturity-assessment/">What an AI Maturity Assessment Reveals About Your Business Readiness</a></li>
+          <li><a href="https://selecttraining.ae/ai-anxiety-workplace/">How to Overcome AI Anxiety in Your Workplace</a></li>
+          <li><a href="https://selecttraining.ae/ai-opportunities-daily-work/">How to Spot AI Opportunities in Your Daily Work</a></li>
+          <li><a href="https://selecttraining.ae/ai-roi-measurement/">How Leaders Can Clearly Measure the Real ROI of AI Initiatives</a></li>
+          <li><a href="https://selecttraining.ae/human-side-ai-adoption/">The Human Side of AI Adoption That Leaders Often Forget</a></li>
+          <li><a href="https://selecttraining.ae/ai-initiative-questions-executives/">Questions Every Executive Should Ask Before Starting an AI Initiative</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Meta, social, legal -->
+    <div class="container footer-bottom">
+      <div class="footer-meta">
+        <div class="footer-social">
+          <a href="https://www.facebook.com/SelectTrainingLLC/" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://twitter.com/SelectTraining" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.linkedin.com/company/selecttrainingae/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.youtube.com/c/SELECTTrainingLLC" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://www.instagram.com/selecttrainingllc/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="footer-address">
+          <p><strong>Head Office:</strong> Office 803 Al Yasat Tower, Fatima Bint <br> Mubarak (Najda) Street, P.O. Box 44705, Abu Dhabi, UAE.</p>
+          <p><strong>Dubai Office:</strong> Office 208, Al Attar Business Centre, <br> Sheikh Zayed Road, Al Barsha 1, P.O. Box 334058, Dubai, UAE.</p>
+        </div>
+        <div class="footer-right">
+          <div class="footer-payments">
+            <img src="https://selecttraining.ae/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/visa.svg" alt="Visa" />
+            <img src="https://selecttraining.ae/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/mastercard.svg" alt="Mastercard" />
+            <img src="https://selecttraining.ae/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/amex.svg" alt="Amex" />
+            <img src="https://selecttraining.ae/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/jcb.svg" alt="JCB" />
+            <img src="https://selecttraining.ae/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/discover.svg" alt="Discover" />
+            <img src="https://selecttraining.ae/wp-content/plugins/woocommerce/assets/images/icons/credit-cards/diners.svg" alt="Diners" />
+          </div>
+          <div class="footer-policy">
+            <a href="https://selecttraining.ae/terms-and-conditions/">Terms of use</a>
+            <a href="https://selecttraining.ae/cookie-policy/">Cookie Policy</a>
+            <a href="https://selecttraining.ae/privacy-policy/">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copy">© 2026 Select Training and Management Consultancy LLC Tax Registration Number: 100003031000003</div>
+    </div>
+  </footer>
+  <!-- ========== / FOOTER ========== -->
+
+  <!-- ========== [4] Floating UI (not part of main/footer landmarks) ========== -->
+  <aside class="floating-ui" aria-label="Page shortcuts">
+    <div id="chat-bot-message-container" class="chat-bot-message-container slide-in"><div class="overflow"><div class="chat-bot-message-label false"><div>Hi there! 👋 Thank you for stopping by.</div></div></div><div id="chat-bot-message-close"></div></div>
+    <div id="chat-bot-launcher-button" class="chat-bot-launcher-button" style="background-image: url('https://avatars.collectcdn.com/5def76effb5ebe491c20e44d/5def76effb5ebe491c20e44d-6707a8f948b2ba247e87e41c.png?t=1728562536008?t=1728563708431');"></div>
+    <button id="scroll-up-trigger" class="scroll-up-trigger" aria-label="Scroll to top"><img src="https://selecttraining.ae/wp-content/uploads/2022/08/up-new.png" alt="" title="" /></button>
+  </aside>
+
+  <!-- Vendor scripts -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6Lf1W0EjAAAAAIr9My1AA4fAg19FCrgdXeLEYGqK" async defer></script>
+  <script src="https://cdn.trustindex.io/loader.js?ver=1" async></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      (function initAOS() {
+        if (typeof AOS === "undefined") return;
+        var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        AOS.init({
+          duration: 750,
+          easing: "ease-out-cubic",
+          once: true,
+          offset: 72,
+          delay: 0,
+          anchorPlacement: "top-bottom",
+          disable: reduceMotion
+        });
+        window.addEventListener(
+          "load",
+          function () {
+            AOS.refresh();
+          },
+          { once: true }
+        );
+        (function initSvcTabs() {
+          var edu = document.getElementById("svc-tab-edu");
+          var hc = document.getElementById("svc-tab-hc");
+          var tabButtons = Array.prototype.slice.call(document.querySelectorAll(".svc-tab-btn"));
+          if (!edu || !hc || !tabButtons.length) return;
+          var inputs = {
+            "svc-tab-edu": edu,
+            "svc-tab-hc": hc
+          };
+          function syncTabs() {
+            tabButtons.forEach(function (btn) {
+              var input = inputs[btn.getAttribute("data-target")];
+              var isActive = !!(input && input.checked);
+              btn.classList.toggle("is-active", isActive);
+              btn.setAttribute("aria-selected", isActive ? "true" : "false");
+              btn.tabIndex = isActive ? 0 : -1;
+            });
+          }
+          function setHashForTarget(targetId) {
+            var activeBtn = tabButtons.find(function (btn) {
+              return btn.getAttribute("data-target") === targetId;
+            });
+            if (!activeBtn) return;
+            var hash = activeBtn.getAttribute("data-hash");
+            if (!hash || window.location.hash === hash) return;
+            if (history && typeof history.replaceState === "function") {
+              history.replaceState(null, "", hash);
+            }
+          }
+          function activateTab(targetId) {
+            var input = inputs[targetId];
+            if (!input) return;
+            if (!input.checked) {
+              input.checked = true;
+              input.dispatchEvent(new Event("change", { bubbles: true }));
+              setHashForTarget(targetId);
+            } else {
+              syncTabs();
+              setHashForTarget(targetId);
+            }
+          }
+          tabButtons.forEach(function (btn, index) {
+            function setPressed(pressed) {
+              btn.classList.toggle("is-pressed", pressed);
+            }
+            btn.addEventListener("click", function () {
+              activateTab(btn.getAttribute("data-target"));
+            });
+            btn.addEventListener("keydown", function (event) {
+              if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                activateTab(btn.getAttribute("data-target"));
+                return;
+              }
+              if (!["ArrowRight", "ArrowLeft", "ArrowDown", "ArrowUp", "Home", "End"].includes(event.key)) return;
+              event.preventDefault();
+              var nextIndex = index;
+              if (event.key === "ArrowRight" || event.key === "ArrowDown") nextIndex = (index + 1) % tabButtons.length;
+              else if (event.key === "ArrowLeft" || event.key === "ArrowUp") nextIndex = (index - 1 + tabButtons.length) % tabButtons.length;
+              else if (event.key === "Home") nextIndex = 0;
+              else if (event.key === "End") nextIndex = tabButtons.length - 1;
+              var nextBtn = tabButtons[nextIndex];
+              if (!nextBtn) return;
+              nextBtn.focus();
+              activateTab(nextBtn.getAttribute("data-target"));
+            });
+            btn.addEventListener("mousedown", function () { setPressed(true); });
+            btn.addEventListener("mouseup", function () { setPressed(false); });
+            btn.addEventListener("mouseleave", function () { setPressed(false); });
+            btn.addEventListener("blur", function () { setPressed(false); });
+            btn.addEventListener("touchstart", function () { setPressed(true); }, { passive: true });
+            btn.addEventListener("touchend", function () { setPressed(false); }, { passive: true });
+            btn.addEventListener("touchcancel", function () { setPressed(false); }, { passive: true });
+          });
+          if (window.location.hash === "#human-capital" || window.location.hash === "#hc") {
+            activateTab("svc-tab-hc");
+          } else if (window.location.hash === "#education" || window.location.hash === "#edu") {
+            activateTab("svc-tab-edu");
+          }
+          edu.addEventListener("change", syncTabs);
+          hc.addEventListener("change", syncTabs);
+          syncTabs();
+        })();
+        /* Tab panels use display:none; AOS must refresh when a panel becomes visible or content stays invisible */
+        (function initSvcTabAOSRefresh() {
+          var edu = document.getElementById("svc-tab-edu");
+          var hc = document.getElementById("svc-tab-hc");
+          if (!edu || !hc) return;
+          function refreshAOS() {
+            requestAnimationFrame(function () {
+              AOS.refresh();
+              setTimeout(function () {
+                AOS.refresh();
+              }, 150);
+            });
+          }
+          edu.addEventListener("change", refreshAOS);
+          hc.addEventListener("change", refreshAOS);
+        })();
+      })();
+
+      (function initMobileMenu() {
+        var header = document.querySelector(".hero-nav-sticky");
+        var toggle = document.getElementById("mobile-menu-toggle");
+        var nav = document.getElementById("mobile-primary-nav");
+        if (!header || !toggle || !nav) return;
+
+        function closeMenu() {
+          header.classList.remove("mobile-menu-open");
+          toggle.setAttribute("aria-expanded", "false");
+          var opened = nav.querySelectorAll(".menu-item.mobile-open");
+          opened.forEach(function (item) { item.classList.remove("mobile-open"); });
+        }
+
+        toggle.addEventListener("click", function () {
+          var willOpen = !header.classList.contains("mobile-menu-open");
+          if (!willOpen) {
+            closeMenu();
+            return;
+          }
+          header.classList.add("mobile-menu-open");
+          toggle.setAttribute("aria-expanded", "true");
+        });
+
+        nav.querySelectorAll(".menu-item > a").forEach(function (anchor) {
+          anchor.addEventListener("click", function (event) {
+            if (window.innerWidth > 980) return;
+            var item = anchor.parentElement;
+            var submenu = item ? item.querySelector(".dropdown") : null;
+            if (!submenu) {
+              closeMenu();
+              return;
+            }
+            event.preventDefault();
+            var opening = !item.classList.contains("mobile-open");
+            nav.querySelectorAll(".menu-item.mobile-open").forEach(function (openItem) {
+              openItem.classList.remove("mobile-open");
+            });
+            if (opening) item.classList.add("mobile-open");
+          });
+        });
+
+        nav.querySelectorAll(":scope > a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            if (window.innerWidth <= 980) closeMenu();
+          });
+        });
+
+        window.addEventListener("resize", function () {
+          if (window.innerWidth > 980) closeMenu();
+        });
+      })();
+
+      (function initChatWidgets() {
+        var launcher = document.getElementById("chat-bot-launcher-button");
+        var message = document.getElementById("chat-bot-message-container");
+        var close = document.getElementById("chat-bot-message-close");
+        if (!launcher || !message) return;
+
+        launcher.addEventListener("click", function () {
+          message.classList.toggle("slide-in");
+        });
+        if (close) {
+          close.addEventListener("click", function () {
+            message.classList.remove("slide-in");
+          });
+        }
+      })();
+
+      (function initScrollUpButton() {
+        var btn = document.getElementById("scroll-up-trigger");
+        if (!btn) return;
+        function sync() {
+          btn.classList.toggle("is-visible", window.scrollY > 240);
+        }
+        sync();
+        window.addEventListener("scroll", sync, { passive: true });
+        btn.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      })();
+
+      (function initStickyHeaderTheme() {
+        var hdr = document.querySelector(".hero-nav-sticky");
+        if (!hdr) return;
+        function sync() {
+          hdr.classList.toggle("is-scrolled", window.scrollY > 10);
+        }
+        sync();
+        window.addEventListener("scroll", sync, { passive: true });
+      })();
+
+      (function initStatCounts() {
+        var nodes = document.querySelectorAll(".js-stat-count");
+        if (!nodes.length) return;
+        function easeOutCubic(t) {
+          return 1 - Math.pow(1 - t, 3);
+        }
+        function runCount(el, target, suffix, duration) {
+          var startTime = null;
+          function tick(now) {
+            if (startTime === null) startTime = now;
+            var p = Math.min(1, (now - startTime) / duration);
+            var v = Math.round(target * easeOutCubic(p));
+            el.textContent = v.toLocaleString("en-US") + suffix;
+            if (p < 1) requestAnimationFrame(tick);
+            else el.textContent = target.toLocaleString("en-US") + suffix;
+          }
+          requestAnimationFrame(tick);
+        }
+        nodes.forEach(function (el, i) {
+          var target = parseInt(el.getAttribute("data-target"), 10);
+          if (isNaN(target)) return;
+          var suffix = el.getAttribute("data-suffix") || "";
+          setTimeout(function () {
+            runCount(el, target, suffix, 2000);
+          }, i * 160);
+        });
+      })();
+
+      (function initContactForm() {
+        var form = document.getElementById("request-callback-form");
+        if (!form) return;
+        var email = document.getElementById("contact-email");
+        var confirmEmail = document.getElementById("contact-confirm-email");
+        var statusMessage = document.getElementById("form-status-message");
+        if (!email || !confirmEmail) return;
+
+        function clearEmailMismatch() {
+          confirmEmail.setCustomValidity("");
+        }
+
+        email.addEventListener("input", clearEmailMismatch);
+        confirmEmail.addEventListener("input", clearEmailMismatch);
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          clearEmailMismatch();
+
+          if (email.value.trim().toLowerCase() !== confirmEmail.value.trim().toLowerCase()) {
+            confirmEmail.setCustomValidity("Email addresses do not match.");
+          }
+
+          if (!form.checkValidity()) {
+            form.reportValidity();
+            if (statusMessage) statusMessage.hidden = true;
+            return;
+          }
+
+          if (statusMessage) statusMessage.hidden = false;
+          form.reset();
+        });
+      })();
+
+      var root = document.querySelector(".js-partners-swiper");
+      if (root && typeof Swiper !== "undefined") {
+        new Swiper(root, {
+          loop: true,
+          speed: 500,
+          grabCursor: true,
+          spaceBetween: 50,
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
+          },
+          pagination: {
+            el: root.querySelector(".swiper-pagination"),
+            clickable: true
+          },
+          navigation: {
+            nextEl: root.querySelector(".swiper-button-next"),
+            prevEl: root.querySelector(".swiper-button-prev")
+          },
+          breakpoints: {
+            0: { slidesPerView: 2, spaceBetween: 16 },
+            520: { slidesPerView: 2, spaceBetween: 24 },
+            700: { slidesPerView: 3, spaceBetween: 32 },
+            900: { slidesPerView: 4, spaceBetween: 40 },
+            1060: { slidesPerView: 5, spaceBetween: 50 }
+          }
+        });
+        if (typeof AOS !== "undefined") AOS.refresh();
+      }
+    });
+  </script>
+</body>
+</html>
